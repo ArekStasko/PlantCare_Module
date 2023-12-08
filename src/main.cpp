@@ -7,6 +7,7 @@ ModuleService moduleService;
 
 void setup() {
   Serial.begin(921600);
+  moduleService.Initialize();
   wifiService.Connect();
 }
 
@@ -16,6 +17,6 @@ void loop() {
   wifiService.HealthCheck();
 
   if(wifiService.isConnected){
-    moduleService.RegisterService();
+    moduleService.RegisterModule();
   }
 }

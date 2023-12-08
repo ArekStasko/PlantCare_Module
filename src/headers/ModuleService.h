@@ -1,16 +1,29 @@
 #include <HTTPClient.h>
+#include <Preferences.h>
 
 class ModuleService
 {
     #define API_BASE_URL "http://192.168.1.40:8080/api"
 
     private:
-        bool isRegistered = false;
-    
+        Preferences preferences;
+        String moduleId = "MODULE_NOT_REGISTERED";
+        bool processed = false;
+
     public:
-        void RegisterService()
+        void Initialize()
         {
-            if(!isRegistered)
+            Serial.println("START INITIALIZING MODULE SERVICE");
+            preferences.begin("module_data", false);
+            moduleId = preferences.getString("module_id", "MODULE_NOT_REGISTERED");
+            Serial.printf("CURRENT MODULE ID: ");
+            Serial.printf(moduleId.c_str());
+            Serial.println("END OF INITIALIZING MODULE SERVICE");
+        }
+
+        void RegisterModule()
+        {
+            if(moduleId == "MODULE_NOT_REGISTERED")
             {
                 Serial.println("START REGISTERING MODULE");
                 HTTPClient client;
@@ -20,8 +33,11 @@ class ModuleService
                     String payload = client.getString();
                     Serial.println("\nStatuscode: " + String(httpCode));
                     Serial.println(payload);
+                    std::string payloadStd = payload.c_str();
+                    preferences.putString("module_id", payload);
+                    moduleId = preferences.getString("module_id", "MODULE_NOT_REGISTERED");
                 }
-                isRegistered = true;
+            Serial.println("MODULE REGISTRATION COMPLETED");
             }
         }
 };
