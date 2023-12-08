@@ -9,6 +9,7 @@ LCDService lcdService;
 
 void setup() {
   Serial.begin(921600);
+  lcdService.Setup();
   wifiService.Connect();
 }
 
