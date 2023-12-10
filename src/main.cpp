@@ -18,5 +18,6 @@ void loop() {
 
   if(wifiService.isConnected){
     moduleService.RegisterModule();
+    moduleService.UpdateMoistureLevel();
   }
 }

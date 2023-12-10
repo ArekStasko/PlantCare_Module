@@ -1,5 +1,6 @@
 #include <HTTPClient.h>
 #include <Preferences.h>
+#include "MoistureSensorService.h"
 
 class ModuleService
 {
@@ -7,6 +8,7 @@ class ModuleService
 
     private:
         Preferences preferences;
+        MoistureSensorService moistureSensorService;
         String moduleId = "MODULE_NOT_REGISTERED";
         bool processed = false;
 
@@ -39,5 +41,13 @@ class ModuleService
                 }
             Serial.println("MODULE REGISTRATION COMPLETED");
             }
+        }
+
+        void UpdateMoistureLevel()
+        {
+            float currentMoistureLevel = moistureSensorService.GetCurrentMoisture();
+            Serial.println("CURRENT MOISTURE :");
+            Serial.println(currentMoistureLevel);
+            delay(2000);
         }
 };
