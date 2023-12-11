@@ -12,12 +12,19 @@ void setup() {
 }
 
 bool isRegistered = false;
+long lastMillis;
 
 void loop() {
   wifiService.HealthCheck();
 
   if(wifiService.isConnected){
     moduleService.RegisterModule();
-    moduleService.UpdateMoistureLevel();
+
+    if(millis() - lastMillis >= 2*60*1000UL) 
+    {
+      lastMillis = millis();
+      moduleService.UpdateMoistureLevel();
+    }
+
   }
 }

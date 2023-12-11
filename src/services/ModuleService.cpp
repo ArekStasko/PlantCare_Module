@@ -1,5 +1,8 @@
 #include <HTTPClient.h>
 #include <Preferences.h>
+#include <ArduinoJson.h>
+#include <chrono>
+#include <headers/MoistureSensorService.h>
 
 class ModuleService
 {
@@ -7,6 +10,8 @@ class ModuleService
 
     private:
         Preferences preferences;
+        MoistureSensorService moistureSensorService;
+        HTTPClient client;
         String moduleId = "MODULE_NOT_REGISTERED";
         bool processed = false;
 
@@ -26,10 +31,10 @@ class ModuleService
             if(moduleId == "MODULE_NOT_REGISTERED")
             {
                 Serial.println("START REGISTERING MODULE");
-                HTTPClient client;
                 client.begin(String(API_BASE_URL) + "/modules/Add");
                 int httpCode = client.POST("");
-                if(httpCode > 0) {
+                if(httpCode > 0) 
+                {
                     String payload = client.getString();
                     Serial.println("\nStatuscode: " + String(httpCode));
                     Serial.println(payload);
@@ -37,7 +42,44 @@ class ModuleService
                     preferences.putString("module_id", payload);
                     moduleId = preferences.getString("module_id", "MODULE_NOT_REGISTERED");
                 }
-            Serial.println("MODULE REGISTRATION COMPLETED");
+
+                client.end();
+                Serial.println("MODULE REGISTRATION COMPLETED");
+            }
+        }
+
+        void UpdateMoistureLevel()
+        {
+            float currentMoistureLevel = moistureSensorService.GetCurrentMoisture();
+            Serial.println("CURRENT MOISTURE :");
+            Serial.println(currentMoistureLevel);
+            client.begin(String(API_BASE_URL) + "/humidity-measurements/Add");
+            client.addHeader("Content-Type", "application/json");
+
+            const size_t CAPACITY = JSON_OBJECT_SIZE(1);
+            StaticJsonDocument<CAPACITY> doc;
+
+            JsonObject object = doc.to<JsonObject>();
+            object["ModuleId"] = this->moduleId;
+            object["Humidity"] = currentMoistureLevel;
+
+            String jsonOutput;
+            serializeJson(doc, jsonOutput);
+
+            int httpCode = client.POST(String(jsonOutput));
+
+            if(httpCode > 0) 
+            {
+                String payload = client.getString();
+                Serial.println("\nStatuscode: " + String(httpCode));
+                Serial.println(payload);
+            }
+
+            client.end();
+
+            if(httpCode == 200)
+            {
+                Serial.println("Humidity Measurement successfully registered");
             }
         }
 };
