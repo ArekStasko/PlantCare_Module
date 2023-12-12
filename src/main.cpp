@@ -7,15 +7,24 @@ ModuleService moduleService;
 
 void setup() {
   Serial.begin(921600);
+  moduleService.Initialize();
   wifiService.Connect();
 }
 
 bool isRegistered = false;
+long lastMillis;
 
 void loop() {
   wifiService.HealthCheck();
 
   if(wifiService.isConnected){
-    moduleService.RegisterService();
+    moduleService.RegisterModule();
+
+    if(millis() - lastMillis >= 2*60*1000UL) 
+    {
+      lastMillis = millis();
+      moduleService.UpdateMoistureLevel();
+    }
+
   }
 }
