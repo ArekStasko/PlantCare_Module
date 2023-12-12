@@ -56,17 +56,24 @@ class ModuleService
             client.begin(String(API_BASE_URL) + "/humidity-measurements/Add");
             client.addHeader("Content-Type", "application/json");
 
-            const size_t CAPACITY = JSON_OBJECT_SIZE(1);
-            StaticJsonDocument<CAPACITY> doc;
+            String moduleIdToSent = moduleId;
+            Serial.println(moduleIdToSent);
 
+            const size_t CAPACITY = JSON_OBJECT_SIZE(2);
+            StaticJsonDocument<CAPACITY> doc;
+            Serial.println(moduleId.c_str());
             JsonObject object = doc.to<JsonObject>();
-            object["ModuleId"] = this->moduleId;
+            moduleIdToSent.remove(0, 1);
+            moduleIdToSent.remove(moduleIdToSent.length() - 1);
+            object["ModuleId"] = moduleIdToSent.c_str();
             object["Humidity"] = currentMoistureLevel;
 
             String jsonOutput;
             serializeJson(doc, jsonOutput);
 
-            int httpCode = client.POST(String(jsonOutput));
+            Serial.println(jsonOutput);
+
+            int httpCode = client.POST(jsonOutput);
 
             if(httpCode > 0) 
             {
