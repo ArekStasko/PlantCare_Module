@@ -17,4 +17,14 @@ class LCDService
                 }
                 isProcessed = true;
         }
+
+        void DisplayMessage()
+        {
+
+        }
+
+        void LogInformation()
+        {
+
+        }
 };
