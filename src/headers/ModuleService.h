@@ -6,7 +6,7 @@
 
 class ModuleService
 {
-    #define API_BASE_URL "http://192.168.1.40:8080/api"
+    #define API_BASE_URL "http://192.168.1.40:8080/api/v1"
 
     private:
         Preferences preferences;
