@@ -20,7 +20,7 @@ void loop() {
   if(wifiService.isConnected){
     moduleService.RegisterModule();
 
-    if(millis() - lastMillis >= 30*60*1000UL) 
+    if(millis() - lastMillis >= 2*60*1000UL) 
     {
       lastMillis = millis();
       moduleService.UpdateMoistureLevel();
