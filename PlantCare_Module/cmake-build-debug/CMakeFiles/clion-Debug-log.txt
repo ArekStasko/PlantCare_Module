@@ -1,0 +1,25 @@
+/home/arekstasko/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/arekstasko/.local/share/JetBrains/Toolbox/apps/clion/bin/ninja/linux/x64/ninja -G Ninja -S /home/arekstasko/sources/repos/PlantCare_Module/PlantCare_Module -B /home/arekstasko/sources/repos/PlantCare_Module/PlantCare_Module/cmake-build-debug
+-- IDF_TARGET is not set, guessed 'esp32' from sdkconfig '/home/arekstasko/sources/repos/PlantCare_Module/PlantCare_Module/sdkconfig'
+CMake Warning at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/tools/cmake/idf.cmake:24 (message):
+  IDF_PATH environment variable not found.  Setting IDF_PATH to
+  '/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1'.
+Call Stack (most recent call first):
+  /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/tools/cmake/project.cmake:29 (include)
+  CMakeLists.txt:7 (include)
+
+
+-- Found Git: /usr/bin/git (found version "2.34.1")
+-- The ASM compiler identification is GNU
+-- Found assembler: /usr/bin/cc
+-- Building ESP-IDF components for target esp32
+-- Checking Python dependencies...
+CMake Error at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/tools/cmake/build.cmake:368 (message):
+  Failed to run Python dependency check.  Python: python, Error: no such file
+  or directory
+Call Stack (most recent call first):
+  /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/tools/cmake/build.cmake:502 (__build_check_python)
+  /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/tools/cmake/project.cmake:710 (idf_build_process)
+  CMakeLists.txt:8 (project)
+
+
+-- Configuring incomplete, errors occurred!
