@@ -2,34 +2,34 @@
 	"sources" : 
 	[
 		{
-			"file" : "/home/arekstasko/sources/repos/PlantCare_Module/PlantCare_Module/build/CMakeFiles/bootloader"
+			"file" : "/home/arekstasko/sources/repos/PlantCare_Module/build/CMakeFiles/bootloader"
 		},
 		{
-			"file" : "/home/arekstasko/sources/repos/PlantCare_Module/PlantCare_Module/build/CMakeFiles/bootloader.rule"
+			"file" : "/home/arekstasko/sources/repos/PlantCare_Module/build/CMakeFiles/bootloader.rule"
 		},
 		{
-			"file" : "/home/arekstasko/sources/repos/PlantCare_Module/PlantCare_Module/build/CMakeFiles/bootloader-complete.rule"
+			"file" : "/home/arekstasko/sources/repos/PlantCare_Module/build/CMakeFiles/bootloader-complete.rule"
 		},
 		{
-			"file" : "/home/arekstasko/sources/repos/PlantCare_Module/PlantCare_Module/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+			"file" : "/home/arekstasko/sources/repos/PlantCare_Module/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
 		},
 		{
-			"file" : "/home/arekstasko/sources/repos/PlantCare_Module/PlantCare_Module/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+			"file" : "/home/arekstasko/sources/repos/PlantCare_Module/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
 		},
 		{
-			"file" : "/home/arekstasko/sources/repos/PlantCare_Module/PlantCare_Module/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+			"file" : "/home/arekstasko/sources/repos/PlantCare_Module/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
 		},
 		{
-			"file" : "/home/arekstasko/sources/repos/PlantCare_Module/PlantCare_Module/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+			"file" : "/home/arekstasko/sources/repos/PlantCare_Module/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
 		},
 		{
-			"file" : "/home/arekstasko/sources/repos/PlantCare_Module/PlantCare_Module/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+			"file" : "/home/arekstasko/sources/repos/PlantCare_Module/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
 		},
 		{
-			"file" : "/home/arekstasko/sources/repos/PlantCare_Module/PlantCare_Module/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+			"file" : "/home/arekstasko/sources/repos/PlantCare_Module/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
 		},
 		{
-			"file" : "/home/arekstasko/sources/repos/PlantCare_Module/PlantCare_Module/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+			"file" : "/home/arekstasko/sources/repos/PlantCare_Module/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
 		}
 	],
 	"target" : 

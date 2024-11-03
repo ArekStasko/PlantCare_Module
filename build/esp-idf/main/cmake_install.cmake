@@ -1,4 +1,4 @@
-# Install script for directory: /home/arekstasko/sources/repos/PlantCare_Module/PlantCare_Module/main
+# Install script for directory: /home/arekstasko/sources/repos/PlantCare_Module/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
