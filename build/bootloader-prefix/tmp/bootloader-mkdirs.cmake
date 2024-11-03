@@ -5,18 +5,18 @@ cmake_minimum_required(VERSION 3.5)
 
 file(MAKE_DIRECTORY
   "/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bootloader/subproject"
-  "/home/arekstasko/sources/repos/PlantCare_Module/PlantCare_Module/build/bootloader"
-  "/home/arekstasko/sources/repos/PlantCare_Module/PlantCare_Module/build/bootloader-prefix"
-  "/home/arekstasko/sources/repos/PlantCare_Module/PlantCare_Module/build/bootloader-prefix/tmp"
-  "/home/arekstasko/sources/repos/PlantCare_Module/PlantCare_Module/build/bootloader-prefix/src/bootloader-stamp"
-  "/home/arekstasko/sources/repos/PlantCare_Module/PlantCare_Module/build/bootloader-prefix/src"
-  "/home/arekstasko/sources/repos/PlantCare_Module/PlantCare_Module/build/bootloader-prefix/src/bootloader-stamp"
+  "/home/arekstasko/sources/repos/PlantCare_Module/build/bootloader"
+  "/home/arekstasko/sources/repos/PlantCare_Module/build/bootloader-prefix"
+  "/home/arekstasko/sources/repos/PlantCare_Module/build/bootloader-prefix/tmp"
+  "/home/arekstasko/sources/repos/PlantCare_Module/build/bootloader-prefix/src/bootloader-stamp"
+  "/home/arekstasko/sources/repos/PlantCare_Module/build/bootloader-prefix/src"
+  "/home/arekstasko/sources/repos/PlantCare_Module/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "/home/arekstasko/sources/repos/PlantCare_Module/PlantCare_Module/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "/home/arekstasko/sources/repos/PlantCare_Module/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "/home/arekstasko/sources/repos/PlantCare_Module/PlantCare_Module/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "/home/arekstasko/sources/repos/PlantCare_Module/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
 endif()

@@ -1,4 +1,4 @@
-/* * Data converted from /home/arekstasko/sources/repos/PlantCare_Module/PlantCare_Module/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from /home/arekstasko/sources/repos/PlantCare_Module/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 #if !defined (__APPLE__) && !defined (__linux__)
