@@ -1,0 +1,388 @@
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+[0m
+[0;33m--- 0x40106424: btc_thread_handler at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/common/btc/core/btc_task.c:268
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x4000c469: memset in ROM
+0x40082d2d: esp_reent_init at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/newlib/reent_init.c:24
+0x400d8368: initialize_spp at /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.c:89
+0x400d83af: enable_bt at /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.c:137
+0x400d821a: app_main at /home/arekstasko/sources/repos/PlantCare_Module/main/PlantCare_Module.c:15
+0x4015a873: main_task at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x400900ad: vPortTaskWrapper at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+[0m
+[0;33m--- 0x40106424: btc_thread_handler at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/common/btc/core/btc_task.c:268
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x4000c469: memset in ROM
+0x40082d2d: esp_reent_init at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/newlib/reent_init.c:24
+0x400d8368: initialize_spp at /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.c:89
+0x400d83af: enable_bt at /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.c:137
+0x400d821a: app_main at /home/arekstasko/sources/repos/PlantCare_Module/main/PlantCare_Module.c:15
+0x4015a873: main_task at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x400900ad: vPortTaskWrapper at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+[0m
+[0;33m--- 0x40106424: btc_thread_handler at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/common/btc/core/btc_task.c:268
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x4000c469: memset in ROM
+0x40082d2d: esp_reent_init at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/newlib/reent_init.c:24
+0x400d8368: initialize_spp at /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.c:89
+0x400d83af: enable_bt at /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.c:137
+0x400d821a: app_main at /home/arekstasko/sources/repos/PlantCare_Module/main/PlantCare_Module.c:15
+0x4015a873: main_task at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x400900ad: vPortTaskWrapper at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+[0m
+[0;33m--- 0x40106424: btc_thread_handler at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/common/btc/core/btc_task.c:268
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x4000c469: memset in ROM
+0x40082d2d: esp_reent_init at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/newlib/reent_init.c:24
+0x400d8368: initialize_spp at /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.c:89
+0x400d83af: enable_bt at /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.c:137
+0x400d821a: app_main at /home/arekstasko/sources/repos/PlantCare_Module/main/PlantCare_Module.c:15
+0x4015a873: main_task at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x400900ad: vPortTaskWrapper at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+[0m
+[0;33m--- 0x40106424: btc_thread_handler at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/common/btc/core/btc_task.c:268
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x4000c469: memset in ROM
+0x40082d2d: esp_reent_init at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/newlib/reent_init.c:24
+0x400d8368: initialize_spp at /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.c:89
+0x400d83af: enable_bt at /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.c:137
+0x400d821a: app_main at /home/arekstasko/sources/repos/PlantCare_Module/main/PlantCare_Module.c:15
+0x4015a873: main_task at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x400900ad: vPortTaskWrapper at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+[0m
+[0;33m--- 0x40106424: btc_thread_handler at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/common/btc/core/btc_task.c:268
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x4000c469: memset in ROM
+0x40082d2d: esp_reent_init at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/newlib/reent_init.c:24
+0x400d8368: initialize_spp at /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.c:89
+0x400d83af: enable_bt at /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.c:137
+0x400d821a: app_main at /home/arekstasko/sources/repos/PlantCare_Module/main/PlantCare_Module.c:15
+0x4015a873: main_task at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x400900ad: vPortTaskWrapper at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+[0m
+[0;33m--- 0x40106424: btc_thread_handler at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/common/btc/core/btc_task.c:268
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x4000c469: memset in ROM
+0x40082d2d: esp_reent_init at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/newlib/reent_init.c:24
+0x400d8368: initialize_spp at /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.c:89
+0x400d83af: enable_bt at /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.c:137
+0x400d821a: app_main at /home/arekstasko/sources/repos/PlantCare_Module/main/PlantCare_Module.c:15
+0x4015a873: main_task at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x400900ad: vPortTaskWrapper at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+[0m
+[0;33m--- 0x40106424: btc_thread_handler at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/common/btc/core/btc_task.c:268
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x4000c469: memset in ROM
+0x40082d2d: esp_reent_init at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/newlib/reent_init.c:24
+0x400d8368: initialize_spp at /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.c:89
+0x400d83af: enable_bt at /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.c:137
+0x400d821a: app_main at /home/arekstasko/sources/repos/PlantCare_Module/main/PlantCare_Module.c:15
+0x4015a873: main_task at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x400900ad: vPortTaskWrapper at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+[0m
+[0;33m--- 0x40106424: btc_thread_handler at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/common/btc/core/btc_task.c:268
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x4000c469: memset in ROM
+0x40082d2d: esp_reent_init at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/newlib/reent_init.c:24
+0x400d8368: initialize_spp at /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.c:89
+0x400d83af: enable_bt at /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.c:137
+0x400d821a: app_main at /home/arekstasko/sources/repos/PlantCare_Module/main/PlantCare_Module.c:15
+0x4015a873: main_task at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x400900ad: vPortTaskWrapper at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+[0m
+[0;33m--- 0x40106424: btc_thread_handler at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/common/btc/core/btc_task.c:268
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x4000c469: memset in ROM
+0x40082d2d: esp_reent_init at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/newlib/reent_init.c:24
+0x400d8368: initialize_spp at /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.c:89
+0x400d83af: enable_bt at /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.c:137
+0x400d821a: app_main at /home/arekstasko/sources/repos/PlantCare_Module/main/PlantCare_Module.c:15
+0x4015a873: main_task at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x400900ad: vPortTaskWrapper at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+[0m
+[0;33m--- 0x40106424: btc_thread_handler at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/common/btc/core/btc_task.c:268
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x4000c469: memset in ROM
+0x40082d2d: esp_reent_init at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/newlib/reent_init.c:24
+0x400d8368: initialize_spp at /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.c:89
+0x400d83af: enable_bt at /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.c:137
+0x400d821a: app_main at /home/arekstasko/sources/repos/PlantCare_Module/main/PlantCare_Module.c:15
+0x4015a873: main_task at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x400900ad: vPortTaskWrapper at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+[0m
+[0;33m--- 0x40106424: btc_thread_handler at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/common/btc/core/btc_task.c:268
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x4000c469: memset in ROM
+0x40082d2d: esp_reent_init at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/newlib/reent_init.c:24
+0x400d8368: initialize_spp at /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.c:89
+0x400d83af: enable_bt at /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.c:137
+0x400d821a: app_main at /home/arekstasko/sources/repos/PlantCare_Module/main/PlantCare_Module.c:15
+0x4015a873: main_task at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x400900ad: vPortTaskWrapper at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+[0m
+[0;33m--- 0x40106424: btc_thread_handler at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/common/btc/core/btc_task.c:268
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x4000c469: memset in ROM
+0x40082d2d: esp_reent_init at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/newlib/reent_init.c:24
+0x400d8368: initialize_spp at /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.c:89
+0x400d83af: enable_bt at /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.c:137
+0x400d821a: app_main at /home/arekstasko/sources/repos/PlantCare_Module/main/PlantCare_Module.c:15
+0x4015a873: main_task at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x400900ad: vPortTaskWrapper at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+[0m
+[0;33m--- 0x40106424: btc_thread_handler at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/common/btc/core/btc_task.c:268
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x4000c469: memset in ROM
+0x40082d2d: esp_reent_init at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/newlib/reent_init.c:24
+0x400d8368: initialize_spp at /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.c:89
+0x400d83af: enable_bt at /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.c:137
+0x400d821a: app_main at /home/arekstasko/sources/repos/PlantCare_Module/main/PlantCare_Module.c:15
+0x4015a873: main_task at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x400900ad: vPortTaskWrapper at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+[0m
+[0;33m--- 0x40106424: btc_thread_handler at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/common/btc/core/btc_task.c:268
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x4000c469: memset in ROM
+0x40082d2d: esp_reent_init at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/newlib/reent_init.c:24
+0x400d8368: initialize_spp at /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.c:89
+0x400d83af: enable_bt at /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.c:137
+0x400d821a: app_main at /home/arekstasko/sources/repos/PlantCare_Module/main/PlantCare_Module.c:15
+0x4015a873: main_task at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x400900ad: vPortTaskWrapper at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+[0m
+[0;33m--- 0x40106424: btc_thread_handler at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/common/btc/core/btc_task.c:268
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x4000c469: memset in ROM
+0x40082d2d: esp_reent_init at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/newlib/reent_init.c:24
+0x400d8368: initialize_spp at /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.c:89
+0x400d83af: enable_bt at /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.c:137
+0x400d821a: app_main at /home/arekstasko/sources/repos/PlantCare_Module/main/PlantCare_Module.c:15
+0x4015a873: main_task at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x400900ad: vPortTaskWrapper at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+[0m
+[0;33m--- 0x40106424: btc_thread_handler at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/common/btc/core/btc_task.c:268
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x4000c469: memset in ROM
+0x40082d2d: esp_reent_init at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/newlib/reent_init.c:24
+0x400d8368: initialize_spp at /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.c:89
+0x400d83af: enable_bt at /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.c:137
+0x400d821a: app_main at /home/arekstasko/sources/repos/PlantCare_Module/main/PlantCare_Module.c:15
+0x4015a873: main_task at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x400900ad: vPortTaskWrapper at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+[0m
+[0;33m--- 0x40106424: btc_thread_handler at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/common/btc/core/btc_task.c:268
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x4000c469: memset in ROM
+0x40082d2d: esp_reent_init at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/newlib/reent_init.c:24
+0x400d8368: initialize_spp at /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.c:89
+0x400d83af: enable_bt at /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.c:137
+0x400d821a: app_main at /home/arekstasko/sources/repos/PlantCare_Module/main/PlantCare_Module.c:15
+0x4015a873: main_task at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x400900ad: vPortTaskWrapper at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+[0m
+[0;33m--- 0x40106424: btc_thread_handler at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/common/btc/core/btc_task.c:268
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x4000c469: memset in ROM
+0x40082d2d: esp_reent_init at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/newlib/reent_init.c:24
+0x400d8368: initialize_spp at /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.c:89
+0x400d83af: enable_bt at /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.c:137
+0x400d821a: app_main at /home/arekstasko/sources/repos/PlantCare_Module/main/PlantCare_Module.c:15
+0x4015a873: main_task at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x400900ad: vPortTaskWrapper at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+[0m
+[0;33m--- 0x40106424: btc_thread_handler at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/common/btc/core/btc_task.c:268
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x4000c469: memset in ROM
+0x40082d2d: esp_reent_init at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/newlib/reent_init.c:24
+0x400d8368: initialize_spp at /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.c:89
+0x400d83af: enable_bt at /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.c:137
+0x400d821a: app_main at /home/arekstasko/sources/repos/PlantCare_Module/main/PlantCare_Module.c:15
+0x4015a873: main_task at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x400900ad: vPortTaskWrapper at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+[0m
+[0;33m--- 0x40106424: btc_thread_handler at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/common/btc/core/btc_task.c:268
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x4000c469: memset in ROM
+0x40082d2d: esp_reent_init at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/newlib/reent_init.c:24
+0x400d8368: initialize_spp at /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.c:89
+0x400d83af: enable_bt at /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.c:137
+0x400d821a: app_main at /home/arekstasko/sources/repos/PlantCare_Module/main/PlantCare_Module.c:15
+0x4015a873: main_task at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x400900ad: vPortTaskWrapper at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+[0m
+[0;33m--- 0x40106424: btc_thread_handler at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/common/btc/core/btc_task.c:268
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x4000c469: memset in ROM
+0x40082d2d: esp_reent_init at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/newlib/reent_init.c:24
+0x400d8368: initialize_spp at /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.c:89
+0x400d83af: enable_bt at /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.c:137
+0x400d821a: app_main at /home/arekstasko/sources/repos/PlantCare_Module/main/PlantCare_Module.c:15
+0x4015a873: main_task at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x400900ad: vPortTaskWrapper at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+[0m
+[0;33m--- 0x40106424: btc_thread_handler at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/common/btc/core/btc_task.c:268
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x4000c469: memset in ROM
+0x40082d2d: esp_reent_init at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/newlib/reent_init.c:24
+0x400d8368: initialize_spp at /home/arekstasko/sources/repos/PlantCare_Module/main/services

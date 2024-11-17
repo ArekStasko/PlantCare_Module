@@ -10867,7 +10867,10 @@
                                 "help": "This option is to configure the buffer size of the hci data steam cache in hci debug mode.\nThis is a ring buffer, the new data will overwrite the oldest data if the buffer is full.",
                                 "id": "BT_HCI_LOG_DATA_BUFFER_SIZE",
                                 "name": "BT_HCI_LOG_DATA_BUFFER_SIZE",
-                                "range": null,
+                                "range": [
+                                    1,
+                                    100
+                                ],
                                 "title": "Size of the cache used for HCI data in Bluetooth HCI debug mode (N*1024 bytes)",
                                 "type": "int"
                             },
@@ -10877,7 +10880,10 @@
                                 "help": "This option is to configure the buffer size of the hci adv report cache in hci debug mode.\nThis is a ring buffer, the new data will overwrite the oldest data if the buffer is full.",
                                 "id": "BT_HCI_LOG_ADV_BUFFER_SIZE",
                                 "name": "BT_HCI_LOG_ADV_BUFFER_SIZE",
-                                "range": null,
+                                "range": [
+                                    1,
+                                    100
+                                ],
                                 "title": "Size of the cache used for adv report in Bluetooth HCI debug mode (N*1024 bytes)",
                                 "type": "int"
                             }
