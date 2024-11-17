@@ -1,0 +1,8 @@
+/home/arekstasko/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/arekstasko/.local/share/JetBrains/Toolbox/apps/clion/bin/ninja/linux/x64/ninja -G Ninja -S /home/arekstasko/sources/repos/PlantCare_Module -B /home/arekstasko/sources/repos/PlantCare_Module/cmake-build-debug
+CMake Error at CMakeLists.txt:7 (include):
+  include could not find requested file:
+
+    /tools/cmake/project.cmake
+
+
+-- Configuring incomplete, errors occurred!

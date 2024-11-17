@@ -1,0 +1,67 @@
+[1/5] cd /home/arekstasko/sources/repos/PlantCare_Module/build/esp-idf/esptool_py && /home/arekstasko/.espressif/python_env/idf5.3_py3.10_env/bin/python /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/arekstasko/sources/repos/PlantCare_Module/build/partition_table/partition-table.bin /home/arekstasko/sources/repos/PlantCare_Module/build/PlantCare_Module.bin
+PlantCare_Module.bin binary size 0xcd8c0 bytes. Smallest app partition is 0x100000 bytes. 0x32740 bytes (20%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cd /home/arekstasko/sources/repos/PlantCare_Module/build/bootloader/esp-idf/esptool_py && /home/arekstasko/.espressif/python_env/idf5.3_py3.10_env/bin/python /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/arekstasko/sources/repos/PlantCare_Module/build/bootloader/bootloader.bin
+Bootloader binary size 0x6880 bytes. 0x780 bytes (7%) free.
+[2/3] cd /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esptool_py && /home/arekstasko/.espressif/tools/cmake/3.24.0/bin/cmake -D IDF_PATH=/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1 -D "SERIAL_TOOL=/home/arekstasko/.espressif/python_env/idf5.3_py3.10_env/bin/python;;/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/arekstasko/sources/repos/PlantCare_Module/build -P /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 115200 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 PlantCare_Module.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.1
+Serial port /dev/ttyUSB0
+Connecting.........
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+WARNING: Detected crystal freq 15.55MHz is quite different to normalized freq 26MHz. Unsupported crystal in use?
+Crystal is 26MHz
+MAC: f0:24:f9:44:30:a8
+Uploading stub...
+Running stub...
+Stub running...
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000ddfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 26752 bytes to 16358...
+Writing at 0x00001000... (100 %)
+Wrote 26752 bytes (16358 compressed) at 0x00001000 in 0.9 seconds (effective 235.9 kbit/s)...
+Hash of data verified.
+Compressed 841920 bytes to 481448...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001f169... (6 %)
+Writing at 0x0002d9f0... (10 %)
+Writing at 0x00039da7... (13 %)
+Writing at 0x0003fd09... (16 %)
+Writing at 0x000458f7... (20 %)
+Writing at 0x0004b91e... (23 %)
+Writing at 0x00051520... (26 %)
+Writing at 0x00057028... (30 %)
+Writing at 0x0005cbec... (33 %)
+Writing at 0x000624d3... (36 %)
+Writing at 0x0006947f... (40 %)
+Writing at 0x0006f361... (43 %)
+Writing at 0x00075923... (46 %)
+Writing at 0x0007be4f... (50 %)
+Writing at 0x00081ec3... (53 %)
+Writing at 0x00087e41... (56 %)
+Writing at 0x0008dd80... (60 %)
+Writing at 0x00093c85... (63 %)
+Writing at 0x0009a029... (66 %)
+Writing at 0x0009fc07... (70 %)
+Writing at 0x000a55d7... (73 %)
+Writing at 0x000ab660... (76 %)
+Writing at 0x000b19db... (80 %)
+Writing at 0x000b7c7b... (83 %)
+Writing at 0x000c2276... (86 %)
+Writing at 0x000c98cf... (90 %)
+Writing at 0x000cf4f7... (93 %)
+Writing at 0x000d4f58... (96 %)
+Writing at 0x000db0d1... (100 %)
+Wrote 841920 bytes (481448 compressed) at 0x00010000 in 16.7 seconds (effective 402.2 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 457.5 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
