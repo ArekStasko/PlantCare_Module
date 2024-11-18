@@ -8,7 +8,6 @@
 #include "esp_bt_defs.h"
 #include "esp_bt_main.h"
 #include "esp_bt_device.h"
-#include "esp_spp_api.h"
 
 #define PLANT_CARE_DEVICE_NAME "PLANTCARE_MODULE"
 
@@ -68,19 +67,6 @@ static void set_scan_mode(void)
     }
 }
 
-static void spp_callback(esp_bt_gap_cb_event_t event, esp_bt_gap_cb_param_t *param)
-{
-    switch (event) {
-        case ESP_SPP_INIT_EVT:
-            printf("SPP initialized successfully.\n");
-        break;
-
-        default:
-            printf("Unhandled SPP event: %d\n", event);
-        break;
-    }
-}
-
 static void bt_gap_callback(esp_bt_gap_cb_event_t event, esp_bt_gap_cb_param_t *param)
 {
     switch (event) {
@@ -127,22 +113,4 @@ void enable_bt(void)
     esp_bt_gap_set_pin(pin_type, 4, pin_code);
 
     esp_bt_gap_register_callback(spp_callback);
-
-    esp_err_t err = esp_spp_register_callback(spp_callback);
-    if (err != ESP_OK) {
-        printf("Failed to register SPP callback: %s\n", esp_err_to_name(err));
-        return;
-    }
-
-    err = esp_spp_init(ESP_SPP_MODE_CB);
-    if (err != ESP_OK) {
-        printf("Failed to initialize SPP: %s\n", esp_err_to_name(err));
-        return;
-    }
-
-    err = esp_spp_start_srv(ESP_SPP_SEC_NONE, ESP_SPP_ROLE_MASTER, 0, "plcrserver");
-    if (err != ESP_OK) {
-        printf("Failed to start SPP server: %s\n", esp_err_to_name(err));
-        return;
-    }
 }
