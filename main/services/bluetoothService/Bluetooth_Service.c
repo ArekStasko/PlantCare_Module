@@ -8,6 +8,7 @@
 #include "esp_bt_defs.h"
 #include "esp_bt_main.h"
 #include "esp_bt_device.h"
+#include "esp_gatt_defs.h"
 
 #define PLANT_CARE_DEVICE_NAME "PLANTCARE_MODULE"
 
