@@ -1,0 +1,68 @@
+[1/5] cd /home/arekstasko/sources/repos/PlantCare_Module/build/esp-idf/esptool_py && /home/arekstasko/.espressif/python_env/idf5.3_py3.10_env/bin/python /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/arekstasko/sources/repos/PlantCare_Module/build/partition_table/partition-table.bin /home/arekstasko/sources/repos/PlantCare_Module/build/PlantCare_Module.bin
+PlantCare_Module.bin binary size 0xdd490 bytes. Smallest app partition is 0x100000 bytes. 0x22b70 bytes (14%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cd /home/arekstasko/sources/repos/PlantCare_Module/build/bootloader/esp-idf/esptool_py && /home/arekstasko/.espressif/python_env/idf5.3_py3.10_env/bin/python /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/arekstasko/sources/repos/PlantCare_Module/build/bootloader/bootloader.bin
+Bootloader binary size 0x6880 bytes. 0x780 bytes (7%) free.
+[2/3] cd /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esptool_py && /home/arekstasko/.espressif/tools/cmake/3.24.0/bin/cmake -D IDF_PATH=/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1 -D "SERIAL_TOOL=/home/arekstasko/.espressif/python_env/idf5.3_py3.10_env/bin/python;;/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/arekstasko/sources/repos/PlantCare_Module/build -P /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 115200 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 PlantCare_Module.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.1
+Serial port /dev/ttyUSB0
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: f0:24:f9:44:30:a8
+Uploading stub...
+Running stub...
+Stub running...
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000edfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 26752 bytes to 16358...
+Writing at 0x00001000... (100 %)
+Wrote 26752 bytes (16358 compressed) at 0x00001000 in 1.8 seconds (effective 118.2 kbit/s)...
+Hash of data verified.
+Compressed 906384 bytes to 518135...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001eec3... (6 %)
+Writing at 0x0002ebcd... (9 %)
+Writing at 0x00038f9d... (12 %)
+Writing at 0x0004281a... (15 %)
+Writing at 0x0004821b... (18 %)
+Writing at 0x0004de96... (21 %)
+Writing at 0x00053a7f... (25 %)
+Writing at 0x00059562... (28 %)
+Writing at 0x0005f1a0... (31 %)
+Writing at 0x00064b7c... (34 %)
+Writing at 0x0006baf0... (37 %)
+Writing at 0x000719c4... (40 %)
+Writing at 0x00077de1... (43 %)
+Writing at 0x0007e572... (46 %)
+Writing at 0x00084401... (50 %)
+Writing at 0x0008a644... (53 %)
+Writing at 0x00090628... (56 %)
+Writing at 0x00096568... (59 %)
+Writing at 0x0009c5c2... (62 %)
+Writing at 0x000a278a... (65 %)
+Writing at 0x000a84ed... (68 %)
+Writing at 0x000ae048... (71 %)
+Writing at 0x000b3fb5... (75 %)
+Writing at 0x000ba242... (78 %)
+Writing at 0x000c00b9... (81 %)
+Writing at 0x000c9606... (84 %)
+Writing at 0x000d1d9e... (87 %)
+Writing at 0x000d7f01... (90 %)
+Writing at 0x000dd9f3... (93 %)
+Writing at 0x000e3466... (96 %)
+Writing at 0x000e961f... (100 %)
+Wrote 906384 bytes (518135 compressed) at 0x00010000 in 45.8 seconds (effective 158.5 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 437.5 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
