@@ -1,0 +1,152 @@
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081360: call_start_cpu1 at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_system/port/cpu_start.c:190
+[0m
+[0;33m--- 0x400d3318: __esp_system_init_fn_init_efuse_check at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/efuse/src/esp_efuse_startup.c:31
+[0m
+[0;33m--- 0x400d37ec: __esp_system_init_fn_init_show_cpu_freq at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_system/startup_funcs.c:58
+[0m
+[0;33m--- 0x400d3258: __esp_system_init_fn_init_show_app_info at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_app_format/esp_app_desc.c:104
+[0m
+[0;33m--- 0x400d332c: __esp_system_init_fn_init_efuse_show_app_info at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/efuse/src/esp_efuse_startup.c:41
+[0m
+[0;33m--- 0x400d5080: __esp_system_init_fn_init_heap at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/heap/heap_caps_init.c:25
+[0m
+[0;33m--- 0x40080000: _WindowOverflow4 at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:2027
+[0m
+[0;33m--- 0x40080000: _WindowOverflow4 at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:2027
+[0m
+[0;33m--- 0x40000000: _WindowOverflow4 in ROM
+[0m
+[0;33m--- 0x40000000: _WindowOverflow4 in ROM
+[0m
+[0;33m--- 0x40080000: _WindowOverflow4 at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:2027
+[0m
+[0;33m--- 0x40080000: _WindowOverflow4 at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:2027
+0x40080000: _WindowOverflow4 at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:2027
+[0m
+[0;33m--- 0x40080000: _WindowOverflow4 at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:2027
+0x40082000: ipc_task at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_system/esp_ipc.c:64 (discriminator 1)
+[0m
+[0;33m--- 0x40080000: _WindowOverflow4 at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:2027
+0x40082000: ipc_task at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_system/esp_ipc.c:64 (discriminator 1)
+0x40080000: _WindowOverflow4 at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:2027
+[0m
+[0;33m--- 0x40082000: ipc_task at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_system/esp_ipc.c:64 (discriminator 1)
+0x40084000: bootloader_flash_execute_command_common at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bootloader_support/bootloader_flash/src/bootloader_flash.c:635 (discriminator 1)
+[0m
+[0;33m--- 0x40082000: ipc_task at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_system/esp_ipc.c:64 (discriminator 1)
+0x40084000: bootloader_flash_execute_command_common at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bootloader_support/bootloader_flash/src/bootloader_flash.c:635 (discriminator 1)
+0x40080000: _WindowOverflow4 at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:2027
+[0m
+[0;33m--- 0x40084000: bootloader_flash_execute_command_common at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bootloader_support/bootloader_flash/src/bootloader_flash.c:635 (discriminator 1)
+0x40086000: coex_core_ts_start at ??:?
+[0m
+[0;33m--- 0x40084000: bootloader_flash_execute_command_common at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bootloader_support/bootloader_flash/src/bootloader_flash.c:635 (discriminator 1)
+0x40086000: coex_core_ts_start at ??:?
+0x40080000: _WindowOverflow4 at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:2027
+[0m
+[0;33m--- 0x40086000: coex_core_ts_start at ??:?
+0x40088000: write_txrate_power_offset at /home/lxf/gittree/chip7.1_phy/chip_7.1/board_code/app_test/pp/phy/phy_chip_v7_cal.c:1801
+[0m
+[0;33m--- 0x40086000: coex_core_ts_start at ??:?
+0x40088000: write_txrate_power_offset at /home/lxf/gittree/chip7.1_phy/chip_7.1/board_code/app_test/pp/phy/phy_chip_v7_cal.c:1801
+0x40080000: _WindowOverflow4 at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:2027
+[0m
+[0;33m--- 0x40088000: write_txrate_power_offset at /home/lxf/gittree/chip7.1_phy/chip_7.1/board_code/app_test/pp/phy/phy_chip_v7_cal.c:1801
+0x4008a000: ke_task_schedule at ke_task.c:?
+[0m
+[0;33m--- 0x40088000: write_txrate_power_offset at /home/lxf/gittree/chip7.1_phy/chip_7.1/board_code/app_test/pp/phy/phy_chip_v7_cal.c:1801
+0x4008a000: ke_task_schedule at ke_task.c:?
+0x40080000: _WindowOverflow4 at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:2027
+[0m
+[0;33m--- 0x4008a000: ke_task_schedule at ke_task.c:?
+0x4008c000: rf_rw_force_agc_enable at rf_espressif.c:?
+[0m
+[0;33m--- 0x4008a000: ke_task_schedule at ke_task.c:?
+0x4008c000: rf_rw_force_agc_enable at rf_espressif.c:?
+0x40080000: _WindowOverflow4 at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:2027
+[0m
+[0;33m--- 0x4008c000: rf_rw_force_agc_enable at rf_espressif.c:?
+0x4008e000: rtc_clk_cal_internal at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_hw_support/port/esp32/rtc_time.c:39 (discriminator 1)
+[0m
+[0;33m--- 0x4008c000: rf_rw_force_agc_enable at rf_espressif.c:?
+0x4008e000: rtc_clk_cal_internal at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_hw_support/port/esp32/rtc_time.c:39 (discriminator 1)
+0x40080000: _WindowOverflow4 at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:2027
+[0m
+[0;33m--- 0x4008e000: rtc_clk_cal_internal at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_hw_support/port/esp32/rtc_time.c:39 (discriminator 1)
+0x40090000: uxInitialiseStackFrame at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:320
+ (inlined by) pxPortInitialiseStack at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:426
+[0m
+[0;33m--- 0x4008e000: rtc_clk_cal_internal at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_hw_support/port/esp32/rtc_time.c:39 (discriminator 1)
+0x40090000: uxInitialiseStackFrame at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:320
+ (inlined by) pxPortInitialiseStack at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:426
+0x40080000: _WindowOverflow4 at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:2027
+[0m
+[0;33m--- 0x40090000: uxInitialiseStackFrame at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:320
+ (inlined by) pxPortInitialiseStack at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:426
+0x40092000: xTaskResumeAll at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/tasks.c:2608
+[0m
+[0;33m--- 0x40090000: uxInitialiseStackFrame at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:320
+ (inlined by) pxPortInitialiseStack at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:426
+0x40092000: xTaskResumeAll at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/tasks.c:2608
+0x40080000: _WindowOverflow4 at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:2027
+[0m
+[0;33m--- 0x40092000: xTaskResumeAll at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/tasks.c:2608
+0x40094000: wdt_hal_enable at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/hal/wdt_hal_iram.c:147
+[0m
+[0;33m--- 0x40092000: xTaskResumeAll at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/tasks.c:2608
+0x40094000: wdt_hal_enable at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/hal/wdt_hal_iram.c:147
+0x40080000: _WindowOverflow4 at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:2027
+[0m
+[0;33m--- 0x40094000: wdt_hal_enable at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/hal/wdt_hal_iram.c:147
+0x40096000: bt_bb_init_cmplx at /home/qgu/git_tree/chip7.1_rtc/board_code/app_test/pp/rtc/bt_bb.c:210
+[0m
+[0;33m--- 0x40094000: wdt_hal_enable at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/hal/wdt_hal_iram.c:147
+0x40096000: bt_bb_init_cmplx at /home/qgu/git_tree/chip7.1_rtc/board_code/app_test/pp/rtc/bt_bb.c:210
+0x40080000: _WindowOverflow4 at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:2027
+[0m
+[0;33m--- 0x40096000: bt_bb_init_cmplx at /home/qgu/git_tree/chip7.1_rtc/board_code/app_test/pp/rtc/bt_bb.c:210
+[0m
+[0;33m--- 0x40096000: bt_bb_init_cmplx at /home/qgu/git_tree/chip7.1_rtc/board_code/app_test/pp/rtc/bt_bb.c:210
+0x40080000: _WindowOverflow4 at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:2027
+[0m
+[0;33m--- 0x400d657c: __esp_system_init_fn_esp_timer_init_nonos at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_timer/src/esp_timer_init.c:28
+[0m
+[0;33m--- 0x400d5fc8: __esp_system_init_fn_init_newlib at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/newlib/newlib_init.c:162
+[0m
+[0;33m--- 0x400d3830: __esp_system_init_fn_init_brownout at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_system/startup_funcs.c:67
+[0m
+[0;33m--- 0x400d383c: __esp_system_init_fn_init_newlib_time at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_system/startup_funcs.c:81
+[0m
+[0;33m--- 0x400d7784: __esp_system_init_fn_init_vfs_uart at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_driver_uart/src/uart_vfs.c:1080
+[0m
+[0;33m--- 0x400d8160: __esp_system_init_fn_init_vfs_console at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_vfs_console/vfs_console.c:222
+[0m
+[0;33m--- 0x400d6034: __esp_system_init_fn_init_newlib_stdio at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/newlib/newlib_init.c:207
+[0m
+[0;33m--- 0x400d6398: __esp_system_init_fn_init_pthread at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/pthread/pthread.c:76
+[0m
+[0;33m--- 0x400d3848: __esp_system_init_fn_init_flash at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_system/startup_funcs.c:88
+[0m
+[0;33m--- 0x400d33b8: __esp_system_init_fn_init_efuse at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/efuse/src/esp_efuse_startup.c:137
+[0m
+[0;33m--- 0x4011d8c8: _GLOBAL__sub_I__ZN17__eh_globals_init7_S_initE at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_globals.cc:162
+[0m
+[0;33m--- 0x4011bbf8: s_set_default_wifi_log_level at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_wifi/src/wifi_init.c:89
+[0m
+[0;33m--- 0x4008e3f8: enable_timer_group0_for_calibration at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_hw_support/port/esp32/rtc_time.c:197
+[0m
+[0;33m--- 0x400d48c0: esp_ipc_init at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_system/esp_ipc.c:113
+[0m
+[0;33m--- 0x400d3e00: esp_reset_reason_init at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_system/port/soc/esp32/reset_reason.c:60
+[0m
+[0;33m--- 0x4011805c: __esp_system_init_fn_esp_timer_init_os at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_timer/src/esp_timer.c:587
+[0m
+[0;33m--- 0x400d386c: __esp_system_init_fn_init_coexist at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_system/startup_funcs.c:134
+[0m
+[0;33m--- 0x400d3880: __esp_system_init_fn_init_disable_rtc_wdt at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_system/startup_funcs.c:143
+[0m
+[0m

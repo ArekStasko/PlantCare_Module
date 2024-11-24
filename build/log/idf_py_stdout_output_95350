@@ -1,6 +1,0 @@
-[0/1] Re-running CMake...
--- Building ESP-IDF components for target esp32
--- Configuring incomplete, errors occurred!
-See also "/home/arekstasko/sources/repos/PlantCare_Module/build/CMakeFiles/CMakeOutput.log".
-FAILED: build.ninja 
-/home/arekstasko/.espressif/tools/cmake/3.24.0/bin/cmake --regenerate-during-build -S/home/arekstasko/sources/repos/PlantCare_Module -B/home/arekstasko/sources/repos/PlantCare_Module/build
