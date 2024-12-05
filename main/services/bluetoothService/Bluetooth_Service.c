@@ -13,7 +13,7 @@
 #include "services/gatt/ble_svc_gatt.h"
 #include "sdkconfig.h"
 
-char *TAG = "BLE-Server";
+char *TAG = "Plantcare Module";
 uint8_t ble_addr_type;
 static void ble_app_advertise(void);
 
@@ -93,12 +93,11 @@ static void ble_app_advertise(void)
     struct ble_hs_adv_fields fields;
     const char *device_name;
     memset(&fields, 0, sizeof(fields));
-    device_name = ble_svc_gap_device_name(); // Read the BLE device name
+    device_name = ble_svc_gap_device_name();
     fields.name = (uint8_t *)device_name;
     fields.name_len = strlen(device_name);
     fields.name_is_complete = 1;
     ble_gap_adv_set_fields(&fields);
-
     struct ble_gap_adv_params adv_params;
     memset(&adv_params, 0, sizeof(adv_params));
     adv_params.conn_mode = BLE_GAP_CONN_MODE_UND;

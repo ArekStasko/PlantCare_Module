@@ -1,0 +1,331 @@
+[0m
+[0m
+[0m
+[0m
+[0m
+[0m
+[0m
+[0m
+[0m
+[0m
+[0m
+[0m
+[0m
+[0m
+[0m
+[0m
+[0m
+[0m
+[0m
+[0m
+[0m
+[0m
+[0m
+[0m
+[0m
+[0m
+[0m
+[0m
+[0m
+[0m
+[0m
+[0m
+[0m
+[0m
+[0m
+[0m
+[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;[0;ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Dec  1 2024 18:55:54[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=180c4h ( 98500) map[0m
+[0;32mI (139) esp_image: segment 1: paddr=000280ec vaddr=3ffbdb60 size=04d78h ( 19832) load[0m
+[0;32mI (146) esp_image: segment 2: paddr=0002ce6c vaddr=40080000 size=031ach ( 12716) load[0m
+[0;32mI (151) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=537d4h (341972) map[0m
+[0;32mI (270) esp_image: segment 4: paddr=000837fc vaddr=400831ac size=14738h ( 83768) load[0m
+[0;32mI (315) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (315) boot: Disabling RNG early entropy source...[0m
+V (327) mmap: after coalescing, 3 regions are left[0m
+[0;32mI (327) cpu_start: Multicore app[0m
+D (327) cpu_start: Pro cpu up[0m
+D (330) cpu_start: Starting app cpu, entry point is 0x40081260[0m
+D (0) cpu_start: App cpu up[0m
+D (343) clk: RTC_SLOW_CLK calibration value: 3008627[0m
+D (355) cpu_start: calling init function: 0x400d1cdc on core: 0[0m
+D (355) cpu_start: calling init function: 0x400d21dc on core: 0[0m
+[0;32mI (358) cpu_start: Pro cpu start user code[0m
+[0;32mI (362) cpu_start: cpu freq: 160000000 Hz[0m
+D (367) cpu_start: calling init function: 0x400d1c1c on core: 0[0m
+[0;32mI (373) app_init: Application information:[0m
+[0;32mI (378) app_init: Project name:     PlantCare_Module[0m
+[0;32mI (383) app_init: App version:      d1e187d-dirty[0m
+[0;32mI (389) app_init: Compile time:     Dec  3 2024 20:26:58[0m
+[0;32mI (395) app_init: ELF file SHA256:  3b579a0de...[0m
+[0;32mI (400) app_init: ESP-IDF:          v5.3.1-dirty[0m
+D (405) cpu_start: calling init function: 0x400d1cf0 on core: 0[0m
+[0;32mI (411) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (416) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (421) efuse_init: Chip rev:         v3.1[0m
+D (426) cpu_start: calling init function: 0x400d3a70 on core: 0[0m
+V (432) memory_layout: reserved range is 0x3f417fec - 0x3f418054[0m
+D (438) memory_layout: Checking 13 reserved memory ranges:[0m
+D (443) memory_layout: Reserved memory range 0x3ff82000 - 0x3ff82000[0m
+D (450) memory_layout: Reserved memory range 0x3ffae000 - 0x3ffae6e0[0m
+D (456) memory_layout: Reserved memory range 0x3ffae6e0 - 0x3ffaff10[0m
+D (463) memory_layout: Reserved memory range 0x3ffb0000 - 0x3ffb6388[0m
+D (469) memory_layout: Reserved memory range 0x3ffb8000 - 0x3ffb9a20[0m
+D (476) memory_layout: Reserved memory range 0x3ffbdb28 - 0x3ffbdb5c[0m
+D (482) memory_layout: Reserved memory range 0x3ffbdb60 - 0x3ffc5630[0m
+D (488) memory_layout: Reserved memory range 0x3ffe0000 - 0x3ffe0440[0m
+D (495) memory_layout: Reserved memory range 0x3ffe3f20 - 0x3ffe4350[0m
+D (501) memory_layout: Reserved memory range 0x40070000 - 0x40078000[0m
+D (508) memory_layout: Reserved memory range 0x40078000 - 0x40080000[0m
+D (514) memory_layout: Reserved memory range 0x40080000 - 0x400978e4[0m
+D (521) memory_layout: Reserved memory range 0x50001fe8 - 0x50002000[0m
+D (527) memory_layout: Building list of available memory regions:[0m
+V (533) memory_layout: Examining memory region 0x3ffae000 - 0x3ffb0000[0m
+V (540) memory_layout: Start of region 0x3ffae000 - 0x3ffb0000 overlaps reserved 0x3ffae000 - 0x3ffae6e0[0m
+V (549) memory_layout: Start of region 0x3ffae6e0 - 0x3ffb0000 overlaps reserved 0x3ffae6e0 - 0x3ffaff10[0m
+D (559) memory_layout: Available memory region 0x3ffaff10 - 0x3ffb0000[0m
+V (565) memory_layout: Examining memory region 0x3ffb0000 - 0x3ffb8000[0m
+V (572) memory_layout: Start of region 0x3ffb0000 - 0x3ffb8000 overlaps reserved 0x3ffb0000 - 0x3ffb6388[0m
+D (582) memory_layout: Available memory region 0x3ffb6388 - 0x3ffb8000[0m
+V (588) memory_layout: Examining memory region 0x3ffb8000 - 0x3ffc0000[0m
+V (595) memory_layout: Start of region 0x3ffb8000 - 0x3ffc0000 overlaps reserved 0x3ffb8000 - 0x3ffb9a20[0m
+V (604) memory_layout: Region 0x3ffb9a20 - 0x3ffc0000 contains reserved 0x3ffbdb28 - 0x3ffbdb5c[0m
+D (613) memory_layout: Available memory region 0x3ffb9a20 - 0x3ffbdb28[0m
+V (620) memory_layout: Examining memory region 0x3ffbdb5c - 0x3ffc0000[0m
+V (626) memory_layout: End of region 0x3ffbdb5c - 0x3ffc0000 overlaps reserved 0x3ffbdb60 - 0x3ffc5630[0m
+V (636) memory_layout: Examining memory region 0x3ffc0000 - 0x3ffc2000[0m
+V (642) memory_layout: Region 0x3ffc0000 - 0x3ffc2000 inside of reserved 0x3ffbdb60 - 0x3ffc5630[0m
+V (651) memory_layout: Examining memory region 0x3ffc2000 - 0x3ffc4000[0m
+V (658) memory_layout: Region 0x3ffc2000 - 0x3ffc4000 inside of reserved 0x3ffbdb60 - 0x3ffc5630[0m
+V (667) memory_layout: Examining memory region 0x3ffc4000 - 0x3ffc6000[0m
+V (673) memory_layout: Start of region 0x3ffc4000 - 0x3ffc6000 overlaps reserved 0x3ffbdb60 - 0x3ffc5630[0m
+D (683) memory_layout: Available memory region 0x3ffc5630 - 0x3ffc6000[0m
+V (689) memory_layout: Examining memory region 0x3ffc6000 - 0x3ffc8000[0m
+D (696) memory_layout: Available memory region 0x3ffc6000 - 0x3ffc8000[0m
+V (702) memory_layout: Examining memory region 0x3ffc8000 - 0x3ffca000[0m
+D (709) memory_layout: Available memory region 0x3ffc8000 - 0x3ffca000[0m
+V (716) memory_layout: Examining memory region 0x3ffca000 - 0x3ffcc000[0m
+D (722) memory_layout: Available memory region 0x3ffca000 - 0x3ffcc000[0m
+V (729) memory_layout: Examining memory region 0x3ffcc000 - 0x3ffce000[0m
+D (735) memory_layout: Available memory region 0x3ffcc000 - 0x3ffce000[0m
+V (742) memory_layout: Examining memory region 0x3ffce000 - 0x3ffd0000[0m
+D (749) memory_layout: Available memory region 0x3ffce000 - 0x3ffd0000[0m
+V (755) memory_layout: Examining memory region 0x3ffd0000 - 0x3ffd2000[0m
+D (762) memory_layout: Available memory region 0x3ffd0000 - 0x3ffd2000[0m
+V (768) memory_layout: Examining memory region 0x3ffd2000 - 0x3ffd4000[0m
+D (775) memory_layout: Available memory region 0x3ffd2000 - 0x3ffd4000[0m
+V (782) memory_layout: Examining memory region 0x3ffd4000 - 0x3ffd6000[0m
+D (788) memory_layout: Available memory region 0x3ffd4000 - 0x3ffd6000[0m
+V (795) memory_layout: Examining memory region 0x3ffd6000 - 0x3ffd8000[0m
+D (801) memory_layout: Available memory region 0x3ffd6000 - 0x3ffd8000[0m
+V (808) memory_layout: Examining memory region 0x3ffd8000 - 0x3ffda000[0m
+D (815) memory_layout: Available memory region 0x3ffd8000 - 0x3ffda000[0m
+V (821) memory_layout: Examining memory region 0x3ffda000 - 0x3ffdc000[0m
+D (828) memory_layout: Available memory region 0x3ffda000 - 0x3ffdc000[0m
+V (834) memory_layout: Examining memory region 0x3ffdc000 - 0x3ffde000[0m
+D (841) memory_layout: Available memory region 0x3ffdc000 - 0x3ffde000[0m
+V (848) memory_layout: Examining memory region 0x3ffde000 - 0x3ffe0000[0m
+D (854) memory_layout: Available memory region 0x3ffde000 - 0x3ffe0000[0m
+V (861) memory_layout: Examining memory region 0x3ffe0000 - 0x3ffe4000[0m
+V (867) memory_layout: Start of region 0x3ffe0000 - 0x3ffe4000 overlaps reserved 0x3ffe0000 - 0x3ffe0440[0m
+V (877) memory_layout: End of region 0x3ffe0440 - 0x3ffe4000 overlaps reserved 0x3ffe3f20 - 0x3ffe4350[0m
+D (886) memory_layout: Available memory region 0x3ffe0440 - 0x3ffe3f20[0m
+V (893) memory_layout: Examining memory region 0x3ffe4000 - 0x3ffe8000[0m
+V (900) memory_layout: Start of region 0x3ffe4000 - 0x3ffe8000 overlaps reserved 0x3ffe3f20 - 0x3ffe4350[0m
+D (909) memory_layout: Available memory region 0x3ffe4350 - 0x3ffe8000[0m
+V (916) memory_layout: Examining memory region 0x3ffe8000 - 0x3fff0000[0m
+D (922) memory_layout: Available memory region 0x3ffe8000 - 0x3fff0000[0m
+V (929) memory_layout: Examining memory region 0x3fff0000 - 0x3fff8000[0m
+D (935) memory_layout: Available memory region 0x3fff0000 - 0x3fff8000[0m
+V (942) memory_layout: Examining memory region 0x3fff8000 - 0x3fffc000[0m
+D (949) memory_layout: Available memory region 0x3fff8000 - 0x3fffc000[0m
+V (955) memory_layout: Examining memory region 0x3fffc000 - 0x40000000[0m
+D (962) memory_layout: Available memory region 0x3fffc000 - 0x40000000[0m
+V (968) memory_layout: Examining memory region 0x40070000 - 0x40078000[0m
+V (975) memory_layout: Region 0x40070000 - 0x40078000 inside of reserved 0x40070000 - 0x40078000[0m
+V (984) memory_layout: Examining memory region 0x40078000 - 0x40080000[0m
+V (990) memory_layout: Region 0x40078000 - 0x40080000 inside of reserved 0x40078000 - 0x40080000[0m
+V (999) memory_layout: Examining memory region 0x40080000 - 0x40082000[0m
+V (1006) memory_layout: Region 0x40080000 - 0x40082000 inside of reserved 0x40080000 - 0x400978e4[0m
+V (1015) memory_layout: Examining memory region 0x40082000 - 0x40084000[0m
+V (1022) memory_layout: Region 0x40082000 - 0x40084000 inside of reserved 0x40080000 - 0x400978e4[0m
+V (1030) memory_layout: Examining memory region 0x40084000 - 0x40086000[0m
+V (1037) memory_layout: Region 0x40084000 - 0x40086000 inside of reserved 0x40080000 - 0x400978e4[0m
+V (1046) memory_layout: Examining memory region 0x40086000 - 0x40088000[0m
+V (1053) memory_layout: Region 0x40086000 - 0x40088000 inside of reserved 0x40080000 - 0x400978e4[0m
+V (1062) memory_layout: Examining memory region 0x40088000 - 0x4008a000[0m
+V (1068) memory_layout: Region 0x40088000 - 0x4008a000 inside of reserved 0x40080000 - 0x400978e4[0m
+V (1077) memory_layout: Examining memory region 0x4008a000 - 0x4008c000[0m
+V (1084) memory_layout: Region 0x4008a000 - 0x4008c000 inside of reserved 0x40080000 - 0x400978e4[0m
+V (1093) memory_layout: Examining memory region 0x4008c000 - 0x4008e000[0m
+V (1100) memory_layout: Region 0x4008c000 - 0x4008e000 inside of reserved 0x40080000 - 0x400978e4[0m
+V (1109) memory_layout: Examining memory region 0x4008e000 - 0x40090000[0m
+V (1115) memory_layout: Region 0x4008e000 - 0x40090000 inside of reserved 0x40080000 - 0x400978e4[0m
+V (1124) memory_layout: Examining memory region 0x40090000 - 0x40092000[0m
+V (1131) memory_layout: Region 0x40090000 - 0x40092000 inside of reserved 0x40080000 - 0x400978e4[0m
+V (1140) memory_layout: Examining memory region 0x40092000 - 0x40094000[0m
+V (1147) memory_layout: Region 0x40092000 - 0x40094000 inside of reserved 0x40080000 - 0x400978e4[0m
+V (1155) memory_layout: Examining memory region 0x40094000 - 0x40096000[0m
+V (1162) memory_layout: Region 0x40094000 - 0x40096000 inside of reserved 0x40080000 - 0x400978e4[0m
+V (1171) memory_layout: Examining memory region 0x40096000 - 0x40098000[0m
+V (1178) memory_layout: Start of region 0x40096000 - 0x40098000 overlaps reserved 0x40080000 - 0x400978e4[0m
+D (1187) memory_layout: Available memory region 0x400978e4 - 0x40098000[0m
+V (1194) memory_layout: Examining memory region 0x40098000 - 0x4009a000[0m
+D (1201) memory_layout: Available memory region 0x40098000 - 0x4009a000[0m
+V (1207) memory_layout: Examining memory region 0x4009a000 - 0x4009c000[0m
+D (1214) memory_layout: Available memory region 0x4009a000 - 0x4009c000[0m
+V (1221) memory_layout: Examining memory region 0x4009c000 - 0x4009e000[0m
+D (1228) memory_layout: Available memory region 0x4009c000 - 0x4009e000[0m
+V (1234) memory_layout: Examining memory region 0x4009e000 - 0x400a0000[0m
+D (1241) memory_layout: Available memory region 0x4009e000 - 0x400a0000[0m
+[0;32mI (1248) heap_init: Initializing. RAM available for dynamic allocation:[0m
+D (1255) heap_init: New heap initialised at 0x3ffaff10[0m
+[0;32mI (1260) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+D (1266) heap_init: New heap initialised at 0x3ffb6388[0m
+[0;32mI (1271) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+D (1278) heap_init: New heap initialised at 0x3ffb9a20[0m
+[0;32mI (1283) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+D (1289) heap_init: New heap initialised at 0x3ffc5630[0m
+[0;32mI (1294) heap_init: At 3FFC5630 len 0001A9D0 (106 KiB): DRAM[0m
+[0;32mI (1301) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (1307) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+D (1314) heap_init: New heap initialised at 0x400978e4[0m
+[0;32mI (1319) heap_init: At 400978E4 len 0000871C (33 KiB): IRAM[0m
+D (1325) cpu_start: calling init function: 0x400d50f0 on core: 0[0m
+D (1331) cpu_start: calling init function: 0x400d4b3c on core: 0[0m
+D (1337) cpu_start: calling init function: 0x400d2220 on core: 0[0m
+V (1343) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): checking args[0m
+V (1350) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): Args okay. Resulting flags 0x40E[0m
+D (1358) intr_alloc: Connected src 46 to int 1 (cpu 0)[0m
+D (1363) cpu_start: calling init function: 0x400d222c on core: 0[0m
+D (1369) cpu_start: calling init function: 0x400d62f8 on core: 0[0m
+D (1375) cpu_start: calling init function: 0x400d6cd4 on core: 0[0m
+D (1381) cpu_start: calling init function: 0x400d4ba8 on core: 0[0m
+D (1388) cpu_start: calling init function: 0x400d4f0c on core: 0[0m
+D (1394) cpu_start: calling init function: 0x400d2238 on core: 0[0m
+V (1400) memspi: raw_chip_id: 164068
+[0m
+V (1403) memspi: chip_id: 684016
+[0m
+V (1407) memspi: raw_chip_id: 164068
+[0m
+V (1411) memspi: chip_id: 684016
+[0m
+D (1414) spi_flash: trying chip: issi[0m
+D (1418) spi_flash: trying chip: gd[0m
+D (1421) spi_flash: trying chip: mxic[0m
+D (1425) spi_flash: trying chip: winbond[0m
+D (1429) spi_flash: trying chip: generic[0m
+[0;32mI (1433) spi_flash: detected chip: generic[0m
+[0;32mI (1438) spi_flash: flash io: dio[0m
+[0;33mW (1442) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+D (1455) cpu_start: calling init function: 0x400d1d7c on core: 0[0m
+D (1461) cpu_start: calling init function: 0x400fbd8c[0m
+D (1466) cpu_start: calling init function: 0x400ed478[0m
+D (1472) cpu_start: calling init function: 0x4008f294[0m
+D (1477) cpu_start: calling init function: 0x400d32b0[0m
+D (1482) cpu_start: calling init function: 0x400d27f0[0m
+D (1487) cpu_start: calling init function: 0x400e9a50 on core: 0[0m
+V (1493) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): checking args[0m
+V (1499) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): Args okay. Resulting flags 0xC02[0m
+D (1508) intr_alloc: Connected src 17 to int 2 (cpu 0)[0m
+D (1513) cpu_start: calling init function: 0x400d225c on core: 0[0m
+[0;32mI (1519) coexist: coex firmware version: 4482466[0m
+D (1524) cpu_start: calling init function: 0x400d2270 on core: 0[0m
+V (1530) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): checking args[0m
+V (1537) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): Args okay. Resulting flags 0x40E[0m
+D (1545) intr_alloc: Connected src 24 to int 3 (cpu 0)[0m
+D (1550) app_start: Starting scheduler on CPU0[0m
+V (1555) intr_alloc: esp_intr_alloc_intrstatus (cpu 1): checking args[0m
+V (1555) intr_alloc: esp_intr_alloc_intrstatus (cpu 1): Args okay. Resulting flags 0x40E[0m
+[0D (1565) intr_alloc: Connected src 25 to int 1 (cpu 1)[0m
+D (1575) app_start: Starting scheduler on CPU1[0m
+;32mI (1555) main_task: Started on CPU0[0m
+D (1585) heap_init: New heap initialised at 0x3ffe0440[0m
+D (1585) heap_init: New heap initialised at 0x3ffe4350[0m
+V (1585) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): checking args[0m
+V (1595) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): Args okay. Resulting flags 0xE[0m
+D (1605) intr_alloc: Connected src 16 to int 5 (cpu 0)[0m
+[0;32mI (1605) main_task: Calling app_main()[0m
+V (1615) partition: Loading the partition table[0m
+V (1615) mmap: actual_mapped_len is 0x10000[0m
+V (1625) calculated md5: 0x3ffbba88   f4 ad 4f 45 38 56 4b 5d  74 35 b6 2c 75 b6 95 24  |..OE8VK]t5.,u..$|[0m
+V (1635) stored md5: 0x3f428070   f4 ad 4f 45 38 56 4b 5d  74 35 b6 2c 75 b6 95 24  |..OE8VK]t5.,u..$|[0m
+V (1645) partition: Partition table MD5 verified[0m
+D (1655) BTDM_INIT: Release DRAM [0x3ffb2730] - [0x3ffb6388][0m
+V (1655) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): checking args[0m
+V (1655) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): Args okay. Resulting flags 0x40E[0m
+D (1665) intr_alloc: Connected src -5 to int 29 (cpu 0)[0m
+[0;32mI (1675) BTDM_INIT: BT controller compile version [b022216][0m
+D (1675) BTDM_INIT: .data initialise [0x3ffae6e0] <== [0x4000d890][0m
+D (1685) BTDM_INIT: .bss initialise [0x3ffb0000] - [0x3ffb09a8][0m
+D (1685) BTDM_INIT: .bss initialise [0x3ffb09a8] - [0x3ffb1ddc][0m
+D (1695) BTDM_INIT: .bss initialise [0x3ffb1ddc] - [0x3ffb2730][0m
+D (1705) BTDM_INIT: .bss initialise [0x3ffb8000] - [0x3ffb9a20][0m
+D (1705) BTDM_INIT: .bss initialise [0x3ffbdb28] - [0x3ffbdb5c][0m
+D (1715) efuse: In EFUSE_BLK0__DATA2_REG is used 8 bits starting with 8 bit[0m
+D (1725) efuse: In EFUSE_BLK0__DATA2_REG is used 8 bits starting with 0 bit[0m
+D (1725) efuse: In EFUSE_BLK0__DATA1_REG is used 8 bits starting with 24 bit[0m
+D (1735) efuse: In EFUSE_BLK0__DATA1_REG is used 8 bits starting with 16 bit[0m
+D (1745) efuse: In EFUSE_BLK0__DATA1_REG is used 8 bits starting with 8 bit[0m
+D (1745) efuse: In EFUSE_BLK0__DATA1_REG is used 8 bits starting with 0 bit[0m
+D (1755) efuse: In EFUSE_BLK0__DATA2_REG is used 8 bits starting with 16 bit[0m
+[0;32mI (1765) BTDM_INIT: Bluetooth MAC: f0:24:f9:44:30:aa[0m
+[0;32mI (1775) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+D (1775) phy_init: loading PHY init data from application binary[0m
+D (1785) nvs: nvs_open_from_partition phy 0[0m
+D (1785) nvs: nvs_get cal_version 4[0m
+V (1795) phy_init: phy_get_rf_cal_version: 4830[0m
+D (1795) nvs: nvs_get_str_or_blob cal_mac[0m
+D (1795) efuse: In EFUSE_BLK0__DATA2_REG is used 8 bits starting with 8 bit[0m
+D (1805) efuse: In EFUSE_BLK0__DATA2_REG is used 8 bits starting with 0 bit[0m
+D (1815) efuse: In EFUSE_BLK0__DATA1_REG is used 8 bits starting with 24 bit[0m
+D (1815) efuse: In EFUSE_BLK0__DATA1_REG is used 8 bits starting with 16 bit[0m
+D (1825) efuse: In EFUSE_BLK0__DATA1_REG is used 8 bits starting with 8 bit[0m
+D (1835) efuse: In EFUSE_BLK0__DATA1_REG is used 8 bits starting with 0 bit[0m
+D (1845) efuse: In EFUSE_BLK0__DATA2_REG is used 8 bits starting with 16 bit[0m
+D (1845) nvs: nvs_get_str_or_blob cal_data[0m
+D (1855) nvs: nvs_close 1[0m
+D (1855) efuse: In EFUSE_BLK0__DATA2_REG is used 8 bits starting with 8 bit[0m
+D (1865) efuse: In EFUSE_BLK0__DATA2_REG is used 8 bits starting with 0 bit[0m
+D (1865) efuse: In EFUSE_BLK0__DATA1_REG is used 8 bits starting with 24 bit[0m
+D (1875) efuse: In EFUSE_BLK0__DATA1_REG is used 8 bits starting with 16 bit[0m
+D (1885) efuse: In EFUSE_BLK0__DATA1_REG is used 8 bits starting with 8 bit[0m
+D (1885) efuse: In EFUSE_BLK0__DATA1_REG is used 8 bits starting with 0 bit[0m
+D (1895) efuse: In EFUSE_BLK0__DATA2_REG is used 8 bits starting with 16 bit[0m
+[0;32mI (2225) main_task: Returned from app_main()[0m
+[0;32mI (2265) NimBLE: Failed to restore IRKs from store; status=8
+[0m
+[0;32mI (2265) NimBLE: GAP procedure initiated: advertise; [0m
+[0;32mI (2265) NimBLE: disc_mode=2[0m
+[0;32mI (2265) NimBLE:  adv_channel_map=0 own_addr_type=0 adv_filter_policy=0 adv_itvl_min=0 adv_itvl_max=0[0m
+[0;32mI (2275) NimBLE: 
+[0m
+[0;32mI (179015) GAP: BLE GAP EVENT CONNECT OK![0m
+[0;32mI (211835) GAP: BLE GAP EVENT DISCONNECTED[0m
+||� p|�|p ��p�| p�pppp|��|�|p�����|���|����pp�p�����p�|�| pp��p���| pppp|ppp��p���| ppp||� p|�|p ��p�| ppppp|��|�|p�����|���|����pp �� �p|�|��p|��|�|p��p�����p�|�| pp��p���| pppp|ppp��p���| ppp||� p|�|p ��p�|p�pppp|��|�|p�����|���|����pp� �|�p||�|��p|��|�|p��p�����p�|�| pp��p���| pppp|ppp��p���pppp||� p|�|p ��p pp�pppp|��|�|p�����|���|����pp �� �p|�|��p|��|�|p��p�����p�|�| pp��p���| pppp|ppp��p���pppp||� p|�|p ��p pppppp|��|�|p�����|���|����pp� �|�p||�|��p|��|�|p��p�����p�|�| pp��p���ppppp|ppp��p���� ppp||� p|�|p ��p p�p�pppp|��|�|p�����|���|����pp �� �p|�|��p|��|�|p��p�����p�|�| pp��p���ppppp|ppp��p���� ppp||� p|�|p ��p p�p�pppp|��|�|p�����|���|����pp� �|�p||�|��p|��|�|p��p�����p�|�| pp��p���� pppp|ppp��p�����ppp||� p|�|p ��p p�ppppp|��|�|p�����|���|����pp �� �p|�|��p|��|�|p��p�����p�|�| pp��p���� pppp|ppp��p�����ppp||� p|�|p ��p p�p| p|��|�|p�����|���|����pp� �|�p||�|��p|��|�|p��p�����p�|�| pp��p�����pppp|ppp��p����ppp||� p|�|p ��p p|pppp|��|�|p�����|���|����pp �� �p|�|��p|��|�|p��p�����p�|�| pp��p�����pppp|ppp��p����ppp||� p|�|p ��p p| pppp|��|�|p�����|���|����pp� �|�p||�|��p|��|�|p��p�����p�|�| pp��p����pppp|ppp��p���pppp||� p|�|p ��p p�p| p|��|�|p�����|���|����pp �� �p|�|��p|��|�|p��p�����p�|�| pp��p����pppp|ppp��p���pppp||� p|�|p ��p p|pppp|��|�|p�����|���|����pp� �|�p||�|��p|��|�|p��p�����p�|�| pp��p���ppppp|ppp��p���| ppp||� p|�|p ��p p|�| p|��|�|p�����|���|����ppp�� ��p|��p�����p�|�| pp��p���ppppp|ppp��p���| pppp|����|��p���������pp��p���ppppp|ppp��p���p|�| p||� p|�|p ��p p|�| p|��|�|p�����|���|����pp|��p|��p�����p�|�| pp��p���p|�| pp|ppp��p���| pppp|����|��p���������pp��p�����p��ppp|ppp��p���||p�pp||� p|�|p ��p pp| p|��|�|p�����|���|����pp �� �p|�|��p|��|�|p��p�����p�|�| pp��p���p|�| pp|ppp��p�����p��pp||� p|�|p ��p p�p�pppp|��|�|p�����|���|����pp� �|�p||�|��p|��|�|p��p�����p�|�| pp��p���| pppp|ppp��p���pppp||� p|�|p ��ppppppp|��|�|p�����|���|����ppp�� ��p|��p�����p�|�| pp��p���| pppp|ppp��p���ppppp|����|��p���������pp��p�����p��ppp|ppp��p���||p�pp||� p|�|p ��ppp�pppp|��|�|p�����|���|����pp �� �p|�|��p|��|�|p��p�����p�|�| pp��p���||p�ppp|ppp��p���pppp||� p|�|p ��pp�p| p|��|�|p�����|���|����pp� �|�p||�|��p|��|�|p��p�����p�|�| pp��p���ppppp|ppp��p���pppp||� p|�|p ��pp�p�pppp|��|�|p�����|���|����pp �� �p|�|��p|��|�|p��p�����p�|�| pp��p���ppppp|ppp��p���pppp||� p|�|p ��pp�p�pppp|��|�|p�����|���|����pp� �|�p||�|��p|��|�|p��p�����p�|�| pp��p���ppppp|ppp��p���pppp||� p|�|p ��pp�p�pppp|��|�|p�����|���|����pp �� �p|�|��p|��|�|p��p�����p�|�| pp��p���ppppp|ppp��p���pppp||� p|�|p ��pp|ppppp|��|�|p�����|���|����pp� �|�p||�|��p|��|�|p��p�����p�|�| pp��p���ppppp|ppp��p�����ppp||� p|�|p ��pp|pppp|��|�|p�����|���|����pp �� �p|�|��p|��|�|p��p�����p�|�| pp��p���ppppp|ppp��p�����ppp||� p|�|p ��pp�p�pppp|��|�|p�����|���|����pp� �|�p||�|��p|��|�|p��p�����p�|�| pp��p�����pppp|ppp| ppppppp||� p|�|p ��pp|ppppp|��|�|p�����|���|����pp �� �p|�|��p|��|�|p��p�����p�|�| pp��p�����pppp|ppp| ppppppp||� p|�|p ��pp| pppp|��|�|p�����|���|����pp� �|�p||�|��p|��|�|p��p�����p�|�| pp| pp| ppppp|ppp| pp| pppp||� p|�|p ��pp|�| p|��|�|p�����|���|����ppp����p�|�| pp| pp| ppppp|ppp| pp| pppppp||�p��p|��p���������pp| pp| ppppp|ppp| pp| pppp||� p|�|p ��ppp| p|��|�|p�����|���|����pp� �|�p||�|��p|��|�|p��p�����p�|�| pp| pp| ppppp|ppp| ppppppp||� p|�|p ��pp�ppppp|��|�|p�����|���|����ppp����p�|�| pp| pp| ppppp|ppp| ppppppppp||�p��p|��p���������pp| pp| ppppp|ppp| ppppppp||� p|�|p ��pp�p�pppp|��|�|p�����|���|����pp� �|�p||�|��p|��|�|p��p�����p�|�| pp| pppppppp|ppp| ppp�pppp||� p|�|p ��pppp| p|��|�|p�����|���|����ppp����p�|�| pp| pppppppp|ppp| ppp�pppppp||�p��p|��p���������pp| pppppppp|ppp| pp�p| p||�|� p|�|p ��ppp�p�pppp|��|�|p�����|���|����pp� �|�p||�|��p|��|�|p��p�����p�|�| pp| ppp�ppppp|ppp| ppp| ppp||� p|�|p ��ppp�p�pppp|��|�|p�����|���|����ppp����p�|�| pp| ppp�ppppp|ppp| ppp| ppppp||�p��p|��p���������pp| pppppppp|ppp| pp�p| p||�|� p|�|p ��ppp�ppppp|��|�|p�����|���|����pp� �|�p||�|��p|��|�|p��p�����p�|�| pp| ppp| pppp|ppp| ppp| ppp||� p|�|p ��ppp�p| p|��|�|p�����|���|����ppp����p�|�| pp| ppp| pppp|ppp| ppp| ppppp||�p��p|��p���������pp| pppppppp|ppp| pp�p| p||�|� p|�|p ��ppp|�| p|��|�|p�����|���|����pp� �|�p||�|��p|��|�|p��p�����p�|�| pp| ppp| pppp|ppp| ppppppp||� p|�|p ��ppp�p�pppp|��|�|p�����|���|����ppp����p�|�| pp| ppp| pppp|ppp| ppppppppp||�p��p|��p���������pp| pppppppp|ppp| pp�p| p||�|� p|�|p ��ppp|ppppp|��|�|p�����|���|����pp� �|�p||�|��p|��|�|p��p�����p�|�| pp| pppppppp|ppp| ppp ppp||� p|�|p ��ppp| pppp|��|�|p�����|���|����ppp����p�|�| pp| pppppppp|ppp| ppp ppppp||�p��p|��p���������pp| pppppppp|ppp| pp�p| p||�|� p|�|p ��ppp|�| p|��|�|p�����|���|����pp� �|�p||�|��p|��|�|p��p�����p�|�| pp| ppp pppp|ppp| ppp�ppp||� p|�|p ��pppp| p|��|�|p�����|���|����ppp����p�|�| pp| ppp pppp|ppp| ppp�ppppp||�p��p|��p���������pp| pppppppp|ppp| pp�p| p||�|� p|�|p ��ppp�p�pppp|��|�|p�����|���|����pp� �|�p||�|��p|��|�|p��p�����p�|�| pp| ppp�pppp|ppp| pppppp||� p|�|p ��pp�pppppp|��|�|p�����|���|����ppp����p�|�| pp| ppp�pppp|ppp| pppppppp||�p��p|��p���������pp| pppppppp|ppp| pp�p| p||�|� p|�|p ��pp�pp�pppp|��|�|p�����|���|����pp� �|�p||�|��p|��|�|p��p�����p�|�| pp| ppppppp|ppp| pp�ppppp||� p|�|p ��pp�p�p�pppp|��|�|p�����|���|����ppp����p�|�| pp| ppppppp|ppp| pp�ppppppp||�p��p|��p���������pp| pppppppp|ppp| pp�p| p||�|� p|�|p ��pp�p�p| p|��|�|p�����|���|����pp� �|�p||�|��p|��|�|p��p�����p�|�| pp| pp�pppppp|ppp| pp�p�pppp||� p|�|p ��pp�p�p�pppp|��|�|p�����|���|����ppp����p�|�| pp| pp�pppppp|ppp| pp�p�pppppp||�p��p|��p���������pp| pppppppp|ppp| pp�p| p||�|� p|�|p ��pp�p| pppp|��|�|p�����|���|����pp� �|�p||�|��p|��|�|p��p�����p�|�| pp| pp�p�ppppp|ppp| pp�p| ppp||� p|�|p ��pp�p|�| p|��|�|p�����|���|����ppp����p�|�| pp| pp�p�ppppp|ppp| pp�p| ppppp||�p��p|��p���������pp| pppppppp|ppp| pp�p| p||�|� p|�|p ��pp�p�p�pppp|��|�|p�����|���|����pp� �|�p||�|��p|��|�|p��p�����p�|�| pp| pp�p| pppp|ppp| pp�p| ppp||� p|�|p ��pp�p|ppppp|��|�|p�����|���|����ppp����p�|�| pp| pp�p| pppp|ppp| pp�p| ppppp||�p��p|��p���������pp| pppppppp|ppp| pp�p| p||�|� p|�|p ��pp�p|pppp|��|�|p�����|���|����pp� �|�p||�|��p|��|�|p��p�����p�|�| pp| pp�p| pppp|ppp| pp�ppppp||� p|�|p ��pp�p| pppp|��|�|p�����|���|����ppp�� ��p|��p�����p�|�| pp| pp�p| pppp|ppp| pp�pppppp|����|��p���������pp| pppppppp|ppp| pp�p| p||�|� p|�|p ��pp�pp| p|��|�|p�����|���|����pp �� �p|�|��p|��|�|p��p�����p�|�| pp| pp�p| p| p|ppp| pp�ppppp||� p|�|p ��pp�p�p| p|��|�|p�����|���|����pp� �|�p||�|��p|��|�|p��p�����p�|�| pp| pp�pppppp|ppp| pp�p ppp||� p|�|p ��pp�pp�pppp|��|�|p�����|���|����pp �� �p|�|��p|��|�|p��p�����p�|�| pp| pp�pppppp|ppp| pp�p ppp||� p|�|p ��pp�pp| p|��|�|p�����|���|����pp� �|�p||�|��p|��|�|p��p�����p�|�| pp| pp�p pppp|ppp| pp�p�ppp||� p|�|p ��pp�p�p| p|��|�|p�����|���|����pp �� �p|�|��p|��|�|p��p�����p�|�| pp| pp�p pppp|ppp| pp�p�ppp||� p|�|p ��pp�p�p�pppp|��|�|p�����|���|����pp� �|�p||�|��p|��|�|p��p�����p�|�| pp| pp�p�pppp|ppp| pp�pppp||� p|�|p ��pp�p�ppppp|��|�|p�����|���|����pp �� �p|�|��p|��|�|p��p�����p�|�| pp| pp�p�pppp|ppp| pp�pppp||� p|�|p ��pp�p�p| p|��|�|p�����|���|����pp� �|�p||�|��p|��|�|p��p�����p�|�| pp| pp�ppppp|ppp| pp pppp||� p|�|p ��pp�p|pppp|��|�|p�����|���|����pp �� �p|�|��p|��|�|p��p�����p�|�| pp| pp�ppppp|ppp| pp pppp||� p|�|p |�|� p�p�p�p|�ppp�p| pppp|��� ��|�||���ppp||���p� ||p�p|�� pp� �|p �� �p|�|��p��|pp���|�|�p��p |�|�||� ��p�|�|pp||� p|�|p ��pp�p�p�pppp|��� ��|�||���ppp����p|��� pp||���p� |||��p �pp��p��� ����pp||� p|�|p |�|� p�p�p�p|�ppp�p| pppp|��� ��|�||���pp �p�p��� ����ppp|��| ppppppp�pp pp�p �pp�pp�p� �|�||� p|�|p ��pp�p|�| p|��� ��|�||���ppp����p|��� pp||���p� |||��p �pp��p���||ppp||� p|�|p |�|� p�p�p�p|�ppp�p|pppp|��� ��|�||���pp �p�p�� ||pppp|��| ppppp�p �| pp�| p�p �pp�pp�p� �|�||� p|�|p ��pp�p| pppp|��� ��|�||���ppp����p|��� pp||���p� |||��p �pp��p�����p �pp||� p|�|p |�|� p�p�p�p|�ppp�pp�pppp|��� ��|�||���pp �p�p�� ��p �ppp|��| ppppp|ppppp| p�p �pp�pp�p� �|�||� p|�|p ��pp�pp�pppp|��� ��|�||���ppp����p|��� pp||���p� |||��p �pp��p������p||pp||� p|�|p |�|� p�p�p�p|�ppp�p�p| p|��� ��|�||���pp �p�p��� ��p||ppp|��| pppp�p ��p�pppp| p�p �pp�pp�p� �|�||� p|�|p |�|� p�p�p�p|�ppp�pp�pppp|��� ��|�||���pp �p�p���p|�| pp|��| ppppp�p �ppp| p�p �pp�pp��pp��|�||� p|�|p |�|� p�p�p�p|�ppp�pp| p|��� ��|�||���pp �p�p���||p�ppp|��| pppp�p �  ppp�p�pp�p �pp�pp��pp��|�||� p|�|p ��pp�p�p| p|��� ��|�||���ppp����p|��� pp||���p� |||��p �pp| pp�p| p||�|� p|�|p |�|� p�p�p�p|�ppp�p�p�pppp|��� ��|�||���pp �p| pp�p| p| p|��| pppppp|p p|p�pp�p �pp�pppp� �|�||� p|�|p ��pp�p�p�pppp�����|�� ���pp�� |�||�|��pp||��p���||��p�|�|pppp| pp���pp�pp|�| p��|p��ppp||� p|�|p ��pp�p�p�pppp�����|�� ���pp�� |�||�|��pp||��p���||��p�|�|pppp| pp�|p��p�p|�| p��|p��ppp||� p|�|p ��pp�p�p| p�����|�� ���pp�� |�||�|��pp||��p���||��p�|�|pppp| pp��p�p�ppp|�| p��|p��ppp||� p|�|p ��pp�p||ppppp|�����|�|�||�pp����|�|�����|�|�||��|�|������� �����p|��pppp�pp�|�������p|��p ������||� p|�|p ��pp�p�pppppp|�����|�|�||�pp����|�|�����|�|�||��|�|������� �����p|��pppp�pp �����p|||�� pp�����|���p|��p�|����pp| p�||� p|�|p ��pp�p�pppppp|�����|�|�||�pp �|�|�|�������p����p|�| p��| pp|��p�pp|��pppp||� p|�|p ��pp�p||pppp�����|�� ���pp�� |�||�|��pp||��p���||��p�|�|pppp| pp��p�p�p�p|�| p��|p��ppp||� p|�|p ��pp�p|pppp�����|�� ���pp�� |�||�|��pp||��p���||��p�|�|pppp| pp�|pp�pp|�| p��|p��ppp||� p|�|p ��pp�p|�| p�����|�� ���pp�� |�||�|��pp||��p���||��p�|�|pppp| pp�||�| p|�| p��|p��ppp||� p|�|p ��pp�pp�pppp�����|�� ���pp�� |�||�|��pp||��p���||��p�|�|pppp| pp�|p� pp|�| p��|p��ppp||� p|�|p ��pp�pppppp�����|�� ���pp�� |�||�|��pp||��p���||��p�|�|pppp| pp�|��p�p|�| p��|p��ppp||� p|�|p ��pp�p�p| p�����|�� ���pp�� |�||�|��pp||��p���||��p�|�|pppp| pp��p�p�ppp|�| p��|p��ppp||� p|�|p ��pp| ppppp|��|���p�pp�� ����||| ��|���pp�p|�| p| p|p |�|� p|�|p ��pp| p�pppp|��|���p�pp�|| ��|���pp| p| p�p|� p |�|� p|�|p ��pp| p| p|��|���p�pp�� ����||| ��|���pp�p|�| p| p|p |�|� p|�|p ��pp|p�pppp|��|���p�pp�|| ��|���pp| p| p�p|� p |�|� p|�|p ��pp|p| p��p����|��|ppp�����p|��p�|| �ppp�����p�||� p|�|p ��pp|ppppp��p����|��|ppp�����p|��p�|| �pp���||� p|�|p ��pp|pp�pppp��p����|��|ppp�����p|��p�|| �pp|�p���||� p|�|p ��pp|pp�pppp��p����|��|ppp�����p|��p�|| �pp��p|p�|�|���||� p|�|p ��pp|pp�pppp��p����|��|ppp�����p|��p�|| �pp��|����p���||� p|�|p |�|� p�p�p�p|�ppp||p�pppp��p����|��|ppp���������p�|| �pp��|����p���||� p|�|p |�|� p�p�p�p|�ppp||ppppp��p����|��|ppp�|��| pp�|ppp��p�||�|� p|�|p |�|� p�p�p�p|��pp|�|ppppp��p����|��|ppp���������p��p���| p�p||| p|�����p�|| p�|��p��p��pp| p�|��p��p|���pp�|� ���p|��� ���ppp| p��pp p��|�p|��p�|��p��p��pp| p�|��p��p|���pp�|� ���p|��� ���|�|� p|�|p ��pp|�|�| p�����|�� ���pp�� |�||�|��pp||��p���||��p�|�|pppp| pp���p��||p|�| p��|p��ppp||� p|�|p ��pp|�|pppp�����|�� ���pp�� |�||�|��pp||��p���||��p�|�|pppp| pp���p��||� p|�|p ��pp|�|�| p�����|�� ���pp�� |�||�|��pp||��p���||��p�|�|pppp| pp�|�| p||� p|�|p ��pp|�|ppppp�����|�� ���pp�� |�||�|��pp||��p���||��p�|�|pppp| ppp��p�p||�|� p|�|p ��pp|�|�| p�����|�� ���pp�� |�||�|��pp||��p���||��p�|�|pppp| pp���p�p�p||� p|�|p ��pp| p�pppp�����|�� ���pp�� |�||�|��pp||��p���||��p�|�|pppp| pp��p|��p||� p|�|p ��pp| p| p�����|�� ���pp�� |�||�|��pp||��p���||��p�|�|pppp| pp��p ��ppp|�| p��|p��ppp||� p|�|p ��pp|p�ppppp|�����|�|�||�pp����|�|�����|�|�||��|�|������� �����p|��pppp�pp�|�������p|��p ������||� p|�|p ��pp|p�ppppp|�����|�|�||�pp����|�|�����|�|�||��|�|������� �����p|��pppp�pp �����p|||�� pp�����|���p|��p�|����pp� p�p||� p|�|p ��pp�ppppppp|�����|�|�||�pp �|�|�|�������p����p�p| p��| pp|��p�pp|��pppp||� p|�|p ��pp�p�p�pppp�����|�� ���pp�� |�||�|��pp||��p���||��p�|�|pppp| pp��p�p�p�p|�| p��|p��ppp||� p|�|p |�|� p�p�p�p|�ppp�p�p�pppp��|���p����pp��|��p��p��|��� ��p������p�|�|ppp|�| p�p|�|�||�|� p|�|p ��pp�p�p| p�����|�� ���pp�� |�||�|��pp||��p���||��p�|�|pppp| pp��p�p| pp|�| p��|p��ppp||� p|�|p ��pp�p�pppppp|�����|�|�||�pp����|�|�����|�|�||��|�|������� �����p|��pppp�pp�|�������p|��p ������||� p|�|p ��pp�p�p| pp|�����|�|�||�pp����|�|�����|�|�||��|�|������� �����p|��pppp�pp �����p|||�� pp�����|���p|��p�|����pp| p�||� p|�|p ��pp�p|�| pp|�����|�|�||�pp �|�|�|�������p����p�p| p��| pp|��p�pp|��pppp||� p|�|p ��pp�p�ppppp ��|�� ���ppp�� ���p|��p���|�����|���p|�| p ���p||� p|�|p ��pp�p�p�ppppp|�����|�|�||�pp����|�|�����|�|�||��|�|������� �����p|��p�ppp�pp�|�������p|��p ������||� p|�|p ��pp�p�p�ppppp|�����|�|�||�pp����|�|�����|�|�||��|�|������� �����p|��p�ppp�pp �����p|||�� pp�����|���p|��p�|����pp| p�||� p|�|p |�|� p�pp�p|�| pp|�����|�|�||�pp �|�|�|�������p����p�p�pp��| pp|��p�pp|��p�ppp||� p|�|p ��pp�p|�| p ��|�� ���ppp�� ���p|��p���|�����|���p|�| p �����p||� p|�|p |p�p�p|�ppp�p�p�pppp|� �p|����� �����ppp�� ����p|�| p ���p||� p|�|p ��pp�pp�pppp|��� ��|�||���ppp����p|��� pp||���p� |||��p �pp��p���p|�| p||� p|�|p ��pp�pp�pppp|��� ��|�||���ppp����p|��� pp||���p� |||��p �pp��p���||p�pp||� p|�|p ��pp�pp�ppppp|�����|�|�||�pp����|�|�����|�|�||��|�|������� �����p|��pppp�pp�|�������p|��p ������||� p|�|p ��pp�p�p�ppppp|�����|�|�||�pp����|�|�����|�|�||��|�|������� �����p|��pppp�pp �����p|||�� pp�����|���p|��p�|����pp��||� p|�|p ��pp| p�ppppp|�����|�|�||�pp �|�|�|�������p����p�p| p��| pp|��p�pp|��pppp||� p|�|p |�|� p�p�p�p|�ppp| p�pppp|� �p|����� �����pp � |�||�|��p ���|�p| |�|� p|�|p ��pp|p�pppp� ���p��p�|�|pppp�|��p|��p�|��p� ���p��p�|�| p�� �|���||� p|�|p ��pp|p�pppp|�|� �pp ������ |���|�����|��| pp��pp��ppppp||� p|�|p ��pp|pp�pppp�� ||��|���p|���p�ppp��p����� ppppp�| p �p|��p|�| p�ppp�p| p|pp�p�pp|�| p�p�pp�| p�p�p|�| p�| p�p�pp�p| pp��p��p���������p�����p��||� p|�|p ��pp||p�pppp���|p��p|���p�ppp��p�|pppp| pppp�| p �p|��p|�| p�ppp�p| p|pp�p�pp|�| p�p�pp�| p�p�p|�| p�| p�p�pp�p| pp��p��p���������p�����p��||� p|�|p ��pp|�|�| p� ���p��p�|�|ppp����p��p�|�| p�� �|��p|���pp����p��p���||� p|�|p ��pp|�|�| p ���|��p�pp���ppp�|��� ���p�p� �|p|p��p����p||pp�� p|pp|p��p���||ppp��|�|� p|�|p ��pp|�|�| pp|�����|�|�||�pp����|�|�����|�|�||��|�|������� �����p|��pppp�pp�|�������p|��p ������||� p|�|p ��pp|�|�| pp|�����|�|�||�pp����|�|�����|�|�||��|�|������� �����p|��pppp�pp �����p|||�� pp�����|���p|��p�|����pp| p�||� p|�|p ��pp|�|�| pp|�����|�|�||�pp �|�|�|�������p����p|p�pp��| pp|��p�p�pp|��pppp||� p|�|p |�|� p�p�p�p|�ppp|�|�| p ���|��p�pp���pp �p��|�|����|�|�|���p��|�| �p|��p������p�|�| p|�p�p�p�p�p|��|�|� p|�|p ��pp|�|�| p ���|��p�pp���pp��� �� pp||���p� |||�p|p��p��� �|��p�� pp�p�pp|p| ppp�p�pp��|�|� p|�|p ��pp| p�pppp ���|��p�pp���ppp����pp||���p� |||�p|p��p���pppp�� p|pp|p��p���p�p p��|�|� p|�|p ��pp| p�pppp ���|��p�pp���ppp����pp||���p� |||�p|p��p���p�p p�� p|pp|p��p�����p�������|�|� p|�|p ��pp|p�pppp ���|��p�pp���ppp����pp||���p� |||�p|p��p�����p������� p|pp|p��p����p||pp��|�|� p|�|p ��pp| p�pppp ���|��p�pp���ppp����pp||���p� |||�p|p��p���pppp�� p|pp|p��p�����p �pp��|�|� p|�|p ��pp| p�pppp ���|��p�pp���ppp����pp||���p� |||�p|p��p������pp�� p|pp|p��p�������p����|�|� p|�|p ��pp|p�pppp�������ppp| p����|�����pp|p p������ �� �p�p�����pp��p�����ppp��p���p��� ���p|��p��p�| ppp��p��||� p|�|p ��pp|pp�pppp�������ppp| p����|�����pp|p p������ �� �p�p�����pp��p�����ppp��p���p��� ���p|��p��p�| ppp��p��||� p|�|p ��pp|pp�pppp�������ppp| p����|�����pp|p p������ �� ��p�p�����pp��p�����ppp��p���p��� ���p|��p��p�| p�p| p��p��||� p|�|p ��pp||p�pppp�������ppp| p����|�����pp|p p������ �� ��p�p�����pp��p�����ppp��p���p��� ���p|��p��p�| p�p| p��p��||� p|�|p ��pp|�|�| p�������ppp| p����|�����pp|p p������ �� ��p�p�����pp��p�����ppp��p���p��� ���p|��p��p�| ppp��p��||� p|�|p ��pp|�|�| p�������ppp| p����|�����pp|p p������ �� ��p�p�����pp��p�����ppp��p���p��� ���p|��p��p�| ppp��p��||� p|�|p ��pp|�|�| p�������ppp| p����|�����pp|p p������ �� �p�p�����pp��p�����ppp��p���p��� ���p|��p��p�| p�p| p��p��||� p|�|p |�|� p�p�p�p|�ppp|�|�| p ���|��p�pp���pp |�����|�|��| p|� � �pp�p�p�p|pp���p�p|�|pp�pp�p � �||� p|�|p |�|� p�p�p�p|�ppp|�|�| p|��|�||���pp|���������p�|�| p| p�pp�|�|�|�| p��|�pp��| p�ppp�pp�p|�p|pp�p�p�ppp||� p|�|p ��pp|�|�| p|��|�||���pp|�|��p|��p� p� pp||��p�� �� p���|�| p |||� ��p�|�| p��p|����||� p|�|p ��pp| p�pppp|�����pp|�������| �|������|�|�� � ���p��p�|�| p|pp||� p|�|p ��pp| p�pppp|�����pp|����������p�� |���������p�|�| p||�|� p|�|p ��pp|p�pppp|��|�||���pp|��������p���|� |���������p�|�|ppp| p�pp||� p|�|p ��pp|p�pppp|�����pp|������������|�����|p��p|�|pp�� |���|���||� p|�|p ��pp|p�pppp�������ppp| p����|�����pp|p p������ �� �p�p�����pp��p�����ppp��p���p��� ���p|��p��p�| ppp��p��||� p|�|p ��pppp�pppp�������ppp| p����|�����pp|p p������ �� �p�p�����pp��p�����ppp��p���p��� ���p|��p��p�| ppp��p��||� p|�|p ��ppp�p�pppp�������ppp| p����|�����pp|p p������ �� ��p�p�����pp��p�����ppp��p���p��� ���p|��p��p�| p�p| p��p��||� p|�|p ��ppp�p�pppp�������ppp| p����|�����pp|p p������ �� ��p�p�����pp��p�����ppp��p���p��� ���p|��p��p�| p�p| p��p��||� p|�|p ��ppp�p�pppp�������ppp| p����|�����pp|p p������ �� ��p�p�����pp��p�����ppp��p���p��� ���p|��p��p�| ppp��p��||� p|�|p ��ppp�p�pppp�������ppp| p����|�����pp|p p������ �� ��p�p�����pp��p�����ppp��p���p��� ���p|��p��p�| ppp��p��||� p|�|p ��ppp|�| p�������ppp| p����|�����pp|p p������ �� �p�p�����pp��p�����ppp��p���p��� ���p|��p��p�| p�p| p��p��||� p|�|p ��ppp|�| p|�����pp|������������|�����|p��p|�|pp�� |����� �� �||� p|�|p ��ppp�p�pppp|�����pp|������||�||�p�p||� p|�|p ��ppp�p�pppp�������ppp| p����|�����pp|p p������ �� �p�p�����pp��p�����ppp��p���p��� ���p|��p��p�| ppp��p��||� p|�|p ��ppp|�| p�������ppp| p����|�����pp|p p������ �� �p�p�����pp��p�����ppp��p���p��� ���p|��p��p�| ppp��p��||� p|�|p ��ppp|�| p�������ppp| p����|�����pp|p p������ �� ��p�p�����pp��p�����ppp��p���p��� ���p|��p��p�| p�p| p��p��||� p|�|p ��ppp|�| p�������ppp| p����|�����pp|p p������ �� ��p�p�����pp��p�����ppp��p���p��� ���p|��p��p�| p�p| p��p��||� p|�|p ��pppp�pppp�������ppp| p����|�����pp|p p������ �� ��p�p�����pp��p�����ppp��p���p��� ���p|��p��p�| ppp��p��||� p|�|p ��pppp�pppp�������ppp| p����|�����pp|p p������ �� ��p�p�����pp��p�����ppp��p���p��� ���p|��p��p�| ppp��p��||� p|�|p ��ppp�p�pppp�������ppp| p����|�����pp|p p������ �� �p�p�����pp��p�����ppp��p���p��� ���p|��p��p�| p�p| p��p��||� p|�|p |�|� p�p�p�p|�pppp�pp�pppp|� �p|����� �����ppp�����|���p���|�| p ���|�p| |�|� p|�|p |�|� p�p�p�p|�pppp�p|�| pp|�|pp���pp�� �p|���p��| p������|p�ppp���p���|�| p���|p���pp��� �������pp|p |�|� p|�|p |�|� p�p�p�p|�pppp�p|�| pp|�|pp���pp�� � p��||������pp||���p� ����pp ������p�����pp||� p|�|p |�|� p�p�p�p|�pppp�p|�| pp|�|pp���pp��p�������|�|�����p�p||� p|�|p |�|� p�p�p�p|�pppp�p|�| pp|�|pp���ppp ����|||�|��|���|��ppp|��|��������������ppp �������p|������ �|�|||����ppp ����|���|���||�|�ppp ����|���|���|��pp||� p|�|p |�|� p�p�p�p|�pppp�p�p�ppppp|�|pp���pp|p |�|� p|�|p |�|� p�p�p�p|�ppp�p�pp�pppp�� �ppp p��p�� � p��p��p �p�p�p��� �pp|pp||� p|�|p |�|� p�p�p�p|�pp�| p�p�p�pppp�� �ppp p��p�� � p��p��p��p�p� �p�p�p��� ����||� p|
