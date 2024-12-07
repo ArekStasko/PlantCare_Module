@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "esp_bt.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "freertos/event_groups.h"
@@ -19,28 +20,47 @@ static void ble_app_advertise(void);
 
 static int device_write(uint16_t conn_handle, uint16_t attr_handle, struct ble_gatt_access_ctxt *ctxt, void *arg)
 {
-    char * data = (char *)ctxt->om->om_data;
-    printf("%d\n",strcmp(data, (char *)"LIGHT ON")==0);
-    if (strcmp(data, (char *)"LIGHT ON\0")==0)
-    {
-       printf("LIGHT ON\n");
-    }
-    else if (strcmp(data, (char *)"LIGHT OFF\0")==0)
-    {
-        printf("LIGHT OFF\n");
-    }
-    else if (strcmp(data, (char *)"FAN ON\0")==0)
-    {
-        printf("FAN ON\n");
-    }
-    else if (strcmp(data, (char *)"FAN OFF\0")==0)
-    {
-        printf("FAN OFF\n");
-    }
-    else{
-        printf("Data from the client: %.*s\n", ctxt->om->om_len, ctxt->om->om_data);
-    }
+    char *data = (char *)ctxt->om->om_data;
+    char *name, *password, *uuid;
 
+    char buffer[256];
+    strncpy(buffer, data, sizeof(buffer) - 1);
+    buffer[sizeof(buffer) - 1] = '\0';
+
+    name = strtok(buffer, "|");
+    password = strtok(NULL, "|");
+    uuid = strtok(NULL, "|");
+
+    if (name && password && uuid)
+    {
+        nvs_handle_t nvs_handle;
+        esp_err_t err = nvs_open("storage", NVS_READWRITE, &nvs_handle);
+        if (err != ESP_OK)
+        {
+            ESP_LOGE(TAG, "Error (%s) opening NVS handle!", esp_err_to_name(err));
+            return BLE_ATT_ERR_UNLIKELY;
+        }
+
+        nvs_set_str(nvs_handle, "name", name);
+        nvs_set_str(nvs_handle, "password", password);
+        nvs_set_str(nvs_handle, "uuid", uuid);
+
+        err = nvs_commit(nvs_handle);
+        if (err != ESP_OK)
+        {
+            ESP_LOGE(TAG, "Error (%s) committing data!", esp_err_to_name(err));
+            nvs_close(nvs_handle);
+            return BLE_ATT_ERR_UNLIKELY;
+        }
+
+        nvs_close(nvs_handle);
+        ESP_LOGI(TAG, "Data saved: name=%s, password=%s, uuid=%s", name, password, uuid);
+    }
+    else
+    {
+        ESP_LOGE(TAG, "Invalid data format");
+        return BLE_ATT_ERR_INVALID_ATTR_VALUE_LEN;
+    }
 
     return 0;
 }
@@ -114,6 +134,36 @@ static void ble_app_on_sync(void)
 static void host_task(void *param)
 {
     nimble_port_run();
+}
+
+void disable_bt()
+{
+    ESP_LOGI(TAG, "Disabling Bluetooth...");
+    nimble_port_stop();
+    nimble_port_deinit();
+
+    esp_err_t err = esp_nimble_hci_deinit();
+    if (err != ESP_OK)
+    {
+        ESP_LOGE(TAG, "Failed to deinitialize NimBLE controller: %s", esp_err_to_name(err));
+        return;
+    }
+
+    err = esp_bt_controller_disable();
+    if (err != ESP_OK)
+    {
+        ESP_LOGE(TAG, "Failed to disable Bluetooth controller: %s", esp_err_to_name(err));
+        return;
+    }
+
+    err = esp_bt_controller_deinit();
+    if (err != ESP_OK)
+    {
+        ESP_LOGE(TAG, "Failed to deinitialize Bluetooth controller: %s", esp_err_to_name(err));
+        return;
+    }
+
+    ESP_LOGI(TAG, "Bluetooth disabled successfully.");
 }
 
 void enable_bt()
