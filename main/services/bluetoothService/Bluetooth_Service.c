@@ -18,6 +18,36 @@ char *TAG = "Plantcare Module";
 uint8_t ble_addr_type;
 static void ble_app_advertise(void);
 
+void disable_bt()
+{
+    ESP_LOGI(TAG, "Disabling Bluetooth...");
+    nimble_port_stop();
+    nimble_port_deinit();
+
+    esp_err_t err = esp_nimble_hci_deinit();
+    if (err != ESP_OK)
+    {
+        ESP_LOGE(TAG, "Failed to deinitialize NimBLE controller: %s", esp_err_to_name(err));
+        return;
+    }
+
+    err = esp_bt_controller_disable();
+    if (err != ESP_OK)
+    {
+        ESP_LOGE(TAG, "Failed to disable Bluetooth controller: %s", esp_err_to_name(err));
+        return;
+    }
+
+    err = esp_bt_controller_deinit();
+    if (err != ESP_OK)
+    {
+        ESP_LOGE(TAG, "Failed to deinitialize Bluetooth controller: %s", esp_err_to_name(err));
+        return;
+    }
+
+    ESP_LOGI(TAG, "Bluetooth disabled successfully.");
+}
+
 static int device_write(uint16_t conn_handle, uint16_t attr_handle, struct ble_gatt_access_ctxt *ctxt, void *arg)
 {
     char *data = (char *)ctxt->om->om_data;
@@ -54,6 +84,7 @@ static int device_write(uint16_t conn_handle, uint16_t attr_handle, struct ble_g
         }
 
         nvs_close(nvs_handle);
+        disable_bt();
         ESP_LOGI(TAG, "Data saved: name=%s, password=%s, uuid=%s", name, password, uuid);
     }
     else
@@ -136,40 +167,10 @@ static void host_task(void *param)
     nimble_port_run();
 }
 
-void disable_bt()
-{
-    ESP_LOGI(TAG, "Disabling Bluetooth...");
-    nimble_port_stop();
-    nimble_port_deinit();
-
-    esp_err_t err = esp_nimble_hci_deinit();
-    if (err != ESP_OK)
-    {
-        ESP_LOGE(TAG, "Failed to deinitialize NimBLE controller: %s", esp_err_to_name(err));
-        return;
-    }
-
-    err = esp_bt_controller_disable();
-    if (err != ESP_OK)
-    {
-        ESP_LOGE(TAG, "Failed to disable Bluetooth controller: %s", esp_err_to_name(err));
-        return;
-    }
-
-    err = esp_bt_controller_deinit();
-    if (err != ESP_OK)
-    {
-        ESP_LOGE(TAG, "Failed to deinitialize Bluetooth controller: %s", esp_err_to_name(err));
-        return;
-    }
-
-    ESP_LOGI(TAG, "Bluetooth disabled successfully.");
-}
-
 void enable_bt()
 {
     nimble_port_init();
-    ble_svc_gap_device_name_set("BLE-Server");
+    ble_svc_gap_device_name_set("Plantcare-Module");
     ble_svc_gap_init();
     ble_svc_gatt_init();
     ble_gatts_count_cfg(gatt_svcs);
