@@ -1,0 +1,252 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Dec 11 2024 20:50:57[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1843ch ( 99388) map[0m
+[0;32mI (139) esp_image: segment 1: paddr=00028464 vaddr=3ffbdb60 size=04d78h ( 19832) load[0m
+[0;32mI (146) esp_image: segment 2: paddr=0002d1e4 vaddr=40080000 size=02e34h ( 11828) load[0m
+[0;32mI (151) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=54100h (344320) map[0m
+[0;32mI (271) esp_image: segment 4: paddr=00084128 vaddr=40082e34 size=14ab0h ( 84656) load[0m
+[0;32mI (317) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (317) boot: Disabling RNG early entropy source...[0m
+V (329) mmap: after coalescing, 3 regions are left[0m
+[0;32mI (329) cpu_start: Multicore app[0m
+D (329) cpu_start: Pro cpu up[0m
+D (331) cpu_start: Starting app cpu, entry point is 0x40081260[0m
+D (0) cpu_start: App cpu up[0m
+D (344) clk: RTC_SLOW_CLK calibration value: 3029824[0m
+D (356) cpu_start: calling init function: 0x400d1d44 on core: 0[0m
+D (357) cpu_start: calling init function: 0x400d2244 on core: 0[0m
+[0;32mI (359) cpu_start: Pro cpu start user code[0m
+[0;32mI (364) cpu_start: cpu freq: 160000000 Hz[0m
+D (368) cpu_start: calling init function: 0x400d1c84 on core: 0[0m
+[0;32mI (374) app_init: Application information:[0m
+[0;32mI (379) app_init: Project name:     PlantCare_Module[0m
+[0;32mI (385) app_init: App version:      25ccfa7-dirty[0m
+[0;32mI (390) app_init: Compile time:     Dec 11 2024 20:50:55[0m
+[0;32mI (396) app_init: ELF file SHA256:  49ed1ecd1...[0m
+[0;32mI (401) app_init: ESP-IDF:          v5.3.1-dirty[0m
+D (407) cpu_start: calling init function: 0x400d1d58 on core: 0[0m
+[0;32mI (413) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (418) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (422) efuse_init: Chip rev:         v3.1[0m
+D (427) cpu_start: calling init function: 0x400d3ad8 on core: 0[0m
+V (433) memory_layout: reserved range is 0x3f418364 - 0x3f4183cc[0m
+D (439) memory_layout: Checking 13 reserved memory ranges:[0m
+D (445) memory_layout: Reserved memory range 0x3ff82000 - 0x3ff82000[0m
+D (451) memory_layout: Reserved memory range 0x3ffae000 - 0x3ffae6e0[0m
+D (458) memory_layout: Reserved memory range 0x3ffae6e0 - 0x3ffaff10[0m
+D (464) memory_layout: Reserved memory range 0x3ffb0000 - 0x3ffb6388[0m
+D (471) memory_layout: Reserved memory range 0x3ffb8000 - 0x3ffb9a20[0m
+D (477) memory_layout: Reserved memory range 0x3ffbdb28 - 0x3ffbdb5c[0m
+D (483) memory_layout: Reserved memory range 0x3ffbdb60 - 0x3ffc5640[0m
+D (490) memory_layout: Reserved memory range 0x3ffe0000 - 0x3ffe0440[0m
+D (496) memory_layout: Reserved memory range 0x3ffe3f20 - 0x3ffe4350[0m
+D (503) memory_layout: Reserved memory range 0x40070000 - 0x40078000[0m
+D (509) memory_layout: Reserved memory range 0x40078000 - 0x40080000[0m
+D (516) memory_layout: Reserved memory range 0x40080000 - 0x400978e4[0m
+D (522) memory_layout: Reserved memory range 0x50001fe8 - 0x50002000[0m
+D (528) memory_layout: Building list of available memory regions:[0m
+V (535) memory_layout: Examining memory region 0x3ffae000 - 0x3ffb0000[0m
+V (541) memory_layout: Start of region 0x3ffae000 - 0x3ffb0000 overlaps reserved 0x3ffae000 - 0x3ffae6e0[0m
+V (551) memory_layout: Start of region 0x3ffae6e0 - 0x3ffb0000 overlaps reserved 0x3ffae6e0 - 0x3ffaff10[0m
+D (560) memory_layout: Available memory region 0x3ffaff10 - 0x3ffb0000[0m
+V (567) memory_layout: Examining memory region 0x3ffb0000 - 0x3ffb8000[0m
+V (573) memory_layout: Start of region 0x3ffb0000 - 0x3ffb8000 overlaps reserved 0x3ffb0000 - 0x3ffb6388[0m
+D (583) memory_layout: Available memory region 0x3ffb6388 - 0x3ffb8000[0m
+V (590) memory_layout: Examining memory region 0x3ffb8000 - 0x3ffc0000[0m
+V (596) memory_layout: Start of region 0x3ffb8000 - 0x3ffc0000 overlaps reserved 0x3ffb8000 - 0x3ffb9a20[0m
+V (606) memory_layout: Region 0x3ffb9a20 - 0x3ffc0000 contains reserved 0x3ffbdb28 - 0x3ffbdb5c[0m
+D (615) memory_layout: Available memory region 0x3ffb9a20 - 0x3ffbdb28[0m
+V (621) memory_layout: Examining memory region 0x3ffbdb5c - 0x3ffc0000[0m
+V (628) memory_layout: End of region 0x3ffbdb5c - 0x3ffc0000 overlaps reserved 0x3ffbdb60 - 0x3ffc5640[0m
+V (637) memory_layout: Examining memory region 0x3ffc0000 - 0x3ffc2000[0m
+V (644) memory_layout: Region 0x3ffc0000 - 0x3ffc2000 inside of reserved 0x3ffbdb60 - 0x3ffc5640[0m
+V (653) memory_layout: Examining memory region 0x3ffc2000 - 0x3ffc4000[0m
+V (659) memory_layout: Region 0x3ffc2000 - 0x3ffc4000 inside of reserved 0x3ffbdb60 - 0x3ffc5640[0m
+V (668) memory_layout: Examining memory region 0x3ffc4000 - 0x3ffc6000[0m
+V (675) memory_layout: Start of region 0x3ffc4000 - 0x3ffc6000 overlaps reserved 0x3ffbdb60 - 0x3ffc5640[0m
+D (684) memory_layout: Available memory region 0x3ffc5640 - 0x3ffc6000[0m
+V (691) memory_layout: Examining memory region 0x3ffc6000 - 0x3ffc8000[0m
+D (697) memory_layout: Available memory region 0x3ffc6000 - 0x3ffc8000[0m
+V (704) memory_layout: Examining memory region 0x3ffc8000 - 0x3ffca000[0m
+D (711) memory_layout: Available memory region 0x3ffc8000 - 0x3ffca000[0m
+V (717) memory_layout: Examining memory region 0x3ffca000 - 0x3ffcc000[0m
+D (724) memory_layout: Available memory region 0x3ffca000 - 0x3ffcc000[0m
+V (730) memory_layout: Examining memory region 0x3ffcc000 - 0x3ffce000[0m
+D (737) memory_layout: Available memory region 0x3ffcc000 - 0x3ffce000[0m
+V (743) memory_layout: Examining memory region 0x3ffce000 - 0x3ffd0000[0m
+D (750) memory_layout: Available memory region 0x3ffce000 - 0x3ffd0000[0m
+V (757) memory_layout: Examining memory region 0x3ffd0000 - 0x3ffd2000[0m
+D (763) memory_layout: Available memory region 0x3ffd0000 - 0x3ffd2000[0m
+V (770) memory_layout: Examining memory region 0x3ffd2000 - 0x3ffd4000[0m
+D (776) memory_layout: Available memory region 0x3ffd2000 - 0x3ffd4000[0m
+V (783) memory_layout: Examining memory region 0x3ffd4000 - 0x3ffd6000[0m
+D (790) memory_layout: Available memory region 0x3ffd4000 - 0x3ffd6000[0m
+V (796) memory_layout: Examining memory region 0x3ffd6000 - 0x3ffd8000[0m
+D (803) memory_layout: Available memory region 0x3ffd6000 - 0x3ffd8000[0m
+V (809) memory_layout: Examining memory region 0x3ffd8000 - 0x3ffda000[0m
+D (816) memory_layout: Available memory region 0x3ffd8000 - 0x3ffda000[0m
+V (823) memory_layout: Examining memory region 0x3ffda000 - 0x3ffdc000[0m
+D (829) memory_layout: Available memory region 0x3ffda000 - 0x3ffdc000[0m
+V (836) memory_layout: Examining memory region 0x3ffdc000 - 0x3ffde000[0m
+D (842) memory_layout: Available memory region 0x3ffdc000 - 0x3ffde000[0m
+V (849) memory_layout: Examining memory region 0x3ffde000 - 0x3ffe0000[0m
+D (856) memory_layout: Available memory region 0x3ffde000 - 0x3ffe0000[0m
+V (862) memory_layout: Examining memory region 0x3ffe0000 - 0x3ffe4000[0m
+V (869) memory_layout: Start of region 0x3ffe0000 - 0x3ffe4000 overlaps reserved 0x3ffe0000 - 0x3ffe0440[0m
+V (878) memory_layout: End of region 0x3ffe0440 - 0x3ffe4000 overlaps reserved 0x3ffe3f20 - 0x3ffe4350[0m
+D (888) memory_layout: Available memory region 0x3ffe0440 - 0x3ffe3f20[0m
+V (894) memory_layout: Examining memory region 0x3ffe4000 - 0x3ffe8000[0m
+V (901) memory_layout: Start of region 0x3ffe4000 - 0x3ffe8000 overlaps reserved 0x3ffe3f20 - 0x3ffe4350[0m
+D (911) memory_layout: Available memory region 0x3ffe4350 - 0x3ffe8000[0m
+V (917) memory_layout: Examining memory region 0x3ffe8000 - 0x3fff0000[0m
+D (924) memory_layout: Available memory region 0x3ffe8000 - 0x3fff0000[0m
+V (930) memory_layout: Examining memory region 0x3fff0000 - 0x3fff8000[0m
+D (937) memory_layout: Available memory region 0x3fff0000 - 0x3fff8000[0m
+V (943) memory_layout: Examining memory region 0x3fff8000 - 0x3fffc000[0m
+D (950) memory_layout: Available memory region 0x3fff8000 - 0x3fffc000[0m
+V (957) memory_layout: Examining memory region 0x3fffc000 - 0x40000000[0m
+D (963) memory_layout: Available memory region 0x3fffc000 - 0x40000000[0m
+V (970) memory_layout: Examining memory region 0x40070000 - 0x40078000[0m
+V (976) memory_layout: Region 0x40070000 - 0x40078000 inside of reserved 0x40070000 - 0x40078000[0m
+V (985) memory_layout: Examining memory region 0x40078000 - 0x40080000[0m
+V (992) memory_layout: Region 0x40078000 - 0x40080000 inside of reserved 0x40078000 - 0x40080000[0m
+V (1001) memory_layout: Examining memory region 0x40080000 - 0x40082000[0m
+V (1007) memory_layout: Region 0x40080000 - 0x40082000 inside of reserved 0x40080000 - 0x400978e4[0m
+V (1016) memory_layout: Examining memory region 0x40082000 - 0x40084000[0m
+V (1023) memory_layout: Region 0x40082000 - 0x40084000 inside of reserved 0x40080000 - 0x400978e4[0m
+V (1032) memory_layout: Examining memory region 0x40084000 - 0x40086000[0m
+V (1039) memory_layout: Region 0x40084000 - 0x40086000 inside of reserved 0x40080000 - 0x400978e4[0m
+V (1048) memory_layout: Examining memory region 0x40086000 - 0x40088000[0m
+V (1054) memory_layout: Region 0x40086000 - 0x40088000 inside of reserved 0x40080000 - 0x400978e4[0m
+V (1063) memory_layout: Examining memory region 0x40088000 - 0x4008a000[0m
+V (1070) memory_layout: Region 0x40088000 - 0x4008a000 inside of reserved 0x40080000 - 0x400978e4[0m
+V (1079) memory_layout: Examining memory region 0x4008a000 - 0x4008c000[0m
+V (1086) memory_layout: Region 0x4008a000 - 0x4008c000 inside of reserved 0x40080000 - 0x400978e4[0m
+V (1095) memory_layout: Examining memory region 0x4008c000 - 0x4008e000[0m
+V (1101) memory_layout: Region 0x4008c000 - 0x4008e000 inside of reserved 0x40080000 - 0x400978e4[0m
+V (1110) memory_layout: Examining memory region 0x4008e000 - 0x40090000[0m
+V (1117) memory_layout: Region 0x4008e000 - 0x40090000 inside of reserved 0x40080000 - 0x400978e4[0m
+V (1126) memory_layout: Examining memory region 0x40090000 - 0x40092000[0m
+V (1132) memory_layout: Region 0x40090000 - 0x40092000 inside of reserved 0x40080000 - 0x400978e4[0m
+V (1141) memory_layout: Examining memory region 0x40092000 - 0x40094000[0m
+V (1148) memory_layout: Region 0x40092000 - 0x40094000 inside of reserved 0x40080000 - 0x400978e4[0m
+V (1157) memory_layout: Examining memory region 0x40094000 - 0x40096000[0m
+V (1164) memory_layout: Region 0x40094000 - 0x40096000 inside of reserved 0x40080000 - 0x400978e4[0m
+V (1173) memory_layout: Examining memory region 0x40096000 - 0x40098000[0m
+V (1179) memory_layout: Start of region 0x40096000 - 0x40098000 overlaps reserved 0x40080000 - 0x400978e4[0m
+D (1189) memory_layout: Available memory region 0x400978e4 - 0x40098000[0m
+V (1196) memory_layout: Examining memory region 0x40098000 - 0x4009a000[0m
+D (1202) memory_layout: Available memory region 0x40098000 - 0x4009a000[0m
+V (1209) memory_layout: Examining memory region 0x4009a000 - 0x4009c000[0m
+D (1216) memory_layout: Available memory region 0x4009a000 - 0x4009c000[0m
+V (1222) memory_layout: Examining memory region 0x4009c000 - 0x4009e000[0m
+D (1229) memory_layout: Available memory region 0x4009c000 - 0x4009e000[0m
+V (1236) memory_layout: Examining memory region 0x4009e000 - 0x400a0000[0m
+D (1242) memory_layout: Available memory region 0x4009e000 - 0x400a0000[0m
+[0;32mI (1249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+D (1257) heap_init: New heap initialised at 0x3ffaff10[0m
+[0;32mI (1262) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+D (1268) heap_init: New heap initialised at 0x3ffb6388[0m
+[0;32mI (1273) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+D (1279) heap_init: New heap initialised at 0x3ffb9a20[0m
+[0;32mI (1284) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+D (1291) heap_init: New heap initialised at 0x3ffc5640[0m
+[0;32mI (1296) heap_init: At 3FFC5640 len 0001A9C0 (106 KiB): DRAM[0m
+[0;32mI (1302) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (1309) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+D (1315) heap_init: New heap initialised at 0x400978e4[0m
+[0;32mI (1320) heap_init: At 400978E4 len 0000871C (33 KiB): IRAM[0m
+D (1327) cpu_start: calling init function: 0x400d5158 on core: 0[0m
+D (1333) cpu_start: calling init function: 0x400d4ba4 on core: 0[0m
+D (1339) cpu_start: calling init function: 0x400d2288 on core: 0[0m
+V (1345) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): checking args[0m
+V (1351) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): Args okay. Resulting flags 0x40E[0m
+D (1360) intr_alloc: Connected src 46 to int 1 (cpu 0)[0m
+D (1365) cpu_start: calling init function: 0x400d2294 on core: 0[0m
+D (1371) cpu_start: calling init function: 0x400d6360 on core: 0[0m
+D (1377) cpu_start: calling init function: 0x400d6d3c on core: 0[0m
+D (1383) cpu_start: calling init function: 0x400d4c10 on core: 0[0m
+D (1389) cpu_start: calling init function: 0x400d4f74 on core: 0[0m
+D (1395) cpu_start: calling init function: 0x400d22a0 on core: 0[0m
+V (1401) memspi: raw_chip_id: 164068
+[0m
+V (1405) memspi: chip_id: 684016
+[0m
+V (1408) memspi: raw_chip_id: 164068
+[0m
+V (1412) memspi: chip_id: 684016
+[0m
+D (1416) spi_flash: trying chip: issi[0m
+D (1419) spi_flash: trying chip: gd[0m
+D (1423) spi_flash: trying chip: mxic[0m
+D (1427) spi_flash: trying chip: winbond[0m
+D (1431) spi_flash: trying chip: generic[0m
+[0;32mI (1435) spi_flash: detected chip: generic[0m
+[0;32mI (1440) spi_flash: flash io: dio[0m
+[0;33mW (1444) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+D (1457) cpu_start: calling init function: 0x400d1de4 on core: 0[0m
+D (1463) cpu_start: calling init function: 0x400fc5fc[0m
+D (1468) cpu_start: calling init function: 0x400edce8[0m
+D (1473) cpu_start: calling init function: 0x4008f294[0m
+D (1478) cpu_start: calling init function: 0x400d3318[0m
+D (1483) cpu_start: calling init function: 0x400d2858[0m
+D (1489) cpu_start: calling init function: 0x400ea264 on core: 0[0m
+V (1495) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): checking args[0m
+V (1501) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): Args okay. Resulting flags 0xC02[0m
+D (1509) intr_alloc: Connected src 17 to int 2 (cpu 0)[0m
+D (1514) cpu_start: calling init function: 0x400d22c4 on core: 0[0m
+[0;32mI (1521) coexist: coex firmware version: 4482466[0m
+D (1526) cpu_start: calling init function: 0x400d22d8 on core: 0[0m
+V (1532) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): checking args[0m
+V (1538) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): Args okay. Resulting flags 0x40E[0m
+D (1547) intr_alloc: Connected src 24 to int 3 (cpu 0)[0m
+D (1552) app_start: Starting scheduler on CPU0[0m
+V (1556) intr_alloc: esp_intr_alloc_intrstatus (cpu 1): checking args[0m
+V (1556) intr_alloc: esp_intr_alloc_intrstatus (cpu 1): Args okay. Resulting flags 0x40E[0m
+[0D (1566) intr_alloc: Connected src 25 to int 1 (cpu 1)[0m
+D (1576) app_start: Starting scheduler on CPU1[0m
+;32mI (1556) main_task: Started on CPU0[0m
+D (1586) heap_init: New heap initialised at 0x3ffe0440[0m
+D (1586) heap_init: New heap initialised at 0x3ffe4350[0m
+V (1586) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): checking args[0m
+V (1596) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): Args okay. Resulting flags 0xE[0m
+D (1606) intr_alloc: Connected src 16 to int 5 (cpu 0)[0m
+[0;32mI (1606) main_task: Calling app_main()[0m
+V (1616) partition: Loading the partition table[0m
+V (1616) mmap: actual_mapped_len is 0x10000[0m
+V (1626) calculated md5: 0x3ffbba88   f4 ad 4f 45 38 56 4b 5d  74 35 b6 2c 75 b6 95 24  |..OE8VK]t5.,u..$|[0m
+V (1636) stored md5: 0x3f428070   f4 ad 4f 45 38 56 4b 5d  74 35 b6 2c 75 b6 95 24  |..OE8VK]t5.,u..$|[0m
+V (1646) partition: Partition table MD5 verified[0m
+D (1656) nvs: nvs_open_from_partition storage 0[0m
+D (1656) nvs: nvs_get_str_or_blob name[0m
+D (1656) nvs: nvs_get_str_or_blob name[0m
+D (1656) nvs: nvs_get_str_or_blob password[0m
+D (1666) nvs: nvs_get_str_or_blob password[0m
+D (1666) nvs: nvs_get_str_or_blob uuid[0m
+D (1676) nvs: nvs_get_str_or_blob uuid[0m
+D (1676) nvs: nvs_close 1[0m
+[0;32mI (1676) main_task: Returned from app_main()[0m
