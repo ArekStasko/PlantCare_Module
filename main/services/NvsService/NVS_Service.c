@@ -5,7 +5,7 @@
 #include "esp_log.h"
 #include "esp_event.h"
 
-char[] getWifiName(void)
+char* getWifiName(void)
 {
     nvs_handle_t nvs_handle;
     esp_err_t ret = nvs_open("storage", NVS_READONLY, &nvs_handle);
@@ -16,7 +16,7 @@ char[] getWifiName(void)
     return [];
 }
 
-char[] getWifiPassword(void)
+char* getWifiPassword(void)
 {
     nvs_handle_t nvs_handle;
     esp_err_t ret = nvs_open("storage", NVS_READONLY, &nvs_handle);
@@ -26,7 +26,7 @@ char[] getWifiPassword(void)
     }
     return []
 }
-
+W
 bool checkIfWiFiDataExists(void)
 {
     nvs_handle_t nvs_handle;
