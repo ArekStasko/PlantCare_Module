@@ -8,5 +8,7 @@
 #include "esp_log.h"
 #include "esp_event.h"
 bool checkIfWiFiDataExists(void);
+char* getWifiName(void);
+char* getWifiPassword(void);
 
 #endif //NVS_SERVICE_H

@@ -7,26 +7,66 @@
 
 char* getWifiName(void)
 {
+  	static char wifiName[128];
+    size_t required_size = 0;
+
     nvs_handle_t nvs_handle;
     esp_err_t ret = nvs_open("storage", NVS_READONLY, &nvs_handle);
-    if (nvs_get_str(nvs_handle, "name", NULL, &required_size) == ESP_OK)
-    {
-        return nvs_get_str(nvs_handle, "name", name, &required_size);
+
+    if (ret != ESP_OK) {
+        ESP_LOGE("NVS", "Failed to open NVS handle! Error: %d", ret);
+        return NULL;
     }
-    return [];
+
+    ret = nvs_get_str(nvs_handle, "name", NULL, &required_size);
+    if (ret != ESP_OK || required_size == 0) {
+        ESP_LOGE("NVS", "Failed to read wifi name or wifi name not found");
+        nvs_close(nvs_handle);
+        return NULL;
+    }
+
+    ret = nvs_get_str(nvs_handle, "name", wifiName, &required_size);
+    if (ret != ESP_OK) {
+        ESP_LOGE("NVS", "Failed to read wifi name");
+        nvs_close(nvs_handle);
+        return NULL;
+    }
+
+    nvs_close(nvs_handle);
+    return wifiName;
 }
 
 char* getWifiPassword(void)
 {
+    static char password[128];
+    size_t required_size = 0;
+
     nvs_handle_t nvs_handle;
     esp_err_t ret = nvs_open("storage", NVS_READONLY, &nvs_handle);
-    if (nvs_get_str(nvs_handle, "password", NULL, &required_size) == ESP_OK)
-    {
-        return nvs_get_str(nvs_handle, "password", password, &required_size);
+
+    if (ret != ESP_OK) {
+        ESP_LOGE("NVS", "Failed to open NVS handle! Error: %d", ret);
+        return NULL;
     }
-    return []
+
+    ret = nvs_get_str(nvs_handle, "password", NULL, &required_size);
+    if (ret != ESP_OK || required_size == 0) {
+        ESP_LOGE("NVS", "Failed to read password or password not found");
+        nvs_close(nvs_handle);
+        return NULL;
+    }
+
+    ret = nvs_get_str(nvs_handle, "password", password, &required_size);
+    if (ret != ESP_OK) {
+        ESP_LOGE("NVS", "Failed to read password");
+        nvs_close(nvs_handle);
+        return NULL;
+    }
+
+    nvs_close(nvs_handle);
+    return password;
 }
-W
+
 bool checkIfWiFiDataExists(void)
 {
     nvs_handle_t nvs_handle;
