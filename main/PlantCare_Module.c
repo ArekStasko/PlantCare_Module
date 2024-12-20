@@ -4,6 +4,7 @@
 #include "nvs_flash.h"
 #include "NVS_Service.h"
 #include "Bluetooth_Service.h"
+#include "WIFI_Service.h"
 #include "esp_log.h"
 #include "esp_event.h"
 
@@ -15,5 +16,10 @@ void app_main(void)
     if (!isWifiDataExist)
     {
         enable_bt();
+    }
+
+    if(isWifiDataExist)
+    {
+      connectToWifi();
     }
 }

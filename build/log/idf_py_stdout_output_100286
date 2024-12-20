@@ -1,0 +1,1938 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /home/arekstasko/sources/repos/PlantCare_Module/build/bootloader/esp-idf/esptool_py && /home/arekstasko/.espressif/python_env/idf5.3_py3.10_env/bin/python /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/arekstasko/sources/repos/PlantCare_Module/build/bootloader/bootloader.bin
+Bootloader binary size 0x6880 bytes. 0x780 bytes (7%) free.
+[2/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/services/WifiService/WIFI_Service.c.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/services/WifiService/WIFI_Service.c.obj 
+/home/arekstasko/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20240530/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc -DESP_PLATFORM -DIDF_VER=\"v5.3.1-dirty\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/home/arekstasko/sources/repos/PlantCare_Module/build/config -I/home/arekstasko/sources/repos/PlantCare_Module/main -I/home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService -I/home/arekstasko/sources/repos/PlantCare_Module/main/services/NvsService -I/home/arekstasko/sources/repos/PlantCare_Module/main/services/WifiService -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/newlib/platform_include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/config/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/config/include/freertos -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/config/xtensa/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/esp_additions/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_hw_support/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_hw_support/include/soc -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_hw_support/include/soc/esp32 -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_hw_support/dma/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_hw_support/ldo/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_hw_support/port/esp32/. -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_hw_support/port/esp32/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/heap/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/log/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/soc/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/soc/esp32 -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/soc/esp32/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/hal/platform_port/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/hal/esp32/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/hal/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_rom/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_rom/include/esp32 -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_rom/esp32 -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_common/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_system/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_system/port/soc -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_system/port/include/private -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/esp32/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/deprecated_include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/lwip/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/lwip/include/apps -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/lwip/include/apps/sntp -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/lwip/lwip/src/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/lwip/port/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/lwip/port/freertos/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/lwip/port/esp32xx/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/lwip/port/esp32xx/include/arch -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/lwip/port/esp32xx/include/sys -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/include/esp32/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/common/osi/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/common/api/include/api -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/common/btc/profile/esp/blufi/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/common/btc/profile/esp/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/common/hci_log/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/esp_ble_mesh/common/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/esp_ble_mesh/common/tinycrypt/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/esp_ble_mesh/core -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/esp_ble_mesh/core/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/esp_ble_mesh/core/storage -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/esp_ble_mesh/btc/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/esp_ble_mesh/models/common/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/esp_ble_mesh/models/client/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/esp_ble_mesh/models/server/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/esp_ble_mesh/api/core/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/esp_ble_mesh/api/models/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/esp_ble_mesh/api -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/esp_ble_mesh/lib/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/esp_ble_mesh/v1.1/api/core/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/esp_ble_mesh/v1.1/api/models/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/esp_ble_mesh/v1.1/btc/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/services/ans/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/services/bas/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/services/dis/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/services/gap/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/services/gatt/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/services/hr/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/services/htp/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/services/ias/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/services/ipss/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/services/lls/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/services/prox/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/services/cts/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/services/tps/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/services/hid/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/services/sps/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/util/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/store/ram/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/store/config/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/nimble/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/port/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/transport/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/porting/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/esp-hci/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_timer/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_wifi/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_wifi/wifi_apps/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_wifi/wifi_apps/nan_app/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_wifi/include/local -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_event/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_phy/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_phy/esp32/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_netif/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/nvs_flash/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/spi_flash/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_partition/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/driver/deprecated -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/driver/i2c/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/driver/touch_sensor/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/driver/twai/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/driver/touch_sensor/esp32/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_pm/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_ringbuf/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_driver_gpio/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_driver_pcnt/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_driver_gptimer/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_driver_spi/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_driver_mcpwm/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_driver_ana_cmpr/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_driver_i2s/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_driver_sdmmc/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/sdmmc/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_driver_sdspi/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_driver_sdio/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_driver_dac/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_driver_rmt/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_driver_tsens/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_driver_sdm/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_driver_i2c/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_driver_uart/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/vfs/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_driver_ledc/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_driver_parlio/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_driver_usb_serial_jtag/include -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=/home/arekstasko/sources/repos/PlantCare_Module=. -fmacro-prefix-map=/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/services/WifiService/WIFI_Service.c.obj -MF esp-idf/main/CMakeFiles/__idf_main.dir/services/WifiService/WIFI_Service.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/services/WifiService/WIFI_Service.c.obj -c /home/arekstasko/sources/repos/PlantCare_Module/main/services/WifiService/WIFI_Service.c
+/home/arekstasko/sources/repos/PlantCare_Module/main/services/WifiService/WIFI_Service.c: In function 'getWifiName':
+/home/arekstasko/sources/repos/PlantCare_Module/main/services/WifiService/WIFI_Service.c:6:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'void'
+    6 | void connectToWifi()
+      | ^~~~
+/home/arekstasko/sources/repos/PlantCare_Module/main/services/WifiService/WIFI_Service.c:14: error: expected '{' at end of input
+/home/arekstasko/sources/repos/PlantCare_Module/main/services/WifiService/WIFI_Service.c:14: error: control reaches end of non-void function [-Werror=return-type]
+cc1: some warnings being treated as errors
+[3/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/PlantCare_Module.c.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/PlantCare_Module.c.obj 
+/home/arekstasko/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20240530/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc -DESP_PLATFORM -DIDF_VER=\"v5.3.1-dirty\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/home/arekstasko/sources/repos/PlantCare_Module/build/config -I/home/arekstasko/sources/repos/PlantCare_Module/main -I/home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService -I/home/arekstasko/sources/repos/PlantCare_Module/main/services/NvsService -I/home/arekstasko/sources/repos/PlantCare_Module/main/services/WifiService -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/newlib/platform_include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/config/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/config/include/freertos -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/config/xtensa/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/esp_additions/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_hw_support/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_hw_support/include/soc -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_hw_support/include/soc/esp32 -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_hw_support/dma/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_hw_support/ldo/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_hw_support/port/esp32/. -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_hw_support/port/esp32/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/heap/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/log/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/soc/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/soc/esp32 -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/soc/esp32/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/hal/platform_port/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/hal/esp32/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/hal/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_rom/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_rom/include/esp32 -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_rom/esp32 -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_common/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_system/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_system/port/soc -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_system/port/include/private -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/esp32/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/deprecated_include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/lwip/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/lwip/include/apps -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/lwip/include/apps/sntp -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/lwip/lwip/src/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/lwip/port/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/lwip/port/freertos/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/lwip/port/esp32xx/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/lwip/port/esp32xx/include/arch -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/lwip/port/esp32xx/include/sys -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/include/esp32/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/common/osi/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/common/api/include/api -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/common/btc/profile/esp/blufi/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/common/btc/profile/esp/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/common/hci_log/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/esp_ble_mesh/common/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/esp_ble_mesh/common/tinycrypt/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/esp_ble_mesh/core -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/esp_ble_mesh/core/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/esp_ble_mesh/core/storage -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/esp_ble_mesh/btc/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/esp_ble_mesh/models/common/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/esp_ble_mesh/models/client/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/esp_ble_mesh/models/server/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/esp_ble_mesh/api/core/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/esp_ble_mesh/api/models/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/esp_ble_mesh/api -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/esp_ble_mesh/lib/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/esp_ble_mesh/v1.1/api/core/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/esp_ble_mesh/v1.1/api/models/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/esp_ble_mesh/v1.1/btc/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/services/ans/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/services/bas/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/services/dis/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/services/gap/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/services/gatt/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/services/hr/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/services/htp/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/services/ias/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/services/ipss/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/services/lls/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/services/prox/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/services/cts/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/services/tps/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/services/hid/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/services/sps/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/util/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/store/ram/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/store/config/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/nimble/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/port/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/transport/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/porting/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/esp-hci/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_timer/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_wifi/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_wifi/wifi_apps/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_wifi/wifi_apps/nan_app/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_wifi/include/local -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_event/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_phy/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_phy/esp32/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_netif/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/nvs_flash/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/spi_flash/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_partition/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/driver/deprecated -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/driver/i2c/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/driver/touch_sensor/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/driver/twai/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/driver/touch_sensor/esp32/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_pm/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_ringbuf/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_driver_gpio/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_driver_pcnt/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_driver_gptimer/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_driver_spi/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_driver_mcpwm/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_driver_ana_cmpr/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_driver_i2s/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_driver_sdmmc/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/sdmmc/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_driver_sdspi/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_driver_sdio/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_driver_dac/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_driver_rmt/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_driver_tsens/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_driver_sdm/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_driver_i2c/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_driver_uart/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/vfs/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_driver_ledc/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_driver_parlio/include -I/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_driver_usb_serial_jtag/include -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=/home/arekstasko/sources/repos/PlantCare_Module=. -fmacro-prefix-map=/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/PlantCare_Module.c.obj -MF esp-idf/main/CMakeFiles/__idf_main.dir/PlantCare_Module.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/PlantCare_Module.c.obj -c /home/arekstasko/sources/repos/PlantCare_Module/main/PlantCare_Module.c
+In file included from /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/nimble/include/os/os.h:42,
+                 from /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h:32,
+                 from /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/transport/include/nimble/transport_impl.h:27,
+                 from /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/transport/include/nimble/transport.h:27,
+                 from /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/esp-hci/include/esp_nimble_hci.h:10,
+                 from /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.h:12,
+                 from /home/arekstasko/sources/repos/PlantCare_Module/main/PlantCare_Module.c:6:
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h: In function 'getWifiName':
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h:31:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'struct'
+   31 | struct ble_npl_event;
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h:32:38: warning: 'struct ble_npl_event' declared inside parameter list will not be visible outside of this definition or declaration
+   32 | typedef void ble_npl_event_fn(struct ble_npl_event *ev);
+      |                                      ^~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h:32:14: error: storage class specified for parameter 'ble_npl_event_fn'
+   32 | typedef void ble_npl_event_fn(struct ble_npl_event *ev);
+      |              ^~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h:34:1: warning: empty declaration
+   34 | enum ble_npl_error {
+      | ^~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h:50:28: error: storage class specified for parameter 'ble_npl_error_t'
+   50 | typedef enum ble_npl_error ble_npl_error_t;
+      |                            ^~~~~~~~~~~~~~~
+In file included from /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_timer/include/esp_timer.h:39,
+                 from /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:31,
+                 from /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h:53:
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_hw_support/include/esp_etm.h:19:35: error: storage class specified for parameter 'esp_etm_channel_handle_t'
+   19 | typedef struct esp_etm_channel_t *esp_etm_channel_handle_t;
+      |                                   ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_hw_support/include/esp_etm.h:24:33: error: storage class specified for parameter 'esp_etm_event_handle_t'
+   24 | typedef struct esp_etm_event_t *esp_etm_event_handle_t;
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_hw_support/include/esp_etm.h:29:32: error: storage class specified for parameter 'esp_etm_task_handle_t'
+   29 | typedef struct esp_etm_task_t *esp_etm_task_handle_t;
+      |                                ^~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_hw_support/include/esp_etm.h:36:3: error: storage class specified for parameter 'esp_etm_channel_config_t'
+   36 | } esp_etm_channel_config_t;
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_hw_support/include/esp_etm.h:52:37: error: type defaults to 'int' in declaration of 'esp_etm_channel_config_t' [-Werror=implicit-int]
+   52 | esp_err_t esp_etm_new_channel(const esp_etm_channel_config_t *config, esp_etm_channel_handle_t *ret_chan);
+      |                                     ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_hw_support/include/esp_etm.h:52:62: error: expected ';', ',' or ')' before '*' token
+   52 | esp_err_t esp_etm_new_channel(const esp_etm_channel_config_t *config, esp_etm_channel_handle_t *ret_chan);
+      |                                                              ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_hw_support/include/esp_etm.h:63:31: error: expected declaration specifiers or '...' before 'esp_etm_channel_handle_t'
+   63 | esp_err_t esp_etm_del_channel(esp_etm_channel_handle_t chan);
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_hw_support/include/esp_etm.h:77:34: error: expected declaration specifiers or '...' before 'esp_etm_channel_handle_t'
+   77 | esp_err_t esp_etm_channel_enable(esp_etm_channel_handle_t chan);
+      |                                  ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_hw_support/include/esp_etm.h:91:35: error: expected declaration specifiers or '...' before 'esp_etm_channel_handle_t'
+   91 | esp_err_t esp_etm_channel_disable(esp_etm_channel_handle_t chan);
+      |                                   ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_hw_support/include/esp_etm.h:106:35: error: expected declaration specifiers or '...' before 'esp_etm_channel_handle_t'
+  106 | esp_err_t esp_etm_channel_connect(esp_etm_channel_handle_t chan, esp_etm_event_handle_t event, esp_etm_task_handle_t task);
+      |                                   ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_hw_support/include/esp_etm.h:106:66: error: expected declaration specifiers or '...' before 'esp_etm_event_handle_t'
+  106 | esp_err_t esp_etm_channel_connect(esp_etm_channel_handle_t chan, esp_etm_event_handle_t event, esp_etm_task_handle_t task);
+      |                                                                  ^~~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_hw_support/include/esp_etm.h:106:96: error: expected declaration specifiers or '...' before 'esp_etm_task_handle_t'
+  106 | esp_err_t esp_etm_channel_connect(esp_etm_channel_handle_t chan, esp_etm_event_handle_t event, esp_etm_task_handle_t task);
+      |                                                                                                ^~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_hw_support/include/esp_etm.h:119:29: error: expected declaration specifiers or '...' before 'esp_etm_event_handle_t'
+  119 | esp_err_t esp_etm_del_event(esp_etm_event_handle_t event);
+      |                             ^~~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_hw_support/include/esp_etm.h:132:28: error: expected declaration specifiers or '...' before 'esp_etm_task_handle_t'
+  132 | esp_err_t esp_etm_del_task(esp_etm_task_handle_t task);
+      |                            ^~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_timer/include/esp_timer.h:49:27: error: storage class specified for parameter 'esp_timer_handle_t'
+   49 | typedef struct esp_timer* esp_timer_handle_t;
+      |                           ^~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_timer/include/esp_timer.h:55:16: error: storage class specified for parameter 'esp_timer_cb_t'
+   55 | typedef void (*esp_timer_cb_t)(void* arg);
+      |                ^~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_timer/include/esp_timer.h:66:3: error: storage class specified for parameter 'esp_timer_dispatch_t'
+   66 | } esp_timer_dispatch_t;
+      |   ^~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_timer/include/esp_timer.h:72:5: error: expected specifier-qualifier-list before 'esp_timer_cb_t'
+   72 |     esp_timer_cb_t callback;        //!< Callback function to execute when timer expires
+      |     ^~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_timer/include/esp_timer.h:79:3: error: storage class specified for parameter 'esp_timer_create_args_t'
+   79 | } esp_timer_create_args_t;
+      |   ^~~~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_timer/include/esp_timer.h:143:34: error: type defaults to 'int' in declaration of 'esp_timer_create_args_t' [-Werror=implicit-int]
+  143 | esp_err_t esp_timer_create(const esp_timer_create_args_t* create_args,
+      |                                  ^~~~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_timer/include/esp_timer.h:143:57: error: expected ';', ',' or ')' before '*' token
+  143 | esp_err_t esp_timer_create(const esp_timer_create_args_t* create_args,
+      |                                                         ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_timer/include/esp_timer.h:158:32: error: expected declaration specifiers or '...' before 'esp_timer_handle_t'
+  158 | esp_err_t esp_timer_start_once(esp_timer_handle_t timer, uint64_t timeout_us);
+      |                                ^~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_timer/include/esp_timer.h:173:36: error: expected declaration specifiers or '...' before 'esp_timer_handle_t'
+  173 | esp_err_t esp_timer_start_periodic(esp_timer_handle_t timer, uint64_t period);
+      |                                    ^~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_timer/include/esp_timer.h:191:29: error: expected declaration specifiers or '...' before 'esp_timer_handle_t'
+  191 | esp_err_t esp_timer_restart(esp_timer_handle_t timer, uint64_t timeout_us);
+      |                             ^~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_timer/include/esp_timer.h:204:26: error: expected declaration specifiers or '...' before 'esp_timer_handle_t'
+  204 | esp_err_t esp_timer_stop(esp_timer_handle_t timer);
+      |                          ^~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_timer/include/esp_timer.h:217:28: error: expected declaration specifiers or '...' before 'esp_timer_handle_t'
+  217 | esp_err_t esp_timer_delete(esp_timer_handle_t timer);
+      |                            ^~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_timer/include/esp_timer.h:253:32: error: expected declaration specifiers or '...' before 'esp_timer_handle_t'
+  253 | esp_err_t esp_timer_get_period(esp_timer_handle_t timer, uint64_t *period);
+      |                                ^~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_timer/include/esp_timer.h:269:37: error: expected declaration specifiers or '...' before 'esp_timer_handle_t'
+  269 | esp_err_t esp_timer_get_expiry_time(esp_timer_handle_t timer, uint64_t *expiry);
+      |                                     ^~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_timer/include/esp_timer.h:322:26: error: expected declaration specifiers or '...' before 'esp_timer_handle_t'
+  322 | bool esp_timer_is_active(esp_timer_handle_t timer);
+      |                          ^~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_timer/include/esp_timer.h:337:41: error: expected declaration specifiers or '...' before 'esp_etm_event_handle_t'
+  337 | esp_err_t esp_timer_new_etm_alarm_event(esp_etm_event_handle_t *out_event);
+      |                                         ^~~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:42:12: error: storage class specified for parameter 'ets_printf'
+   42 | extern int ets_printf(const char *fmt, ...);
+      |            ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:57:18: error: storage class specified for parameter 'ble_npl_time_t'
+   57 | typedef uint32_t ble_npl_time_t;
+      |                  ^~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:58:17: error: storage class specified for parameter 'ble_npl_stime_t'
+   58 | typedef int32_t ble_npl_stime_t;
+      |                 ^~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:60:1: warning: empty declaration
+   60 | struct ble_npl_event;
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:61:14: error: storage class specified for parameter 'ble_npl_event_fn'
+   61 | typedef void ble_npl_event_fn(struct ble_npl_event *ev);
+      |              ^~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:61:14: error: conflicting types for 'ble_npl_event_fn'; have 'void (*)(struct ble_npl_event *)'
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h:32:14: note: previous definition of 'ble_npl_event_fn' with type 'void (*)(struct ble_npl_event *)'
+   32 | typedef void ble_npl_event_fn(struct ble_npl_event *ev);
+      |              ^~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:63:1: warning: empty declaration
+   63 | struct ble_npl_event {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:67:1: warning: empty declaration
+   67 | struct ble_npl_eventq {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:71:1: warning: empty declaration
+   71 | struct ble_npl_callout {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:75:1: warning: empty declaration
+   75 | struct ble_npl_mutex {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:79:1: warning: empty declaration
+   79 | struct ble_npl_sem {
+      | ^~~~~~
+In file included from /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:89:
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/npl_freertos.h:27:14: error: storage class specified for parameter 'ble_npl_event_fn'
+   27 | typedef void ble_npl_event_fn(struct ble_npl_event *ev);
+      |              ^~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/npl_freertos.h:27:14: error: redefinition of parameter 'ble_npl_event_fn'
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:61:14: note: previous definition of 'ble_npl_event_fn' with type 'void (*)(struct ble_npl_event *)'
+   61 | typedef void ble_npl_event_fn(struct ble_npl_event *ev);
+      |              ^~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/npl_freertos.h:31:5: error: expected specifier-qualifier-list before 'ble_npl_event_fn'
+   31 |     ble_npl_event_fn *fn;
+      |     ^~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/npl_freertos.h:29:1: warning: empty declaration
+   29 | struct ble_npl_event_freertos {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/npl_freertos.h:35:1: warning: empty declaration
+   35 | struct ble_npl_eventq_freertos {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/npl_freertos.h:41:4: error: expected specifier-qualifier-list before 'esp_timer_handle_t'
+   41 |    esp_timer_handle_t handle;
+      |    ^~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/npl_freertos.h:39:1: warning: empty declaration
+   39 | struct ble_npl_callout_freertos {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/npl_freertos.h:49:1: warning: empty declaration
+   49 | struct ble_npl_mutex_freertos {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/npl_freertos.h:53:1: warning: empty declaration
+   53 | struct ble_npl_sem_freertos {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/npl_freertos.h:57:14: error: storage class specified for parameter 'ble_npl_event_fn_freertos'
+   57 | typedef void ble_npl_event_fn_freertos(struct ble_npl_event_freertos *ev);
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/npl_freertos.h:62:47: error: expected declaration specifiers or '...' before 'ble_npl_time_t'
+   62 |                                               ble_npl_time_t tmo);
+      |                                               ^~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/npl_freertos.h:70:1: error: expected declaration specifiers before 'ble_npl_error_t'
+   70 | ble_npl_error_t npl_freertos_mutex_init(struct ble_npl_mutex *mu);
+      | ^~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/npl_freertos.h:71:1: error: expected declaration specifiers before 'ble_npl_error_t'
+   71 | ble_npl_error_t npl_freertos_mutex_deinit(struct ble_npl_mutex *mu);
+      | ^~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/npl_freertos.h:73:1: error: expected declaration specifiers before 'ble_npl_error_t'
+   73 | ble_npl_error_t npl_freertos_mutex_pend(struct ble_npl_mutex *mu,
+      | ^~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/npl_freertos.h:76:1: error: expected declaration specifiers before 'ble_npl_error_t'
+   76 | ble_npl_error_t npl_freertos_mutex_release(struct ble_npl_mutex *mu);
+      | ^~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/npl_freertos.h:78:1: error: expected declaration specifiers before 'ble_npl_error_t'
+   78 | ble_npl_error_t npl_freertos_sem_init(struct ble_npl_sem *sem, uint16_t tokens);
+      | ^~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/npl_freertos.h:79:1: error: expected declaration specifiers before 'ble_npl_error_t'
+   79 | ble_npl_error_t npl_freertos_sem_deinit(struct ble_npl_sem *sem);
+      | ^~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/npl_freertos.h:81:1: error: expected declaration specifiers before 'ble_npl_error_t'
+   81 | ble_npl_error_t npl_freertos_sem_pend(struct ble_npl_sem *sem,
+      | ^~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/npl_freertos.h:84:1: error: expected declaration specifiers before 'ble_npl_error_t'
+   84 | ble_npl_error_t npl_freertos_sem_release(struct ble_npl_sem *sem);
+      | ^~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/npl_freertos.h:88:32: error: expected declaration specifiers or '...' before 'ble_npl_event_fn'
+   88 |                                ble_npl_event_fn *ev_cb, void *ev_arg);
+      |                                ^~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/npl_freertos.h:96:1: error: expected declaration specifiers before 'ble_npl_time_t'
+   96 | ble_npl_time_t npl_freertos_callout_get_ticks(struct ble_npl_callout *co);
+      | ^~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/npl_freertos.h:98:1: error: expected declaration specifiers before 'ble_npl_error_t'
+   98 | ble_npl_error_t npl_freertos_callout_reset(struct ble_npl_callout *co,
+      | ^~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/npl_freertos.h:101:1: error: expected declaration specifiers before 'ble_npl_time_t'
+  101 | ble_npl_time_t npl_freertos_callout_remaining_ticks(struct ble_npl_callout *co,
+      | ^~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/npl_freertos.h:104:1: error: expected declaration specifiers before 'ble_npl_error_t'
+  104 | ble_npl_error_t npl_freertos_time_ms_to_ticks(uint32_t ms,
+      | ^~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/npl_freertos.h:107:1: error: expected declaration specifiers before 'ble_npl_error_t'
+  107 | ble_npl_error_t npl_freertos_time_ticks_to_ms(ble_npl_time_t ticks,
+      | ^~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:96:77: error: expected declaration specifiers or '...' before 'ble_npl_time_t'
+   96 |     struct ble_npl_event * (*p_ble_npl_eventq_get)(struct ble_npl_eventq *, ble_npl_time_t);
+      |                                                                             ^~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:101:58: error: expected declaration specifiers or '...' before 'ble_npl_event_fn'
+  101 |     void (*p_ble_npl_event_init)(struct ble_npl_event *, ble_npl_event_fn *, void *);
+      |                                                          ^~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:107:5: error: expected specifier-qualifier-list before 'ble_npl_error_t'
+  107 |     ble_npl_error_t (*p_ble_npl_mutex_init)(struct ble_npl_mutex *);
+      |     ^~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:91:1: warning: empty declaration
+   91 | struct npl_funcs_t {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:138:28: error: storage class specified for parameter 'npl_funcs'
+  138 | extern struct npl_funcs_t *npl_funcs;
+      |                            ^~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:142:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  142 | {
+      | ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:148:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  148 | {
+      | ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:154:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  154 | {
+      | ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:160:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  160 | {
+      | ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:165:48: error: expected declaration specifiers or '...' before 'ble_npl_time_t'
+  165 | ble_npl_eventq_get(struct ble_npl_eventq *evq, ble_npl_time_t tmo)
+      |                                                ^~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:172:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  172 | {
+      | ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:178:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  178 | {
+      | ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:184:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  184 | {
+      | ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:190:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  190 | {
+      | ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:195:46: error: expected declaration specifiers or '...' before 'ble_npl_event_fn'
+  195 | ble_npl_event_init(struct ble_npl_event *ev, ble_npl_event_fn *fn,
+      |                                              ^~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:203:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  203 | {
+      | ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:209:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  209 | {
+      | ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:215:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  215 | {
+      | ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:220:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'ble_npl_mutex_init'
+  220 | ble_npl_mutex_init(struct ble_npl_mutex *mu)
+      | ^~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:226:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'ble_npl_mutex_deinit'
+  226 | ble_npl_mutex_deinit(struct ble_npl_mutex *mu)
+      | ^~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:232:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'ble_npl_mutex_pend'
+  232 | ble_npl_mutex_pend(struct ble_npl_mutex *mu, ble_npl_time_t timeout)
+      | ^~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:238:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'ble_npl_mutex_release'
+  238 | ble_npl_mutex_release(struct ble_npl_mutex *mu)
+      | ^~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:244:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'ble_npl_sem_init'
+  244 | ble_npl_sem_init(struct ble_npl_sem *sem, uint16_t tokens)
+      | ^~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:250:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'ble_npl_sem_deinit'
+  250 | ble_npl_sem_deinit(struct ble_npl_sem *sem)
+      | ^~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:256:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'ble_npl_sem_pend'
+  256 | ble_npl_sem_pend(struct ble_npl_sem *sem, ble_npl_time_t timeout)
+      | ^~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:262:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'ble_npl_sem_release'
+  262 | ble_npl_sem_release(struct ble_npl_sem *sem)
+      | ^~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:269:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  269 | {
+      | ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:275:22: error: expected declaration specifiers or '...' before 'ble_npl_event_fn'
+  275 |                      ble_npl_event_fn *ev_cb, void *ev_arg)
+      |                      ^~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:281:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  281 | {
+      | ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:286:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'ble_npl_callout_reset'
+  286 | ble_npl_callout_reset(struct ble_npl_callout *co, ble_npl_time_t ticks)
+      | ^~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:293:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  293 | {
+      | ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:299:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  299 | {
+      | ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:304:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'ble_npl_callout_get_ticks'
+  304 | ble_npl_callout_get_ticks(struct ble_npl_callout *co)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:310:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'ble_npl_callout_remaining_ticks'
+  310 | ble_npl_callout_remaining_ticks(struct ble_npl_callout *co,
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:318:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  318 | {
+      | ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:323:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'ble_npl_time_get'
+  323 | ble_npl_time_get(void)
+      | ^~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:329:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'ble_npl_time_ms_to_ticks'
+  329 | ble_npl_time_ms_to_ticks(uint32_t ms, ble_npl_time_t *out_ticks)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:335:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'ble_npl_time_ticks_to_ms'
+  335 | ble_npl_time_ticks_to_ms(ble_npl_time_t ticks, uint32_t *out_ms)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:341:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'ble_npl_time_ms_to_ticks32'
+  341 | ble_npl_time_ms_to_ticks32(uint32_t ms)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:347:28: error: expected declaration specifiers or '...' before 'ble_npl_time_t'
+  347 | ble_npl_time_ticks_to_ms32(ble_npl_time_t ticks)
+      |                            ^~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:353:20: error: expected declaration specifiers or '...' before 'ble_npl_time_t'
+  353 | ble_npl_time_delay(ble_npl_time_t ticks)
+      |                    ^~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:368:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  368 | {
+      | ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:374:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  374 | {
+      | ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:379:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  379 | {
+      | ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h:72:42: error: expected declaration specifiers or '...' before 'ble_npl_time_t'
+   72 |                                          ble_npl_time_t tmo);
+      |                                          ^~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h:79:51: error: expected declaration specifiers or '...' before 'ble_npl_event_fn'
+   79 | void ble_npl_event_init(struct ble_npl_event *ev, ble_npl_event_fn *fn,
+      |                                                   ^~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h:96:1: error: expected declaration specifiers before 'ble_npl_error_t'
+   96 | ble_npl_error_t ble_npl_mutex_init(struct ble_npl_mutex *mu);
+      | ^~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h:98:1: error: expected declaration specifiers before 'ble_npl_error_t'
+   98 | ble_npl_error_t ble_npl_mutex_pend(struct ble_npl_mutex *mu,
+      | ^~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h:101:1: error: expected declaration specifiers before 'ble_npl_error_t'
+  101 | ble_npl_error_t ble_npl_mutex_release(struct ble_npl_mutex *mu);
+      | ^~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h:103:1: error: expected declaration specifiers before 'ble_npl_error_t'
+  103 | ble_npl_error_t ble_npl_mutex_deinit(struct ble_npl_mutex *mu);
+      | ^~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h:109:1: error: expected declaration specifiers before 'ble_npl_error_t'
+  109 | ble_npl_error_t ble_npl_sem_init(struct ble_npl_sem *sem, uint16_t tokens);
+      | ^~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h:111:1: error: expected declaration specifiers before 'ble_npl_error_t'
+  111 | ble_npl_error_t ble_npl_sem_pend(struct ble_npl_sem *sem,
+      | ^~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h:114:1: error: expected declaration specifiers before 'ble_npl_error_t'
+  114 | ble_npl_error_t ble_npl_sem_release(struct ble_npl_sem *sem);
+      | ^~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h:116:1: error: expected declaration specifiers before 'ble_npl_error_t'
+  116 | ble_npl_error_t ble_npl_sem_deinit(struct ble_npl_sem *sem);
+      | ^~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h:125:27: error: expected declaration specifiers or '...' before 'ble_npl_event_fn'
+  125 |                           ble_npl_event_fn *ev_cb, void *ev_arg);
+      |                           ^~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h:127:1: error: expected declaration specifiers before 'ble_npl_error_t'
+  127 | ble_npl_error_t ble_npl_callout_reset(struct ble_npl_callout *co,
+      | ^~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h:134:1: error: expected declaration specifiers before 'ble_npl_time_t'
+  134 | ble_npl_time_t ble_npl_callout_get_ticks(struct ble_npl_callout *co);
+      | ^~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h:136:1: error: expected declaration specifiers before 'ble_npl_time_t'
+  136 | ble_npl_time_t ble_npl_callout_remaining_ticks(struct ble_npl_callout *co,
+      | ^~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h:145:1: error: expected declaration specifiers before 'ble_npl_time_t'
+  145 | ble_npl_time_t ble_npl_time_get(void);
+      | ^~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h:147:1: error: expected declaration specifiers before 'ble_npl_error_t'
+  147 | ble_npl_error_t ble_npl_time_ms_to_ticks(uint32_t ms, ble_npl_time_t *out_ticks);
+      | ^~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h:149:1: error: expected declaration specifiers before 'ble_npl_error_t'
+  149 | ble_npl_error_t ble_npl_time_ticks_to_ms(ble_npl_time_t ticks, uint32_t *out_ms);
+      | ^~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h:151:1: error: expected declaration specifiers before 'ble_npl_time_t'
+  151 | ble_npl_time_t ble_npl_time_ms_to_ticks32(uint32_t ms);
+      | ^~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h:153:37: error: expected declaration specifiers or '...' before 'ble_npl_time_t'
+  153 | uint32_t ble_npl_time_ticks_to_ms32(ble_npl_time_t ticks);
+      |                                     ^~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h:155:25: error: expected declaration specifiers or '...' before 'ble_npl_time_t'
+  155 | void ble_npl_time_delay(ble_npl_time_t ticks);
+      |                         ^~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/nimble/include/os/os.h:51:18: error: storage class specified for parameter 'os_sr_t'
+   51 | typedef uint32_t os_sr_t;
+      |                  ^~~~~~~
+In file included from /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/nimble/include/os/os.h:59:
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/nimble/include/os/os_error.h:30:1: warning: empty declaration
+   30 | enum os_error {
+      | ^~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/nimble/include/os/os_error.h:46:23: error: storage class specified for parameter 'os_error_t'
+   46 | typedef enum os_error os_error_t;
+      |                       ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/nimble/include/os/os_error.h:56:21: error: expected declaration specifiers or '...' before 'os_error_t'
+   56 | int os_error_to_sys(os_error_t os_error);
+      |                     ^~~~~~~~~~
+In file included from /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/nimble/include/os/os.h:60:
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h:52:1: warning: empty declaration
+   52 | struct os_mbuf_pool {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h:70:1: warning: empty declaration
+   70 | struct os_mbuf_pkthdr {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h:86:1: warning: empty declaration
+   86 | struct os_mbuf {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h:120:1: warning: empty declaration
+  120 | struct os_mqueue {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h:190:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  190 | {
+      | ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h:225:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  225 | {
+      | ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h:726:42: error: expected declaration specifiers or '...' before 'ble_npl_event_fn'
+  726 | int os_mqueue_init(struct os_mqueue *mq, ble_npl_event_fn *ev_cb, void *arg);
+      |                                          ^~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h:45:1: warning: empty declaration
+   45 | struct os_memblock {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h:57:1: warning: empty declaration
+   57 | struct os_mempool {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h:82:1: warning: empty declaration
+   82 | struct os_mempool_ext;
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h:102:20: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'os_mempool_put_fn'
+  102 | typedef os_error_t os_mempool_put_fn(struct os_mempool_ext *ome, void *data,
+      |                    ^~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h:109:5: error: unknown type name 'os_mempool_put_fn'
+  109 |     os_mempool_put_fn *mpe_put_cb;
+      |     ^~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h:105:1: warning: empty declaration
+  105 | struct os_mempool_ext {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h:119:1: warning: empty declaration
+  119 | struct os_mempool_info {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h:159:18: error: storage class specified for parameter 'os_membuf_t'
+  159 | typedef uint32_t os_membuf_t;
+      |                  ^~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h:301:1: error: expected declaration specifiers before 'os_error_t'
+  301 | os_error_t os_mempool_init(struct os_mempool *mp, uint16_t blocks,
+      | ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h:317:1: error: expected declaration specifiers before 'os_error_t'
+  317 | os_error_t os_mempool_ext_init(struct os_mempool_ext *mpe, uint16_t blocks,
+      | ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h:329:1: error: expected declaration specifiers before 'os_error_t'
+  329 | os_error_t os_mempool_unregister(struct os_mempool *mp);
+      | ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h:338:1: error: expected declaration specifiers before 'os_error_t'
+  338 | os_error_t os_mempool_clear(struct os_mempool *mp);
+      | ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h:347:1: error: expected declaration specifiers before 'os_error_t'
+  347 | os_error_t os_mempool_ext_clear(struct os_mempool_ext *mpe);
+      | ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h:391:1: error: expected declaration specifiers before 'os_error_t'
+  391 | os_error_t os_memblock_put_from_cb(struct os_mempool *mp, void *block_addr);
+      | ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h:401:1: error: expected declaration specifiers before 'os_error_t'
+  401 | os_error_t os_memblock_put(struct os_mempool *mp, void *block_addr);
+      | ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/transport/include/nimble/transport_impl.h:31:13: error: storage class specified for parameter 'ble_transport_ll_init'
+   31 | extern void ble_transport_ll_init(void);
+      |             ^~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/transport/include/nimble/transport_impl.h:32:13: error: storage class specified for parameter 'ble_transport_hs_init'
+   32 | extern void ble_transport_hs_init(void);
+      |             ^~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/transport/include/nimble/transport_impl.h:35:12: error: storage class specified for parameter 'ble_transport_to_ll_cmd_impl'
+   35 | extern int ble_transport_to_ll_cmd_impl(void *buf);
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/transport/include/nimble/transport_impl.h:36:12: error: storage class specified for parameter 'ble_transport_to_ll_acl_impl'
+   36 | extern int ble_transport_to_ll_acl_impl(struct os_mbuf *om);
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/transport/include/nimble/transport_impl.h:37:12: error: storage class specified for parameter 'ble_transport_to_ll_iso_impl'
+   37 | extern int ble_transport_to_ll_iso_impl(struct os_mbuf *om);
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/transport/include/nimble/transport_impl.h:38:12: error: storage class specified for parameter 'ble_transport_to_hs_evt_impl'
+   38 | extern int ble_transport_to_hs_evt_impl(void *buf);
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/transport/include/nimble/transport_impl.h:39:12: error: storage class specified for parameter 'ble_transport_to_hs_acl_impl'
+   39 | extern int ble_transport_to_hs_acl_impl(struct os_mbuf *om);
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/transport/include/nimble/transport_impl.h:40:12: error: storage class specified for parameter 'ble_transport_to_hs_iso_impl'
+   40 | extern int ble_transport_to_hs_iso_impl(struct os_mbuf *om);
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/transport/include/nimble/transport.h:28:
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/transport/include/nimble/transport/monitor.h:38:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   38 | {
+      | ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/transport/include/nimble/transport/monitor.h:44:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   44 | {
+      | ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/transport/include/nimble/transport/monitor.h:52:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   52 | {
+      | ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/transport/include/nimble/transport/monitor.h:58:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   58 | {
+      | ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/transport/include/nimble/transport/monitor.h:64:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   64 | {
+      | ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/transport/include/nimble/transport/monitor.h:70:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   70 | {
+      | ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/transport/include/nimble/transport/monitor.h:76:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   76 | {
+      | ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/transport/include/nimble/transport/monitor.h:82:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   82 | {
+      | ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/transport/include/nimble/transport.h:76:13: error: storage class specified for parameter 'ble_hci_trans_rx_cmd_fn'
+   76 | typedef int ble_hci_trans_rx_cmd_fn(uint8_t *cmd, void *arg);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/transport/include/nimble/transport.h:77:13: error: storage class specified for parameter 'ble_hci_trans_rx_acl_fn'
+   77 | typedef int ble_hci_trans_rx_acl_fn(struct os_mbuf *om, void *arg);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/transport/include/nimble/transport.h:174:31: error: expected declaration specifiers or '...' before 'ble_hci_trans_rx_cmd_fn'
+  174 | void esp_ble_hci_trans_cfg_hs(ble_hci_trans_rx_cmd_fn *evt_cb,
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/transport/include/nimble/transport.h:176:27: error: expected declaration specifiers or '...' before 'ble_hci_trans_rx_acl_fn'
+  176 |                           ble_hci_trans_rx_acl_fn *acl_cb,
+      |                           ^~~~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/transport/include/nimble/transport.h:188:1: warning: empty declaration
+  188 | struct os_mbuf;
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/transport/include/nimble/transport.h:191:6: error: redefinition of parameter 'ble_transport_init'
+  191 | void ble_transport_init(void);
+      |      ^~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/transport/include/nimble/transport.h:67:6: note: previous definition of 'ble_transport_init' with type 'void (*)(void)'
+   67 | void ble_transport_init(void);
+      |      ^~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/transport/include/nimble/transport.h:205:47: error: unknown type name 'os_mempool_put_fn'
+  205 | int ble_transport_register_put_acl_from_ll_cb(os_mempool_put_fn *cb);
+      |                                               ^~~~~~~~~~~~~~~~~
+In file included from /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:30,
+                 from /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h:30,
+                 from /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.h:15:
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/ble.h:41:1: warning: empty declaration
+   41 | struct ble_encryption_block
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/ble.h:67:1: warning: empty declaration
+   67 | struct ble_mbuf_hdr_rxinfo
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/ble.h:113:1: warning: empty declaration
+  113 | struct ble_mbuf_hdr_txinfo
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/ble.h:121:1: warning: empty declaration
+  121 | struct ble_mbuf_hdr_txiso {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/ble.h:125:1: warning: empty declaration
+  125 | struct ble_mbuf_hdr
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/ble.h:190:16: error: storage class specified for parameter 'g_dev_addr'
+  190 | extern uint8_t g_dev_addr[BLE_DEV_ADDR_LEN];
+      |                ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/ble.h:191:16: error: storage class specified for parameter 'g_random_addr'
+  191 | extern uint8_t g_random_addr[BLE_DEV_ADDR_LEN];
+      |                ^~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/ble.h:194:1: warning: empty declaration
+  194 | enum ble_error_codes
+      | ^~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/ble.h:298:3: error: storage class specified for parameter 'ble_addr_t'
+  298 | } ble_addr_t;
+      |   ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/ble.h:301:38: error: type defaults to 'int' in declaration of 'ble_addr_t' [-Werror=implicit-int]
+  301 | static inline int ble_addr_cmp(const ble_addr_t *a, const ble_addr_t *b)
+      |                                      ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/ble.h:301:49: error: expected ';', ',' or ')' before '*' token
+  301 | static inline int ble_addr_cmp(const ble_addr_t *a, const ble_addr_t *b)
+      |                                                 ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:41:1: warning: empty declaration
+   41 | struct ble_hci_cmd {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:48:1: warning: empty declaration
+   48 | struct ble_hci_ev {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:81:1: warning: empty declaration
+   81 | struct ble_hci_lc_disconnect_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:87:1: warning: empty declaration
+   87 | struct ble_hci_rd_rem_ver_info_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:93:1: warning: empty declaration
+   93 | struct ble_hci_cb_set_event_mask_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:100:1: warning: empty declaration
+  100 | struct ble_hci_cb_read_tx_pwr_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:105:1: warning: empty declaration
+  105 | struct ble_hci_cb_read_tx_pwr_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:112:1: warning: empty declaration
+  112 | struct ble_hci_cb_ctlr_to_host_fc_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:117:1: warning: empty declaration
+  117 | struct ble_hci_cb_host_buf_size_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:125:1: warning: empty declaration
+  125 | struct  ble_hci_cb_host_num_comp_pkts_entry {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:129:1: warning: empty declaration
+  129 | struct ble_hci_cb_host_num_comp_pkts_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:135:1: warning: empty declaration
+  135 | struct ble_hci_cb_set_event_mask2_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:140:1: warning: empty declaration
+  140 | struct ble_hci_cb_rd_auth_pyld_tmo_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:143:1: warning: empty declaration
+  143 | struct ble_hci_cb_rd_auth_pyld_tmo_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:149:1: warning: empty declaration
+  149 | struct ble_hci_cb_wr_auth_pyld_tmo_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:153:1: warning: empty declaration
+  153 | struct ble_hci_cb_wr_auth_pyld_tmo_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:159:1: warning: empty declaration
+  159 | struct ble_hci_ip_rd_local_ver_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:168:1: warning: empty declaration
+  168 | struct ble_hci_ip_rd_loc_supp_cmd_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:173:1: warning: empty declaration
+  173 | struct ble_hci_ip_rd_loc_supp_feat_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:178:1: warning: empty declaration
+  178 | struct ble_hci_ip_rd_buf_size_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:186:1: warning: empty declaration
+  186 | struct ble_hci_ip_rd_bd_addr_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:192:1: warning: empty declaration
+  192 | struct ble_hci_rd_rssi_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:195:1: warning: empty declaration
+  195 | struct ble_hci_rd_rssi_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:202:1: warning: empty declaration
+  202 | struct ble_hci_le_set_event_mask_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:207:1: warning: empty declaration
+  207 | struct ble_hci_le_rd_buf_size_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:213:1: warning: empty declaration
+  213 | struct ble_hci_le_rd_buf_size_v2_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:221:1: warning: empty declaration
+  221 | struct ble_hci_le_rd_loc_supp_feat_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:227:1: warning: empty declaration
+  227 | struct ble_hci_le_set_rand_addr_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:232:1: warning: empty declaration
+  232 | struct ble_hci_le_set_adv_params_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:244:1: warning: empty declaration
+  244 | struct ble_hci_le_rd_adv_chan_txpwr_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:250:1: warning: empty declaration
+  250 | struct ble_hci_le_set_adv_data_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:257:1: warning: empty declaration
+  257 | struct ble_hci_le_set_scan_rsp_data_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:263:1: warning: empty declaration
+  263 | struct ble_hci_le_set_adv_enable_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:268:1: warning: empty declaration
+  268 | struct ble_hci_le_set_scan_params_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:277:1: warning: empty declaration
+  277 | struct ble_hci_le_set_scan_enable_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:283:1: warning: empty declaration
+  283 | struct ble_hci_le_create_conn_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:301:1: warning: empty declaration
+  301 | struct ble_hci_le_rd_white_list_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:308:1: warning: empty declaration
+  308 | struct ble_hci_le_add_whte_list_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:314:1: warning: empty declaration
+  314 | struct ble_hci_le_rmv_white_list_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:320:1: warning: empty declaration
+  320 | struct ble_hci_le_conn_update_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:331:1: warning: empty declaration
+  331 | struct ble_hci_le_set_host_chan_class_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:336:1: warning: empty declaration
+  336 | struct ble_hci_le_rd_chan_map_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:339:1: warning: empty declaration
+  339 | struct ble_hci_le_rd_chan_map_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:345:1: warning: empty declaration
+  345 | struct ble_hci_le_rd_rem_feat_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:350:1: warning: empty declaration
+  350 | struct ble_hci_le_encrypt_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:354:1: warning: empty declaration
+  354 | struct ble_hci_le_encrypt_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:359:1: warning: empty declaration
+  359 | struct ble_hci_le_rand_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:364:1: warning: empty declaration
+  364 | struct ble_hci_le_start_encrypt_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:372:1: warning: empty declaration
+  372 | struct ble_hci_le_lt_key_req_reply_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:376:1: warning: empty declaration
+  376 | struct ble_hci_le_lt_key_req_reply_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:381:1: warning: empty declaration
+  381 | struct ble_hci_le_lt_key_req_neg_reply_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:384:1: warning: empty declaration
+  384 | struct ble_hci_le_lt_key_req_neg_reply_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:389:1: warning: empty declaration
+  389 | struct ble_hci_le_rd_supp_states_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:394:1: warning: empty declaration
+  394 | struct ble_hci_le_rx_test_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:399:1: warning: empty declaration
+  399 | struct ble_hci_le_tx_test_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:415:1: warning: empty declaration
+  415 | struct ble_hci_le_test_end_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:420:1: warning: empty declaration
+  420 | struct ble_hci_le_rem_conn_param_rr_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:429:1: warning: empty declaration
+  429 | struct ble_hci_le_rem_conn_param_rr_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:434:1: warning: empty declaration
+  434 | struct ble_hci_le_rem_conn_params_nrr_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:438:1: warning: empty declaration
+  438 | struct ble_hci_le_rem_conn_params_nrr_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:443:1: warning: empty declaration
+  443 | struct ble_hci_le_set_data_len_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:448:1: warning: empty declaration
+  448 | struct ble_hci_le_set_data_len_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:453:1: warning: empty declaration
+  453 | struct ble_hci_le_rd_sugg_def_data_len_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:459:1: warning: empty declaration
+  459 | struct ble_hci_le_wr_sugg_def_data_len_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:467:1: warning: empty declaration
+  467 | struct ble_hci_le_gen_dhkey_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:472:1: warning: empty declaration
+  472 | struct ble_hci_le_add_resolv_list_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:480:1: warning: empty declaration
+  480 | struct ble_hci_le_rmv_resolve_list_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:488:1: warning: empty declaration
+  488 | struct ble_hci_le_rd_resolv_list_size_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:493:1: warning: empty declaration
+  493 | struct ble_hci_le_rd_peer_resolv_addr_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:497:1: warning: empty declaration
+  497 | struct ble_hci_le_rd_peer_resolv_addr_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:502:1: warning: empty declaration
+  502 | struct ble_hci_le_rd_local_resolv_addr_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:506:1: warning: empty declaration
+  506 | struct ble_hci_le_rd_local_resolv_addr_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:511:1: warning: empty declaration
+  511 | struct ble_hci_le_set_addr_res_en_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:516:1: warning: empty declaration
+  516 | struct ble_hci_le_set_rpa_tmo_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:521:1: warning: empty declaration
+  521 | struct ble_hci_le_rd_max_data_len_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:529:1: warning: empty declaration
+  529 | struct ble_hci_le_rd_phy_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:532:1: warning: empty declaration
+  532 | struct ble_hci_le_rd_phy_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:539:1: warning: empty declaration
+  539 | struct ble_hci_le_set_default_phy_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:546:1: warning: empty declaration
+  546 | struct ble_hci_le_set_phy_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:555:1: warning: empty declaration
+  555 | struct ble_hci_le_rx_test_v2_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:562:1: warning: empty declaration
+  562 | struct ble_hci_le_tx_test_v2_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:580:1: warning: empty declaration
+  580 | struct ble_hci_le_set_adv_set_rnd_addr_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:586:1: warning: empty declaration
+  586 | struct ble_hci_le_set_ext_adv_params_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:603:1: warning: empty declaration
+  603 | struct ble_hci_le_set_ext_adv_params_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:608:1: warning: empty declaration
+  608 | struct ble_hci_le_set_ext_adv_data_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:617:1: warning: empty declaration
+  617 | struct ble_hci_le_set_ext_scan_rsp_data_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:626:1: warning: empty declaration
+  626 | struct adv_set {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:631:1: warning: empty declaration
+  631 | struct ble_hci_le_set_ext_adv_enable_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:638:1: warning: empty declaration
+  638 | struct ble_hci_le_rd_max_adv_data_len_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:643:1: warning: empty declaration
+  643 | struct ble_hci_le_rd_num_of_adv_sets_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:648:1: warning: empty declaration
+  648 | struct ble_hci_le_remove_adv_set_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:655:1: warning: empty declaration
+  655 | struct ble_hci_le_set_periodic_adv_params_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:663:1: warning: empty declaration
+  663 | struct ble_hci_le_set_periodic_adv_data_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:671:1: warning: empty declaration
+  671 | struct ble_hci_le_set_periodic_adv_enable_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:677:1: warning: empty declaration
+  677 | struct scan_params {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:682:1: warning: empty declaration
+  682 | struct ble_hci_le_set_ext_scan_params_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:690:1: warning: empty declaration
+  690 | struct ble_hci_le_set_ext_scan_enable_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:698:1: warning: empty declaration
+  698 | struct conn_params {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:708:1: warning: empty declaration
+  708 | struct ble_hci_le_ext_create_conn_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:722:1: warning: empty declaration
+  722 | struct ble_hci_le_periodic_adv_create_sync_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:735:1: warning: empty declaration
+  735 | struct ble_hci_le_periodic_adv_term_sync_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:740:1: warning: empty declaration
+  740 | struct ble_hci_le_add_dev_to_periodic_adv_list_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:747:1: warning: empty declaration
+  747 | struct ble_hci_le_rem_dev_from_periodic_adv_list_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:756:1: warning: empty declaration
+  756 | struct ble_hci_le_rd_periodic_adv_list_size_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:761:1: warning: empty declaration
+  761 | struct ble_hci_le_rd_transmit_power_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:767:1: warning: empty declaration
+  767 | struct ble_hci_le_rd_rf_path_compensation_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:773:1: warning: empty declaration
+  773 | struct ble_hci_le_wr_rf_path_compensation_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:779:1: warning: empty declaration
+  779 | struct ble_hci_le_set_privacy_mode_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:797:1: warning: empty declaration
+  797 | struct ble_hci_le_periodic_adv_receive_enable_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:803:1: warning: empty declaration
+  803 | struct ble_hci_le_periodic_adv_sync_transfer_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:808:1: warning: empty declaration
+  808 | struct ble_hci_le_periodic_adv_sync_transfer_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:813:1: warning: empty declaration
+  813 | struct ble_hci_le_periodic_adv_set_info_transfer_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:818:1: warning: empty declaration
+  818 | struct ble_hci_le_periodic_adv_set_info_transfer_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:823:1: warning: empty declaration
+  823 | struct ble_hci_le_periodic_adv_sync_transfer_params_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:830:1: warning: empty declaration
+  830 | struct ble_hci_le_periodic_adv_sync_transfer_params_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:835:1: warning: empty declaration
+  835 | struct ble_hci_le_set_default_periodic_sync_transfer_params_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:846:1: warning: empty declaration
+  846 | struct ble_hci_le_read_iso_tx_sync_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:849:1: warning: empty declaration
+  849 | struct ble_hci_le_read_iso_tx_sync_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:857:1: warning: empty declaration
+  857 | struct ble_hci_le_cis_params {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:866:1: warning: empty declaration
+  866 | struct ble_hci_le_set_cig_params_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:878:1: warning: empty declaration
+  878 | struct ble_hci_le_set_cig_params_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:885:1: warning: empty declaration
+  885 | struct ble_hci_le_cis_params_test {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:897:1: warning: empty declaration
+  897 | struct ble_hci_le_set_cig_params_test_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:910:1: warning: empty declaration
+  910 | struct ble_hci_le_set_cig_params_test_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:917:1: warning: empty declaration
+  917 | struct ble_hci_le_create_cis_params {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:921:1: warning: empty declaration
+  921 | struct ble_hci_le_create_cis_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:927:1: warning: empty declaration
+  927 | struct ble_hci_le_remove_cig_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:930:1: warning: empty declaration
+  930 | struct ble_hci_le_remove_cig_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:935:1: warning: empty declaration
+  935 | struct ble_hci_le_accept_cis_request_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:940:1: warning: empty declaration
+  940 | struct ble_hci_le_reject_cis_request_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:944:1: warning: empty declaration
+  944 | struct ble_hci_le_reject_cis_request_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:949:1: warning: empty declaration
+  949 | struct ble_hci_le_create_big_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:965:1: warning: empty declaration
+  965 | struct ble_hci_le_create_big_test_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:985:1: warning: empty declaration
+  985 | struct ble_hci_le_terminate_big_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:991:1: warning: empty declaration
+  991 | struct ble_hci_le_big_create_sync_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1003:1: warning: empty declaration
+ 1003 | struct ble_hci_le_big_terminate_sync_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1006:1: warning: empty declaration
+ 1006 | struct ble_hci_le_big_terminate_sync_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1011:1: warning: empty declaration
+ 1011 | struct ble_hci_le_request_peer_sca_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1016:1: warning: empty declaration
+ 1016 | struct ble_hci_le_setup_iso_data_path_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1025:1: warning: empty declaration
+ 1025 | struct ble_hci_le_setup_iso_data_path_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1030:1: warning: empty declaration
+ 1030 | struct ble_hci_le_remove_iso_data_path_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1034:1: warning: empty declaration
+ 1034 | struct ble_hci_le_remove_iso_data_path_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1039:1: warning: empty declaration
+ 1039 | struct ble_hci_le_iso_transmit_test_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1043:1: warning: empty declaration
+ 1043 | struct ble_hci_le_iso_transmit_test_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1048:1: warning: empty declaration
+ 1048 | struct ble_hci_le_iso_receive_test_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1052:1: warning: empty declaration
+ 1052 | struct ble_hci_le_iso_receive_test_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1057:1: warning: empty declaration
+ 1057 | struct ble_hci_le_iso_read_test_counters_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1060:1: warning: empty declaration
+ 1060 | struct ble_hci_le_iso_read_test_counters_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1068:1: warning: empty declaration
+ 1068 | struct ble_hci_le_iso_test_end_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1071:1: warning: empty declaration
+ 1071 | struct ble_hci_le_iso_test_end_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1079:1: warning: empty declaration
+ 1079 | struct ble_hci_le_set_host_feature_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1085:1: warning: empty declaration
+ 1085 | struct ble_hci_le_read_iso_link_quality_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1088:1: warning: empty declaration
+ 1088 | struct ble_hci_le_read_iso_link_quality_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1100:1: warning: empty declaration
+ 1100 | struct ble_hci_le_enh_read_transmit_power_level_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1104:1: warning: empty declaration
+ 1104 | struct ble_hci_le_enh_read_transmit_power_level_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1112:1: warning: empty declaration
+ 1112 | struct ble_hci_le_read_remote_transmit_power_level_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1118:1: warning: empty declaration
+ 1118 | struct ble_hci_le_set_path_loss_report_param_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1128:1: warning: empty declaration
+ 1128 | struct ble_hci_le_set_path_loss_report_enable_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1134:1: warning: empty declaration
+ 1134 | struct ble_hci_le_set_transmit_power_report_enable_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1141:1: warning: empty declaration
+ 1141 | struct ble_hci_le_set_data_addr_change_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1147:1: warning: empty declaration
+ 1147 | struct ble_hci_le_set_default_subrate_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1156:1: warning: empty declaration
+ 1156 | struct ble_hci_le_subrate_req_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1167:1: warning: empty declaration
+ 1167 | struct ble_hci_vs_rd_static_addr_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1175:1: warning: empty declaration
+ 1175 | struct ble_hci_vs_set_tx_pwr_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1178:1: warning: empty declaration
+ 1178 | struct ble_hci_vs_set_tx_pwr_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1183:1: warning: empty declaration
+ 1183 | struct ble_hci_vs_css_configure_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1188:1: warning: empty declaration
+ 1188 | struct ble_hci_vs_css_enable_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1192:1: warning: empty declaration
+ 1192 | struct ble_hci_vs_css_set_next_slot_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1196:1: warning: empty declaration
+ 1196 | struct ble_hci_vs_css_set_conn_slot_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1201:1: warning: empty declaration
+ 1201 | struct ble_hci_vs_css_read_conn_slot_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1204:1: warning: empty declaration
+ 1204 | struct ble_hci_vs_css_read_conn_slot_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1209:1: warning: empty declaration
+ 1209 | struct ble_hci_vs_set_data_len_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1216:1: warning: empty declaration
+ 1216 | struct ble_hci_vs_set_data_len_rp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1220:1: warning: empty declaration
+ 1220 | struct ble_hci_vs_set_antenna_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1227:1: warning: empty declaration
+ 1227 | struct ble_hci_vs_duplicate_exception_list_cp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1486:1: warning: empty declaration
+ 1486 | struct ble_hci_ev_disconn_cmp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1496:1: warning: empty declaration
+ 1496 | struct ble_hci_ev_enrypt_chg {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1506:1: warning: empty declaration
+ 1506 | struct ble_hci_ev_rd_rem_ver_info_cmp {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1517:1: warning: empty declaration
+ 1517 | struct ble_hci_ev_command_complete {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1524:1: warning: empty declaration
+ 1524 | struct ble_hci_ev_command_complete_nop {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1530:1: warning: empty declaration
+ 1530 | struct ble_hci_ev_command_status {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1537:1: warning: empty declaration
+ 1537 | struct ble_hci_ev_hw_error {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1542:1: warning: empty declaration
+ 1542 | struct comp_pkt {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1545:27: error: expected declaration specifiers before ';' token
+ 1545 | } __attribute__((packed));;
+      |                           ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1546:1: warning: empty declaration
+ 1546 | struct ble_hci_ev_num_comp_pkts {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1559:1: warning: empty declaration
+ 1559 | struct ble_hci_ev_data_buf_overflow {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1579:1: warning: empty declaration
+ 1579 | struct ble_hci_ev_enc_key_refresh {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1598:1: warning: empty declaration
+ 1598 | struct ble_hci_ev_le_meta {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1629:1: warning: empty declaration
+ 1629 | struct ble_hci_ev_auth_pyld_tmo {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1636:1: warning: empty declaration
+ 1636 | struct ble_hci_ev_vs {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1643:1: warning: empty declaration
+ 1643 | struct ble_hci_ev_vs_css_slot_changed {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1652:1: warning: empty declaration
+ 1652 | struct ble_hci_ev_le_subev_conn_complete {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1666:1: warning: empty declaration
+ 1666 | struct adv_report {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1673:1: warning: empty declaration
+ 1673 | struct ble_hci_ev_le_subev_adv_rpt {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1680:1: warning: empty declaration
+ 1680 | struct ble_hci_ev_le_subev_conn_upd_complete {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1690:1: warning: empty declaration
+ 1690 | struct ble_hci_ev_le_subev_rd_rem_used_feat {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1698:1: warning: empty declaration
+ 1698 | struct ble_hci_ev_le_subev_lt_key_req {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1706:1: warning: empty declaration
+ 1706 | struct ble_hci_ev_le_subev_rem_conn_param_req {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1716:1: warning: empty declaration
+ 1716 | struct ble_hci_ev_le_subev_data_len_chg {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1726:1: warning: empty declaration
+ 1726 | struct ble_hci_ev_le_subev_rd_loc_p256_pubkey {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1733:1: warning: empty declaration
+ 1733 | struct ble_hci_ev_le_subev_gen_dhkey_complete {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1740:1: warning: empty declaration
+ 1740 | struct ble_hci_ev_le_subev_enh_conn_complete {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1756:1: warning: empty declaration
+ 1756 | struct dir_adv_report {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1764:1: warning: empty declaration
+ 1764 | struct ble_hci_ev_le_subev_direct_adv_rpt {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1771:1: warning: empty declaration
+ 1771 | struct ble_hci_ev_le_subev_phy_update_complete {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1780:1: warning: empty declaration
+ 1780 | struct ext_adv_report {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1795:1: warning: empty declaration
+ 1795 | struct ble_hci_ev_le_subev_ext_adv_rpt {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1802:1: warning: empty declaration
+ 1802 | struct ble_hci_ev_le_subev_periodic_adv_sync_estab {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1815:1: warning: empty declaration
+ 1815 | struct ble_hci_ev_le_subev_periodic_adv_rpt {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1827:1: warning: empty declaration
+ 1827 | struct ble_hci_ev_le_subev_periodic_adv_sync_lost {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1833:1: warning: empty declaration
+ 1833 | struct ble_hci_ev_le_subev_scan_timeout {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1838:1: warning: empty declaration
+ 1838 | struct ble_hci_ev_le_subev_adv_set_terminated {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1847:1: warning: empty declaration
+ 1847 | struct ble_hci_ev_le_subev_scan_req_rcvd {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1855:1: warning: empty declaration
+ 1855 | struct ble_hci_ev_le_subev_chan_sel_alg {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1866:1: warning: empty declaration
+ 1866 | struct ble_hci_ev_le_subev_periodic_adv_sync_transfer {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1881:1: warning: empty declaration
+ 1881 | struct ble_hci_ev_le_subev_cis_established {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1902:1: warning: empty declaration
+ 1902 | struct ble_hci_ev_le_subev_cis_request {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1911:1: warning: empty declaration
+ 1911 | struct ble_hci_ev_le_subev_create_big_complete {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1929:1: warning: empty declaration
+ 1929 | struct ble_hci_ev_le_subev_terminate_big_complete {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1936:1: warning: empty declaration
+ 1936 | struct ble_hci_ev_le_subev_big_sync_established {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1952:1: warning: empty declaration
+ 1952 | struct ble_hci_ev_le_subev_big_sync_lost {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1959:1: warning: empty declaration
+ 1959 | struct ble_hci_ev_le_subev_peer_sca_complete {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1967:1: warning: empty declaration
+ 1967 | struct ble_hci_ev_le_subev_path_loss_threshold {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1975:1: warning: empty declaration
+ 1975 | struct ble_hci_ev_le_subev_transmit_power_report {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:1987:1: warning: empty declaration
+ 1987 | struct ble_hci_ev_le_subev_biginfo_adv_report {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:2005:1: warning: empty declaration
+ 2005 | struct ble_hci_ev_le_subev_subrate_change {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:2103:1: warning: empty declaration
+ 2103 | struct hci_data_hdr
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:2131:1: warning: empty declaration
+ 2131 | struct ble_hci_iso {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:2139:1: warning: empty declaration
+ 2139 | struct ble_hci_iso_data {
+      | ^~~~~~
+In file included from /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h:31:
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_att.h:36:1: warning: empty declaration
+   36 | struct os_mbuf;
+      | ^~~~~~
+In file included from /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h:32:
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_eddystone.h:35:1: warning: empty declaration
+   35 | struct ble_hs_adv_fields;
+      | ^~~~~~
+In file included from /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_adv.h:24,
+                 from /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:32,
+                 from /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h:33:
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_uuid.h:37:1: warning: empty declaration
+   37 | struct os_mbuf;
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_uuid.h:40:1: warning: empty declaration
+   40 | enum {
+      | ^~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_uuid.h:55:3: error: storage class specified for parameter 'ble_uuid_t'
+   55 | } ble_uuid_t;
+      |   ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_uuid.h:60:5: error: expected specifier-qualifier-list before 'ble_uuid_t'
+   60 |     ble_uuid_t u;
+      |     ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_uuid.h:64:3: error: storage class specified for parameter 'ble_uuid16_t'
+   64 | } ble_uuid16_t;
+      |   ^~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_uuid.h:69:5: error: expected specifier-qualifier-list before 'ble_uuid_t'
+   69 |     ble_uuid_t u;
+      |     ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_uuid.h:73:3: error: storage class specified for parameter 'ble_uuid32_t'
+   73 | } ble_uuid32_t;
+      |   ^~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_uuid.h:78:5: error: expected specifier-qualifier-list before 'ble_uuid_t'
+   78 |     ble_uuid_t u;
+      |     ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_uuid.h:82:3: error: storage class specified for parameter 'ble_uuid128_t'
+   82 | } ble_uuid128_t;
+      |   ^~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_uuid.h:87:5: error: expected specifier-qualifier-list before 'ble_uuid_t'
+   87 |     ble_uuid_t u;
+      |     ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_uuid.h:97:3: error: storage class specified for parameter 'ble_uuid_any_t'
+   97 | } ble_uuid_any_t;
+      |   ^~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_uuid.h:215:28: error: expected declaration specifiers or '...' before 'ble_uuid_any_t'
+  215 | int ble_uuid_init_from_buf(ble_uuid_any_t *uuid, const void *buf, size_t len);
+      |                            ^~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_uuid.h:224:24: error: type defaults to 'int' in declaration of 'ble_uuid_t' [-Werror=implicit-int]
+  224 | int ble_uuid_cmp(const ble_uuid_t *uuid1, const ble_uuid_t *uuid2);
+      |                        ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_uuid.h:224:35: error: expected ';', ',' or ')' before '*' token
+  224 | int ble_uuid_cmp(const ble_uuid_t *uuid1, const ble_uuid_t *uuid2);
+      |                                   ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_uuid.h:231:20: error: expected declaration specifiers or '...' before 'ble_uuid_any_t'
+  231 | void ble_uuid_copy(ble_uuid_any_t *dst, const ble_uuid_t *src);
+      |                    ^~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_uuid.h:231:47: error: type defaults to 'int' in declaration of 'ble_uuid_t' [-Werror=implicit-int]
+  231 | void ble_uuid_copy(ble_uuid_any_t *dst, const ble_uuid_t *src);
+      |                                               ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_uuid.h:231:58: error: expected ';', ',' or ')' before '*' token
+  231 | void ble_uuid_copy(ble_uuid_any_t *dst, const ble_uuid_t *src);
+      |                                                          ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_uuid.h:245:29: error: type defaults to 'int' in declaration of 'ble_uuid_t' [-Werror=implicit-int]
+  245 | char *ble_uuid_to_str(const ble_uuid_t *uuid, char *dst);
+      |                             ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_uuid.h:245:40: error: expected ';', ',' or ')' before '*' token
+  245 | char *ble_uuid_to_str(const ble_uuid_t *uuid, char *dst);
+      |                                        ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_uuid.h:264:19: error: expected declaration specifiers or '...' before 'ble_uuid_any_t'
+  264 | ble_uuid_from_str(ble_uuid_any_t *uuid, const char *str);
+      |                   ^~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_uuid.h:273:29: error: type defaults to 'int' in declaration of 'ble_uuid_t' [-Werror=implicit-int]
+  273 | uint16_t ble_uuid_u16(const ble_uuid_t *uuid);
+      |                             ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_uuid.h:273:40: error: expected ';', ',' or ')' before '*' token
+  273 | uint16_t ble_uuid_u16(const ble_uuid_t *uuid);
+      |                                        ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_adv.h:35:1: warning: empty declaration
+   35 | struct ble_hs_adv_field {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_adv.h:41:16: error: storage class specified for parameter 'ble_hs_adv_parse_func_t'
+   41 | typedef int (* ble_hs_adv_parse_func_t) (const struct ble_hs_adv_field *,
+      |                ^~~~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_adv.h:49:24: error: expected ':', ',', ';', '}' or '__attribute__' before '*' token
+   49 |     const ble_uuid16_t *uuids16;
+      |                        ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_adv.h:44:1: warning: empty declaration
+   44 | struct ble_hs_adv_fields {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_adv.h:211:22: error: expected declaration specifiers or '...' before 'ble_hs_adv_parse_func_t'
+  211 |                      ble_hs_adv_parse_func_t func, void *user_data);
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:34:
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_esp_gap.h:14:1: warning: empty declaration
+   14 | enum gap_status {
+      | ^~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_esp_gap.h:25:25: error: storage class specified for parameter 'gap_status_t'
+   25 | typedef enum gap_status gap_status_t;
+      |                         ^~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_esp_gap.h:89:29: error: type defaults to 'int' in declaration of 'ble_addr_t' [-Werror=implicit-int]
+   89 | int ble_gap_wl_tx_rmv(const ble_addr_t *addrs);
+      |                             ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_esp_gap.h:89:40: error: expected ';', ',' or ')' before '*' token
+   89 | int ble_gap_wl_tx_rmv(const ble_addr_t *addrs);
+      |                                        ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_esp_gap.h:122:33: error: expected declaration specifiers or '...' before 'ble_addr_t'
+  122 | int ble_gap_get_local_used_addr(ble_addr_t *addr);
+      |                                 ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:44:1: warning: empty declaration
+   44 | struct hci_le_conn_complete;
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:45:1: warning: empty declaration
+   45 | struct hci_conn_update;
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:204:1: warning: empty declaration
+  204 | struct ble_gap_sec_state {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:222:1: warning: empty declaration
+  222 | struct ble_gap_adv_params {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:256:5: error: expected specifier-qualifier-list before 'ble_addr_t'
+  256 |     ble_addr_t our_id_addr;
+      |     ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:251:1: warning: empty declaration
+  251 | struct ble_gap_conn_desc {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:289:1: warning: empty declaration
+  289 | struct ble_gap_conn_params {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:316:1: warning: empty declaration
+  316 | struct ble_gap_ext_disc_params {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:328:1: warning: empty declaration
+  328 | struct ble_gap_disc_params {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:349:1: warning: empty declaration
+  349 | struct ble_gap_upd_params {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:370:1: warning: empty declaration
+  370 | struct ble_gap_passkey_params {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:474:5: error: expected specifier-qualifier-list before 'ble_addr_t'
+  474 |     ble_addr_t addr;
+      |     ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:460:1: warning: empty declaration
+  460 | struct ble_gap_disc_desc {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:488:1: warning: empty declaration
+  488 | struct ble_gap_repeat_pairing {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:856:13: error: expected specifier-qualifier-list before 'ble_addr_t'
+  856 |             ble_addr_t peer_id_addr;
+      |             ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:512:1: warning: empty declaration
+  512 | struct ble_gap_event {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:1321:13: error: storage class specified for parameter 'ble_gap_event_fn'
+ 1321 | typedef int ble_gap_event_fn(struct ble_gap_event *event, void *arg);
+      |             ^~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:1322:13: error: storage class specified for parameter 'ble_gap_conn_foreach_handle_fn'
+ 1322 | typedef int ble_gap_conn_foreach_handle_fn(uint16_t conn_handle, void *arg);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:1360:37: error: type defaults to 'int' in declaration of 'ble_addr_t' [-Werror=implicit-int]
+ 1360 | int ble_gap_conn_find_by_addr(const ble_addr_t *addr,
+      |                                     ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:1360:48: error: expected ';', ',' or ')' before '*' token
+ 1360 | int ble_gap_conn_find_by_addr(const ble_addr_t *addr,
+      |                                                ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:1377:26: error: expected declaration specifiers or '...' before 'ble_gap_event_fn'
+ 1377 |                          ble_gap_event_fn *cb, void *cb_arg);
+      |                          ^~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:1407:52: error: type defaults to 'int' in declaration of 'ble_addr_t' [-Werror=implicit-int]
+ 1407 | int ble_gap_adv_start(uint8_t own_addr_type, const ble_addr_t *direct_addr,
+      |                                                    ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:1407:63: error: expected ';', ',' or ')' before '*' token
+ 1407 | int ble_gap_adv_start(uint8_t own_addr_type, const ble_addr_t *direct_addr,
+      |                                                               ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:2060:18: error: expected declaration specifiers or '...' before 'ble_gap_event_fn'
+ 2060 |                  ble_gap_event_fn *cb, void *cb_arg);
+      |                  ^~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:2117:22: error: expected declaration specifiers or '...' before 'ble_gap_event_fn'
+ 2117 |                      ble_gap_event_fn *cb, void *cb_arg);
+      |                      ^~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:2176:50: error: type defaults to 'int' in declaration of 'ble_addr_t' [-Werror=implicit-int]
+ 2176 | int ble_gap_connect(uint8_t own_addr_type, const ble_addr_t *peer_addr,
+      |                                                  ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:2176:61: error: expected ';', ',' or ')' before '*' token
+ 2176 | int ble_gap_connect(uint8_t own_addr_type, const ble_addr_t *peer_addr,
+      |                                                             ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:2232:54: error: type defaults to 'int' in declaration of 'ble_addr_t' [-Werror=implicit-int]
+ 2232 | int ble_gap_ext_connect(uint8_t own_addr_type, const ble_addr_t *peer_addr,
+      |                                                      ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:2232:65: error: expected ';', ',' or ')' before '*' token
+ 2232 | int ble_gap_ext_connect(uint8_t own_addr_type, const ble_addr_t *peer_addr,
+      |                                                                 ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:2318:26: error: type defaults to 'int' in declaration of 'ble_addr_t' [-Werror=implicit-int]
+ 2318 | int ble_gap_wl_set(const ble_addr_t *addrs, uint8_t white_list_count);
+      |                          ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:2318:37: error: expected ';', ',' or ')' before '*' token
+ 2318 | int ble_gap_wl_set(const ble_addr_t *addrs, uint8_t white_list_count);
+      |                                     ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:2410:5: error: redefinition of parameter 'ble_gap_read_sugg_def_data_len'
+ 2410 | int ble_gap_read_sugg_def_data_len(uint16_t *out_sugg_max_tx_octets,
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:2375:5: note: previous definition of 'ble_gap_read_sugg_def_data_len' with type 'int (*)(uint16_t *, uint16_t *)' {aka 'int (*)(short unsigned int *, short unsigned int *)'}
+ 2375 | int ble_gap_read_sugg_def_data_len(uint16_t *out_sugg_max_tx_octets,
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:2426:5: error: redefinition of parameter 'ble_gap_write_sugg_def_data_len'
+ 2426 | int ble_gap_write_sugg_def_data_len(uint16_t sugg_max_tx_octets, uint16_t sugg_max_tx_time);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:2394:5: note: previous definition of 'ble_gap_write_sugg_def_data_len' with type 'int (*)(uint16_t,  uint16_t)' {aka 'int (*)(short unsigned int,  short unsigned int)'}
+ 2394 | int ble_gap_write_sugg_def_data_len(uint16_t sugg_max_tx_octets,
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:2514:26: error: type defaults to 'int' in declaration of 'ble_addr_t' [-Werror=implicit-int]
+ 2514 | int ble_gap_unpair(const ble_addr_t *peer_addr);
+      |                          ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:2514:37: error: expected ';', ',' or ')' before '*' token
+ 2514 | int ble_gap_unpair(const ble_addr_t *peer_addr);
+      |                                     ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:2541:40: error: type defaults to 'int' in declaration of 'ble_addr_t' [-Werror=implicit-int]
+ 2541 | int ble_gap_unpair_oldest_except(const ble_addr_t *peer_addr);
+      |                                        ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:2541:51: error: expected ';', ',' or ')' before '*' token
+ 2541 | int ble_gap_unpair_oldest_except(const ble_addr_t *peer_addr);
+      |                                                   ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:2557:33: error: type defaults to 'int' in declaration of 'ble_addr_t' [-Werror=implicit-int]
+ 2557 | int ble_gap_set_priv_mode(const ble_addr_t *peer_addr, uint8_t priv_mode);
+      |                                 ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:2557:44: error: expected ';', ',' or ')' before '*' token
+ 2557 | int ble_gap_set_priv_mode(const ble_addr_t *peer_addr, uint8_t priv_mode);
+      |                                            ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:2680:5: error: expected specifier-qualifier-list before 'ble_gap_event_fn'
+ 2680 |     ble_gap_event_fn *fn;
+      |     ^~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:2679:1: warning: empty declaration
+ 2679 | struct ble_gap_event_listener {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h:2701:37: error: expected declaration specifiers or '...' before 'ble_gap_event_fn'
+ 2701 |                                     ble_gap_event_fn *fn, void *arg);
+      |                                     ^~~~~~~~~~~~~~~~
+In file included from /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h:34:
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:39:1: warning: empty declaration
+   39 | struct ble_hs_conn;
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:40:1: warning: empty declaration
+   40 | struct ble_att_error_rsp;
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:41:1: warning: empty declaration
+   41 | struct ble_hs_cfg;
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:391:1: warning: empty declaration
+  391 | struct ble_gatt_error {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:408:5: error: expected specifier-qualifier-list before 'ble_uuid_any_t'
+  408 |     ble_uuid_any_t uuid;
+      |     ^~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:400:1: warning: empty declaration
+  400 | struct ble_gatt_svc {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:413:1: warning: empty declaration
+  413 | struct ble_gatt_attr {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:437:5: error: expected specifier-qualifier-list before 'ble_uuid_any_t'
+  437 |     ble_uuid_any_t uuid;
+      |     ^~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:426:1: warning: empty declaration
+  426 | struct ble_gatt_chr {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:447:5: error: expected specifier-qualifier-list before 'ble_uuid_any_t'
+  447 |     ble_uuid_any_t uuid;
+      |     ^~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:442:1: warning: empty declaration
+  442 | struct ble_gatt_dsc {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:451:13: error: storage class specified for parameter 'ble_gatt_mtu_fn'
+  451 | typedef int ble_gatt_mtu_fn(uint16_t conn_handle,
+      |             ^~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:456:13: error: storage class specified for parameter 'ble_gatt_disc_svc_fn'
+  456 | typedef int ble_gatt_disc_svc_fn(uint16_t conn_handle,
+      |             ^~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:466:13: error: storage class specified for parameter 'ble_gatt_attr_fn'
+  466 | typedef int ble_gatt_attr_fn(uint16_t conn_handle,
+      |             ^~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:476:13: error: storage class specified for parameter 'ble_gatt_attr_mult_fn'
+  476 | typedef int ble_gatt_attr_mult_fn(uint16_t conn_handle,
+      |             ^~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:487:13: error: storage class specified for parameter 'ble_gatt_reliable_attr_fn'
+  487 | typedef int ble_gatt_reliable_attr_fn(uint16_t conn_handle,
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:493:13: error: storage class specified for parameter 'ble_gatt_chr_fn'
+  493 | typedef int ble_gatt_chr_fn(uint16_t conn_handle,
+      |             ^~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:498:13: error: storage class specified for parameter 'ble_gatt_dsc_fn'
+  498 | typedef int ble_gatt_dsc_fn(uint16_t conn_handle,
+      |             ^~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:517:28: error: expected declaration specifiers or '...' before 'ble_gatt_mtu_fn'
+  517 |                            ble_gatt_mtu_fn *cb, void *cb_arg);
+      |                            ^~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:530:29: error: expected declaration specifiers or '...' before 'ble_gatt_disc_svc_fn'
+  530 |                             ble_gatt_disc_svc_fn *cb, void *cb_arg);
+      |                             ^~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:545:60: error: type defaults to 'int' in declaration of 'ble_uuid_t' [-Werror=implicit-int]
+  545 | int ble_gattc_disc_svc_by_uuid(uint16_t conn_handle, const ble_uuid_t *uuid,
+      |                                                            ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:545:71: error: expected ';', ',' or ')' before '*' token
+  545 | int ble_gattc_disc_svc_by_uuid(uint16_t conn_handle, const ble_uuid_t *uuid,
+      |                                                                       ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:566:29: error: expected declaration specifiers or '...' before 'ble_gatt_disc_svc_fn'
+  566 |                             ble_gatt_disc_svc_fn *cb, void *cb_arg);
+      |                             ^~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:585:50: error: expected declaration specifiers or '...' before 'ble_gatt_chr_fn'
+  585 |                             uint16_t end_handle, ble_gatt_chr_fn *cb,
+      |                                                  ^~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:607:59: error: type defaults to 'int' in declaration of 'ble_uuid_t' [-Werror=implicit-int]
+  607 |                                uint16_t end_handle, const ble_uuid_t *uuid,
+      |                                                           ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:607:70: error: expected ';', ',' or ')' before '*' token
+  607 |                                uint16_t end_handle, const ble_uuid_t *uuid,
+      |                                                                      ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:628:29: error: expected declaration specifiers or '...' before 'ble_gatt_dsc_fn'
+  628 |                             ble_gatt_dsc_fn *cb, void *cb_arg);
+      |                             ^~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:644:20: error: expected declaration specifiers or '...' before 'ble_gatt_attr_fn'
+  644 |                    ble_gatt_attr_fn *cb, void *cb_arg);
+      |                    ^~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:665:55: error: type defaults to 'int' in declaration of 'ble_uuid_t' [-Werror=implicit-int]
+  665 |                            uint16_t end_handle, const ble_uuid_t *uuid,
+      |                                                       ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:665:66: error: expected ';', ',' or ')' before '*' token
+  665 |                            uint16_t end_handle, const ble_uuid_t *uuid,
+      |                                                                  ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:684:25: error: expected declaration specifiers or '...' before 'ble_gatt_attr_fn'
+  684 |                         ble_gatt_attr_fn *cb, void *cb_arg);
+      |                         ^~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:701:46: error: expected declaration specifiers or '...' before 'ble_gatt_attr_fn'
+  701 |                         uint8_t num_handles, ble_gatt_attr_fn *cb,
+      |                                              ^~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:705:50: error: expected declaration specifiers or '...' before 'ble_gatt_attr_mult_fn'
+  705 |                             uint8_t num_handles, ble_gatt_attr_mult_fn *cb,
+      |                                                  ^~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:772:21: error: expected declaration specifiers or '...' before 'ble_gatt_attr_fn'
+  772 |                     ble_gatt_attr_fn *cb, void *cb_arg);
+      |                     ^~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:792:26: error: expected declaration specifiers or '...' before 'ble_gatt_attr_fn'
+  792 |                          ble_gatt_attr_fn *cb, void *cb_arg);
+      |                          ^~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:813:26: error: expected declaration specifiers or '...' before 'ble_gatt_attr_fn'
+  813 |                          ble_gatt_attr_fn *cb, void *cb_arg);
+      |                          ^~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:836:45: error: expected declaration specifiers or '...' before 'ble_gatt_reliable_attr_fn'
+  836 |                              int num_attrs, ble_gatt_reliable_attr_fn *cb,
+      |                                             ^~~~~~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:925:1: warning: empty declaration
+  925 | struct ble_gatt_access_ctxt;
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:928:13: error: storage class specified for parameter 'ble_gatt_access_fn'
+  928 | typedef int ble_gatt_access_fn(uint16_t conn_handle, uint16_t attr_handle,
+      |             ^~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:932:18: error: storage class specified for parameter 'ble_gatt_chr_flags'
+  932 | typedef uint16_t ble_gatt_chr_flags;
+      |                  ^~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:940:22: error: expected ':', ',', ';', '}' or '__attribute__' before '*' token
+  940 |     const ble_uuid_t *uuid;
+      |                      ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:935:1: warning: empty declaration
+  935 | struct ble_gatt_chr_def {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:988:22: error: expected ':', ',', ';', '}' or '__attribute__' before '*' token
+  988 |     const ble_uuid_t *uuid;
+      |                      ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:975:1: warning: empty declaration
+  975 | struct ble_gatt_svc_def {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:1010:22: error: expected ':', ',', ';', '}' or '__attribute__' before '*' token
+ 1010 |     const ble_uuid_t *uuid;
+      |                      ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:1005:1: warning: empty declaration
+ 1005 | struct ble_gatt_dsc_def {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:1039:1: warning: empty declaration
+ 1039 | struct ble_gatt_cpfd {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:1064:1: warning: empty declaration
+ 1064 | struct ble_gatt_access_ctxt {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:1111:1: warning: empty declaration
+ 1111 | struct ble_gatt_register_ctxt {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:1185:14: error: storage class specified for parameter 'ble_gatt_register_fn'
+ 1185 | typedef void ble_gatt_register_fn(struct ble_gatt_register_ctxt *ctxt,
+      |              ^~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:1290:30: error: type defaults to 'int' in declaration of 'ble_uuid_t' [-Werror=implicit-int]
+ 1290 | int ble_gatts_find_svc(const ble_uuid_t *uuid, uint16_t *out_handle);
+      |                              ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:1290:41: error: expected ';', ',' or ')' before '*' token
+ 1290 | int ble_gatts_find_svc(const ble_uuid_t *uuid, uint16_t *out_handle);
+      |                                         ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:1309:30: error: type defaults to 'int' in declaration of 'ble_uuid_t' [-Werror=implicit-int]
+ 1309 | int ble_gatts_find_chr(const ble_uuid_t *svc_uuid, const ble_uuid_t *chr_uuid,
+      |                              ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:1309:41: error: expected ';', ',' or ')' before '*' token
+ 1309 | int ble_gatts_find_chr(const ble_uuid_t *svc_uuid, const ble_uuid_t *chr_uuid,
+      |                                         ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:1327:30: error: type defaults to 'int' in declaration of 'ble_uuid_t' [-Werror=implicit-int]
+ 1327 | int ble_gatts_find_dsc(const ble_uuid_t *svc_uuid, const ble_uuid_t *chr_uuid,
+      |                              ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:1327:41: error: expected ';', ',' or ')' before '*' token
+ 1327 | int ble_gatts_find_dsc(const ble_uuid_t *svc_uuid, const ble_uuid_t *chr_uuid,
+      |                                         ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h:1331:16: error: storage class specified for parameter 'ble_gatt_svc_foreach_fn'
+ 1331 | typedef void (*ble_gatt_svc_foreach_fn)(const struct ble_gatt_svc_def *svc,
+      |                ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h:36:
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_id.h:50:33: error: expected declaration specifiers or '...' before 'ble_addr_t'
+   50 | int ble_hs_id_gen_rnd(int nrpa, ble_addr_t *out_addr);
+      |                                 ^~~~~~~~~~
+In file included from /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/nimble/include/modlog/modlog.h:25,
+                 from /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_log.h:36,
+                 from /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h:38:
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/nimble/include/log_common/log_common.h:30:1: warning: empty declaration
+   30 | struct log;
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/nimble/include/log_common/log_common.h:116:1: warning: empty declaration
+  116 | struct log_info {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/nimble/include/log_common/log_common.h:123:24: error: storage class specified for parameter 'g_log_info'
+  123 | extern struct log_info g_log_info;
+      |                        ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/nimble/include/log_common/log_common.h:132:14: error: storage class specified for parameter 'log_append_cb'
+  132 | typedef void log_append_cb(struct log *log, uint32_t idx);
+      |              ^~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/nimble/include/log_common/log_common.h:139:14: error: storage class specified for parameter 'log_notify_rotate_cb'
+  139 | typedef void log_notify_rotate_cb(const struct log *log);
+      |              ^~~~~~~~~~~~~~~~~~~~
+In file included from /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/nimble/include/modlog/modlog.h:26:
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/porting/nimble/include/log/log.h:27:1: warning: empty declaration
+   27 | struct log {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_log.h:48:1: warning: empty declaration
+   48 | struct os_mbuf;
+      | ^~~~~~
+In file included from /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h:39:
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_mbuf.h:35:1: warning: empty declaration
+   35 | struct os_mbuf;
+      | ^~~~~~
+In file included from /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h:40:
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_stop.h:40:14: error: storage class specified for parameter 'ble_hs_stop_fn'
+   40 | typedef void ble_hs_stop_fn(int status, void *arg);
+      |              ^~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_stop.h:49:5: error: expected specifier-qualifier-list before 'ble_hs_stop_fn'
+   49 |     ble_hs_stop_fn *fn;
+      |     ^~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_stop.h:47:1: warning: empty declaration
+   47 | struct ble_hs_stop_listener {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_stop.h:80:17: error: expected declaration specifiers or '...' before 'ble_hs_stop_fn'
+   80 |                 ble_hs_stop_fn *fn, void *arg);
+      |                 ^~~~~~~~~~~~~~
+In file included from /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h:42:
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_l2cap.h:47:1: warning: empty declaration
+   47 | struct ble_l2cap_sig_update_req;
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_l2cap.h:54:1: warning: empty declaration
+   54 | struct ble_hs_conn;
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_l2cap.h:276:14: error: storage class specified for parameter 'ble_l2cap_sig_update_fn'
+  276 | typedef void ble_l2cap_sig_update_fn(uint16_t conn_handle, int status,
+      |              ^~~~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_l2cap.h:285:1: warning: empty declaration
+  285 | struct ble_l2cap_sig_update_params {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_l2cap.h:334:26: error: expected declaration specifiers or '...' before 'ble_l2cap_sig_update_fn'
+  334 |                          ble_l2cap_sig_update_fn *cb, void *cb_arg);
+      |                          ^~~~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_l2cap.h:342:1: warning: empty declaration
+  342 | struct ble_l2cap_chan;
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_l2cap.h:350:1: warning: empty declaration
+  350 | struct ble_l2cap_event {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_l2cap.h:478:1: warning: empty declaration
+  478 | struct ble_l2cap_chan_info {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_l2cap.h:509:13: error: storage class specified for parameter 'ble_l2cap_event_fn'
+  509 | typedef int ble_l2cap_event_fn(struct ble_l2cap_event *event, void *arg);
+      |             ^~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_l2cap.h:541:29: error: expected declaration specifiers or '...' before 'ble_l2cap_event_fn'
+  541 |                             ble_l2cap_event_fn *cb, void *cb_arg);
+      |                             ^~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_l2cap.h:563:23: error: expected declaration specifiers or '...' before 'ble_l2cap_event_fn'
+  563 |                       ble_l2cap_event_fn *cb, void *cb_arg);
+      |                       ^~~~~~~~~~~~~~~~~~
+In file included from /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h:43:
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_sm.h:92:1: warning: empty declaration
+   92 | struct ble_sm_sc_oob_data {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_sm.h:100:1: warning: empty declaration
+  100 | struct ble_sm_io {
+      | ^~~~~~
+In file included from /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h:44:
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_store.h:58:5: error: expected specifier-qualifier-list before 'ble_addr_t'
+   58 |     ble_addr_t peer_addr;
+      |     ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_store.h:53:1: warning: empty declaration
+   53 | struct ble_store_key_sec {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_store.h:71:5: error: expected specifier-qualifier-list before 'ble_addr_t'
+   71 |     ble_addr_t peer_addr;
+      |     ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_store.h:70:1: warning: empty declaration
+   70 | struct ble_store_value_sec {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_store.h:101:5: error: expected specifier-qualifier-list before 'ble_addr_t'
+  101 |     ble_addr_t peer_addr;
+      |     ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_store.h:96:1: warning: empty declaration
+   96 | struct ble_store_key_cccd {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_store.h:118:5: error: expected specifier-qualifier-list before 'ble_addr_t'
+  118 |     ble_addr_t peer_addr;
+      |     ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_store.h:117:1: warning: empty declaration
+  117 | struct ble_store_value_cccd {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_store.h:152:5: error: expected specifier-qualifier-list before 'ble_addr_t'
+  152 |     ble_addr_t addr;
+      |     ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_store.h:151:1: warning: empty declaration
+  151 | struct ble_store_key_local_irk {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_store.h:158:6: error: expected specifier-qualifier-list before 'ble_addr_t'
+  158 |      ble_addr_t addr;
+      |      ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_store.h:157:1: warning: empty declaration
+  157 | struct ble_store_value_local_irk {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_store.h:164:5: error: expected specifier-qualifier-list before 'ble_addr_t'
+  164 |     ble_addr_t peer_rpa_addr;
+      |     ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_store.h:163:1: warning: empty declaration
+  163 | struct ble_store_key_rpa_rec{
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_store.h:168:5: error: expected specifier-qualifier-list before 'ble_addr_t'
+  168 |     ble_addr_t peer_rpa_addr;
+      |     ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_store.h:167:1: warning: empty declaration
+  167 | struct ble_store_value_rpa_rec{
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_store.h:176:1: warning: empty declaration
+  176 | union ble_store_key {
+      | ^~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_store.h:190:1: warning: empty declaration
+  190 | union ble_store_value {
+      | ^~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_store.h:200:1: warning: empty declaration
+  200 | struct ble_store_status_event {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_store.h:247:1: warning: empty declaration
+  247 | struct ble_store_gen_key {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_store.h:272:13: error: storage class specified for parameter 'ble_store_gen_key_fn'
+  272 | typedef int ble_store_gen_key_fn(uint8_t key,
+      |             ^~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_store.h:293:13: error: storage class specified for parameter 'ble_store_read_fn'
+  293 | typedef int ble_store_read_fn(int obj_type, const union ble_store_key *key,
+      |             ^~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_store.h:309:13: error: storage class specified for parameter 'ble_store_write_fn'
+  309 | typedef int ble_store_write_fn(int obj_type, const union ble_store_value *val);
+      |             ^~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_store.h:324:13: error: storage class specified for parameter 'ble_store_delete_fn'
+  324 | typedef int ble_store_delete_fn(int obj_type, const union ble_store_key *key);
+      |             ^~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_store.h:340:13: error: storage class specified for parameter 'ble_store_status_fn'
+  340 | typedef int ble_store_status_fn(struct ble_store_status_event *event,
+      |             ^~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_store.h:397:13: error: storage class specified for parameter 'ble_store_iterator_fn'
+  397 | typedef int ble_store_iterator_fn(int obj_type,
+      |             ^~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_store.h:402:23: error: expected declaration specifiers or '...' before 'ble_store_iterator_fn'
+  402 |                       ble_store_iterator_fn *callback,
+      |                       ^~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_store.h:409:33: error: expected declaration specifiers or '...' before 'ble_addr_t'
+  409 | int ble_store_util_bonded_peers(ble_addr_t *out_peer_id_addrs,
+      |                                 ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_store.h:413:38: error: type defaults to 'int' in declaration of 'ble_addr_t' [-Werror=implicit-int]
+  413 | int ble_store_util_delete_peer(const ble_addr_t *peer_id_addr);
+      |                                      ^~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_store.h:413:49: error: expected ';', ',' or ')' before '*' token
+  413 | int ble_store_util_delete_peer(const ble_addr_t *peer_id_addr);
+      |                                                 ^
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h:260:14: error: storage class specified for parameter 'ble_hs_reset_fn'
+  260 | typedef void ble_hs_reset_fn(int reason);
+      |              ^~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h:264:14: error: storage class specified for parameter 'ble_hs_sync_fn'
+  264 | typedef void ble_hs_sync_fn(void);
+      |              ^~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h:279:5: error: expected specifier-qualifier-list before 'ble_gatt_register_fn'
+  279 |     ble_gatt_register_fn *gatts_register_cb;
+      |     ^~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h:274:1: warning: empty declaration
+  274 | struct ble_hs_cfg {
+      | ^~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h:374:26: error: storage class specified for parameter 'ble_hs_cfg'
+  374 | extern struct ble_hs_cfg ble_hs_cfg;
+      |                          ^~~~~~~~~~
+In file included from /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.h:16:
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/services/gap/include/services/gap/ble_svc_gap.h:47:15: error: storage class specified for parameter 'ble_svc_gap_chr_changed_fn'
+   47 | typedef void (ble_svc_gap_chr_changed_fn) (uint16_t uuid);
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/services/gap/include/services/gap/ble_svc_gap.h:49:37: error: expected declaration specifiers or '...' before 'ble_svc_gap_chr_changed_fn'
+   49 | void ble_svc_gap_set_chr_changed_cb(ble_svc_gap_chr_changed_fn *cb);
+      |                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/arekstasko/sources/repos/PlantCare_Module/main/services/bluetoothService/Bluetooth_Service.h:17:
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bt/host/nimble/nimble/nimble/host/services/gatt/include/services/gatt/ble_svc_gatt.h:30:1: warning: empty declaration
+   30 | struct ble_hs_cfg;
+      | ^~~~~~
+/home/arekstasko/sources/repos/PlantCare_Module/main/PlantCare_Module.c:13:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   13 | {
+      | ^
+In file included from /home/arekstasko/sources/repos/PlantCare_Module/main/PlantCare_Module.c:5:
+/home/arekstasko/sources/repos/PlantCare_Module/main/services/NvsService/NVS_Service.h:11:7: error: old-style parameter declarations in prototyped function definition
+   11 | char* getWifiName(void)
+      |       ^~~~~~~~~~~
+/home/arekstasko/sources/repos/PlantCare_Module/main/PlantCare_Module.c:26: error: expected '{' at end of input
+/home/arekstasko/sources/repos/PlantCare_Module/main/PlantCare_Module.c:26: error: control reaches end of non-void function [-Werror=return-type]
+cc1: some warnings being treated as errors
+ninja: build stopped: subcommand failed.
