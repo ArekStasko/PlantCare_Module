@@ -1,0 +1,224 @@
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081314: call_start_cpu1 at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_system/port/cpu_start.c:190
+[0m
+[0;33m--- 0x400d2630: __esp_system_init_fn_init_efuse_check at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/efuse/src/esp_efuse_startup.c:31
+[0m
+[0;33m--- 0x400d2b4c: __esp_system_init_fn_init_show_cpu_freq at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_system/startup_funcs.c:58
+[0m
+[0;33m--- 0x400d2570: __esp_system_init_fn_init_show_app_info at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_app_format/esp_app_desc.c:104
+[0m
+[0;33m--- 0x400d2644: __esp_system_init_fn_init_efuse_show_app_info at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/efuse/src/esp_efuse_startup.c:41
+[0m
+[0;33m--- 0x400d4444: __esp_system_init_fn_init_heap at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/heap/heap_caps_init.c:25
+[0m
+[0;33m--- 0x40080000: _WindowOverflow4 at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:2027
+[0m
+[0;33m--- 0x40080000: _WindowOverflow4 at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:2027
+[0m
+[0;33m--- 0x40000000: _WindowOverflow4 in ROM
+[0m
+[0;33m--- 0x40000000: _WindowOverflow4 in ROM
+[0m
+[0;33m--- 0x40080000: _WindowOverflow4 at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:2027
+[0m
+[0;33m--- 0x40080000: _WindowOverflow4 at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:2027
+0x40080000: _WindowOverflow4 at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:2027
+[0m
+[0;33m--- 0x40080000: _WindowOverflow4 at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:2027
+0x40082000: ipc_task at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_system/esp_ipc.c:75
+[0m
+[0;33m--- 0x40080000: _WindowOverflow4 at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:2027
+0x40082000: ipc_task at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_system/esp_ipc.c:75
+0x40080000: _WindowOverflow4 at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:2027
+[0m
+[0;33m--- 0x40082000: ipc_task at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_system/esp_ipc.c:75
+0x40084000: bootloader_flash_execute_command_common at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bootloader_support/bootloader_flash/src/bootloader_flash.c:629 (discriminator 4)
+[0m
+[0;33m--- 0x40082000: ipc_task at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_system/esp_ipc.c:75
+0x40084000: bootloader_flash_execute_command_common at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bootloader_support/bootloader_flash/src/bootloader_flash.c:629 (discriminator 4)
+0x40080000: _WindowOverflow4 at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:2027
+[0m
+[0;33m--- 0x40084000: bootloader_flash_execute_command_common at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bootloader_support/bootloader_flash/src/bootloader_flash.c:629 (discriminator 4)
+0x40086000: coex_bt_request at ??:?
+[0m
+[0;33m--- 0x40084000: bootloader_flash_execute_command_common at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/bootloader_support/bootloader_flash/src/bootloader_flash.c:629 (discriminator 4)
+0x40086000: coex_bt_request at ??:?
+0x40080000: _WindowOverflow4 at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:2027
+[0m
+[0;33m--- 0x40086000: coex_bt_request at ??:?
+0x40088000: wr_bt_tx_atten at /home/lxf/gittree/chip7.1_phy/chip_7.1/board_code/app_test/pp/phy/phy_chip_v7.c:1379
+[0m
+[0;33m--- 0x40086000: coex_bt_request at ??:?
+0x40088000: wr_bt_tx_atten at /home/lxf/gittree/chip7.1_phy/chip_7.1/board_code/app_test/pp/phy/phy_chip_v7.c:1379
+0x40080000: _WindowOverflow4 at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:2027
+[0m
+[0;33m--- 0x40088000: wr_bt_tx_atten at /home/lxf/gittree/chip7.1_phy/chip_7.1/board_code/app_test/pp/phy/phy_chip_v7.c:1379
+0x4008a000: r_ea_finetimer_isr at ??:?
+[0m
+[0;33m--- 0x40088000: wr_bt_tx_atten at /home/lxf/gittree/chip7.1_phy/chip_7.1/board_code/app_test/pp/phy/phy_chip_v7.c:1379
+0x4008a000: r_ea_finetimer_isr at ??:?
+0x40080000: _WindowOverflow4 at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:2027
+[0m
+[0;33m--- 0x4008a000: r_ea_finetimer_isr at ??:?
+0x4008c000: r_lld_evt_restart at ??:?
+[0m
+[0;33m--- 0x4008a000: r_ea_finetimer_isr at ??:?
+0x4008c000: r_lld_evt_restart at ??:?
+0x40080000: _WindowOverflow4 at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:2027
+[0m
+[0;33m--- 0x4008c000: r_lld_evt_restart at ??:?
+0x4008e000: r_rwble_isr at ??:?
+[0m
+[0;33m--- 0x4008c000: r_lld_evt_restart at ??:?
+0x4008e000: r_rwble_isr at ??:?
+0x40080000: _WindowOverflow4 at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:2027
+[0m
+[0;33m--- 0x4008e000: r_rwble_isr at ??:?
+0x40090000: prvSendAcquireGeneric at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_ringbuf/ringbuf.c:772
+[0m
+[0;33m--- 0x4008e000: r_rwble_isr at ??:?
+0x40090000: prvSendAcquireGeneric at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_ringbuf/ringbuf.c:772
+0x40080000: _WindowOverflow4 at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:2027
+[0m
+[0;33m--- 0x40090000: prvSendAcquireGeneric at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_ringbuf/ringbuf.c:772
+0x40092000: prvAddNewTaskToReadyList at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/tasks.c:1242
+[0m
+[0;33m--- 0x40090000: prvSendAcquireGeneric at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_ringbuf/ringbuf.c:772
+0x40092000: prvAddNewTaskToReadyList at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/tasks.c:1242
+0x40080000: _WindowOverflow4 at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:2027
+[0m
+[0;33m--- 0x40092000: prvAddNewTaskToReadyList at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/tasks.c:1242
+0x40094000: mmu_ll_get_entry_target at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/hal/esp32/include/hal/mmu_ll.h:335 (discriminator 2)
+[0m
+[0;33m--- 0x40092000: prvAddNewTaskToReadyList at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/tasks.c:1242
+0x40094000: mmu_ll_get_entry_target at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/hal/esp32/include/hal/mmu_ll.h:335 (discriminator 2)
+0x40080000: _WindowOverflow4 at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:2027
+[0m
+[0;33m--- 0x40094000: mmu_ll_get_entry_target at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/hal/esp32/include/hal/mmu_ll.h:335 (discriminator 2)
+0x40096000: block_split at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:410 (discriminator 3)
+ (inlined by) block_trim_free_leading at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:528 (discriminator 3)
+ (inlined by) tlsf_memalign_offs at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:1176 (discriminator 3)
+[0m
+[0;33m--- 0x40094000: mmu_ll_get_entry_target at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/hal/esp32/include/hal/mmu_ll.h:335 (discriminator 2)
+0x40096000: block_split at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:410 (discriminator 3)
+ (inlined by) block_trim_free_leading at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:528 (discriminator 3)
+ (inlined by) tlsf_memalign_offs at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:1176 (discriminator 3)
+0x40080000: _WindowOverflow4 at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:2027
+[0m
+[0;33m--- 0x40096000: block_split at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:410 (discriminator 3)
+ (inlined by) block_trim_free_leading at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:528 (discriminator 3)
+ (inlined by) tlsf_memalign_offs at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:1176 (discriminator 3)
+0x40098000: xt_utils_get_core_id at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/include/xt_utils.h:37
+ (inlined by) esp_cpu_get_core_id at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_hw_support/include/esp_cpu.h:127
+ (inlined by) abort at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/newlib/abort.c:28
+[0m
+[0;33m--- 0x40096000: block_split at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:410 (discriminator 3)
+ (inlined by) block_trim_free_leading at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:528 (discriminator 3)
+ (inlined by) tlsf_memalign_offs at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:1176 (discriminator 3)
+0x40098000: xt_utils_get_core_id at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/include/xt_utils.h:37
+ (inlined by) esp_cpu_get_core_id at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_hw_support/include/esp_cpu.h:127
+ (inlined by) abort at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/newlib/abort.c:28
+0x40080000: _WindowOverflow4 at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:2027
+[0m
+[0;33m--- 0x40098000: xt_utils_get_core_id at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/include/xt_utils.h:37
+ (inlined by) esp_cpu_get_core_id at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_hw_support/include/esp_cpu.h:127
+ (inlined by) abort at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/newlib/abort.c:28
+0x4009a000: rcUpdateTxDoneAmpdu2 at ??:?
+[0m
+[0;33m--- 0x40098000: xt_utils_get_core_id at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/include/xt_utils.h:37
+ (inlined by) esp_cpu_get_core_id at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_hw_support/include/esp_cpu.h:127
+ (inlined by) abort at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/newlib/abort.c:28
+0x4009a000: rcUpdateTxDoneAmpdu2 at ??:?
+0x40080000: _WindowOverflow4 at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:2027
+[0m
+[0;33m--- 0x4009a000: rcUpdateTxDoneAmpdu2 at ??:?
+0x4009c000: pm_coex_pwr_update at ??:?
+[0m
+[0;33m--- 0x4009a000: rcUpdateTxDoneAmpdu2 at ??:?
+0x4009c000: pm_coex_pwr_update at ??:?
+0x40080000: _WindowOverflow4 at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:2027
+[0m
+[0;33m--- 0x4009c000: pm_coex_pwr_update at ??:?
+0x4009e000: spi_flash_chip_generic_erase_sector at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/spi_flash/spi_flash_chip_generic.c:175
+[0m
+[0;33m--- 0x4009c000: pm_coex_pwr_update at ??:?
+0x4009e000: spi_flash_chip_generic_erase_sector at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/spi_flash/spi_flash_chip_generic.c:175
+0x40080000: _WindowOverflow4 at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:2027
+[0m
+[0;33m--- 0x4009e000: spi_flash_chip_generic_erase_sector at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/spi_flash/spi_flash_chip_generic.c:175
+[0m
+[0;33m--- 0x4009e000: spi_flash_chip_generic_erase_sector at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/spi_flash/spi_flash_chip_generic.c:175
+0x40080000: _WindowOverflow4 at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:2027
+[0m
+[0;33m--- 0x400d5b2c: __esp_system_init_fn_esp_timer_init_nonos at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_timer/src/esp_timer_init.c:28
+[0m
+[0;33m--- 0x400d5528: __esp_system_init_fn_init_newlib at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/newlib/newlib_init.c:162
+[0m
+[0;33m--- 0x400d2b90: __esp_system_init_fn_init_brownout at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_system/startup_funcs.c:67
+[0m
+[0;33m--- 0x400d2b9c: __esp_system_init_fn_init_newlib_time at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_system/startup_funcs.c:81
+[0m
+[0;33m--- 0x400d6d6c: __esp_system_init_fn_init_vfs_uart at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_driver_uart/src/uart_vfs.c:1080
+[0m
+[0;33m--- 0x400d7768: __esp_system_init_fn_init_vfs_console at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_vfs_console/vfs_console.c:222
+[0m
+[0;33m--- 0x400d55a4: __esp_system_init_fn_init_newlib_stdio at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/newlib/newlib_init.c:207
+[0m
+[0;33m--- 0x400d5948: __esp_system_init_fn_init_pthread at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/pthread/pthread.c:76
+[0m
+[0;33m--- 0x400d2ba8: __esp_system_init_fn_init_flash at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_system/startup_funcs.c:88
+[0m
+[0;33m--- 0x400d26d0: __esp_system_init_fn_init_efuse at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/efuse/src/esp_efuse_startup.c:137
+[0m
+[0;33m--- 0x40152204: _GLOBAL__sub_I__ZN17__eh_globals_init7_S_initE at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_globals.cc:162
+[0m
+[0;33m--- 0x400f26c0: s_set_default_wifi_log_level at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_wifi/src/wifi_init.c:89
+[0m
+[0;33m--- 0x4008fd24: enable_timer_group0_for_calibration at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_hw_support/port/esp32/rtc_time.c:197
+[0m
+[0;33m--- 0x400d3c44: esp_ipc_init at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_system/esp_ipc.c:113
+[0m
+[0;33m--- 0x400d3160: esp_reset_reason_init at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_system/port/soc/esp32/reset_reason.c:60
+[0m
+[0;33m--- 0x400eb944: __esp_system_init_fn_esp_timer_init_os at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_timer/src/esp_timer.c:587
+[0m
+[0;33m--- 0x400d2bcc: __esp_system_init_fn_init_coexist at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_system/startup_funcs.c:134
+[0m
+[0;33m--- 0x400d2be0: __esp_system_init_fn_init_disable_rtc_wdt at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_system/startup_funcs.c:143
+[0m
+[0;33m--- 0x400eff98: esp_netif_new_api at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_netif/lwip/esp_netif_lwip.c:690
+[0m
+[0;33m--- 0x400d8f48: wifi_event_handler at /home/arekstasko/sources/repos/PlantCare_Module/main/services/WifiService/WIFI_Service.c:13
+[0m
+[0;33m--- 0x400f290c: wifi_default_action_sta_start at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_wifi/src/wifi_default.c:72
+[0m
+[0;33m--- 0x400ef9dc: esp_netif_set_mac_api at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_netif/lwip/esp_netif_lwip.c:993
+[0m
+[0;33m--- 0x400f0204: esp_netif_start_api at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_netif/lwip/esp_netif_lwip.c:1068
+[0m
+[0;33m--- 0x400f0910: esp_netif_update_default_netif_lwip at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_netif/lwip/esp_netif_lwip.c:317
+[0m
+[0;33m--- 0x400d8f48: wifi_event_handler at /home/arekstasko/sources/repos/PlantCare_Module/main/services/WifiService/WIFI_Service.c:13
+[0m
+[0;33m--- 0x4011eec4: cnx_start_handoff_cb at ??:?
+[0m
+[0;33m--- 0x400f293c: wifi_default_action_sta_connected at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_wifi/src/wifi_default.c:86
+[0m
+[0;33m--- 0x400f057c: esp_netif_up_api at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_netif/lwip/esp_netif_lwip.c:1647
+[0m
+[0;33m--- 0x400f0910: esp_netif_update_default_netif_lwip at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_netif/lwip/esp_netif_lwip.c:317
+[0m
+[0;33m--- 0x400f0458: esp_netif_dhcpc_start_api at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_netif/lwip/esp_netif_lwip.c:1439
+[0m
+[0;33m--- 0x400d8f48: wifi_event_handler at /home/arekstasko/sources/repos/PlantCare_Module/main/services/WifiService/WIFI_Service.c:13
+[0m
+[0;33m--- 0x400f2788: wifi_default_action_sta_got_ip at /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esp_wifi/src/wifi_default.c:128
+[0m
+[0;33m--- 0x400d8f48: wifi_event_handler at /home/arekstasko/sources/repos/PlantCare_Module/main/services/WifiService/WIFI_Service.c:13
+[0m
+[1;31m--- Error: device reports readiness to read but returned no data (device disconnected or multiple access on port?)[0m
+[0;33m--- Waiting for the device to reconnect[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m[0m
+[0m

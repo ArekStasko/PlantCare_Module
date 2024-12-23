@@ -56,11 +56,19 @@ void connect_to_wifi()
 static esp_err_t get_handler(httpd_req_t *req)
 {
     vTaskDelay(1000 / portTICK_PERIOD_MS);
-    httpd_resp_send(req, "URI POST Response", HTTPD_RESP_USE_STRLEN);
+    httpd_resp_send(req, "Plantcare module - get response", HTTPD_RESP_USE_STRLEN);
     return ESP_OK;
 }
 
 void server_initiation()
 {
-
+	httpd_config_t server_config = HTTPD_DEFAULT_CONFIG();
+    httpd_handle_t server_handle = NULL;
+    httpd_start(&server_handle, &server_config);
+    httpd_uri_t uri_post = {
+        .uri = "/humidity",
+        .method = HTTP_GET,
+        .handler = get_handler,
+        .user_ctx = NULL};
+    httpd_register_uri_handler(server_handle, &uri_post);
 }
