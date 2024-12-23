@@ -7,7 +7,7 @@
 #include "esp_log.h"
 #include "esp_netif.h"
 #include "esp_http_server.h"
-#include "my_data.h"
+#include "NVS_Service.h"
 
 static void wifi_event_handler(void *event_handler_arg, esp_event_base_t event_base, int32_t event_id, void *event_data)
 {
@@ -34,6 +34,7 @@ void connect_to_wifi()
 {
   	char* wifiName = getWifiName();
     char* wifiPassword = getWifiPassword();
+
     esp_netif_init();
     esp_event_loop_create_default();
     esp_netif_create_default_wifi_sta();
@@ -41,20 +42,21 @@ void connect_to_wifi()
     esp_wifi_init(&wifi_initiation);
     esp_event_handler_register(WIFI_EVENT, ESP_EVENT_ANY_ID, wifi_event_handler, NULL);
     esp_event_handler_register(IP_EVENT, IP_EVENT_STA_GOT_IP, wifi_event_handler, NULL);
-    wifi_config_t wifi_configuration = {
-        .sta = {
-            .ssid = SSID,
-            .password = PASS}};
+
+    wifi_config_t wifi_configuration = {0};
+    snprintf((char*)wifi_configuration.sta.ssid, sizeof(wifi_configuration.sta.ssid), "%s", wifiName);
+    snprintf((char*)wifi_configuration.sta.password, sizeof(wifi_configuration.sta.password), "%s", wifiPassword);
+
     esp_wifi_set_config(ESP_IF_WIFI_STA, &wifi_configuration);
     esp_wifi_set_mode(WIFI_MODE_STA);
     esp_wifi_start();
     esp_wifi_connect();
 }
 
-static esp_err_t post_handler(httpd_req_t *req)
+static esp_err_t get_handler(httpd_req_t *req)
 {
     vTaskDelay(1000 / portTICK_PERIOD_MS);
-    httpd_resp_send(req, "URI POST Response ... from ESP32", HTTPD_RESP_USE_STRLEN);
+    httpd_resp_send(req, "URI POST Response", HTTPD_RESP_USE_STRLEN);
     return ESP_OK;
 }
 
