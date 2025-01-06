@@ -51,7 +51,7 @@ void disable_bt()
 static int device_write(uint16_t conn_handle, uint16_t attr_handle, struct ble_gatt_access_ctxt *ctxt, void *arg)
 {
     char *data = (char *)ctxt->om->om_data;
-    char *name, *password, *uuid;
+    char *name, *password, *id;
 
     char buffer[256];
     strncpy(buffer, data, sizeof(buffer) - 1);
@@ -59,9 +59,9 @@ static int device_write(uint16_t conn_handle, uint16_t attr_handle, struct ble_g
 
     name = strtok(buffer, "|");
     password = strtok(NULL, "|");
-    uuid = strtok(NULL, "|");
+    id = strtok(NULL, "|");
 
-    if (name && password && uuid)
+    if (name && password && id)
     {
         nvs_handle_t nvs_handle;
         esp_err_t err = nvs_open("storage", NVS_READWRITE, &nvs_handle);
@@ -73,7 +73,7 @@ static int device_write(uint16_t conn_handle, uint16_t attr_handle, struct ble_g
 
         nvs_set_str(nvs_handle, "name", name);
         nvs_set_str(nvs_handle, "password", password);
-        nvs_set_str(nvs_handle, "uuid", uuid);
+        nvs_set_str(nvs_handle, "id", id);
 
         err = nvs_commit(nvs_handle);
         if (err != ESP_OK)
@@ -85,7 +85,7 @@ static int device_write(uint16_t conn_handle, uint16_t attr_handle, struct ble_g
 
         nvs_close(nvs_handle);
         disable_bt();
-        ESP_LOGI(TAG, "Data saved: name=%s, password=%s, uuid=%s", name, password, uuid);
+        ESP_LOGI(TAG, "Data saved: name=%s, password=%s, id=%s", name, password, id);
     }
     else
     {
