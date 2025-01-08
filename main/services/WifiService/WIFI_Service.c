@@ -62,11 +62,14 @@ static esp_err_t get_handler(httpd_req_t *req)
 
 void server_initiation()
 {
+    char* id = getModuleId();
+    char uri_path[50];
+    snprintf(uri_path, sizeof(uri_path), "/%s/humidity", id);
 	httpd_config_t server_config = HTTPD_DEFAULT_CONFIG();
     httpd_handle_t server_handle = NULL;
     httpd_start(&server_handle, &server_config);
     httpd_uri_t uri_post = {
-        .uri = "/humidity",
+        .uri = uri_path,
         .method = HTTP_GET,
         .handler = get_handler,
         .user_ctx = NULL};
