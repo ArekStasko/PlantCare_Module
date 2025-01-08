@@ -56,7 +56,7 @@ void connect_to_wifi()
 static esp_err_t get_handler(httpd_req_t *req)
 {
     vTaskDelay(1000 / portTICK_PERIOD_MS);
-    httpd_resp_send(req, "Plantcare module - get response", HTTPD_RESP_USE_STRLEN);
+    httpd_resp_send(req, "59", HTTPD_RESP_USE_STRLEN);
     return ESP_OK;
 }
 
