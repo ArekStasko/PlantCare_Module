@@ -12,8 +12,6 @@
 void app_main(void)
 {
     nvs_flash_init();
-    //Method added for test purposes
-    resetWifiData();
     bool isWifiDataExist = checkIfWiFiDataExists();
     if (!isWifiDataExist)
     {

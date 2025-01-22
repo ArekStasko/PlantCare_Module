@@ -515,7 +515,6 @@ SECTIONS
     *(.rodata_wlog_debug .rodata_wlog_debug.*)
     *(.rodata_wlog_error .rodata_wlog_error.*)
     *(.rodata_wlog_info .rodata_wlog_info.*)
-    *(.rodata_wlog_verbose .rodata_wlog_verbose.*)
     *(.rodata_wlog_warning .rodata_wlog_warning.*)
     *(.irom1.text) /* catch stray ICACHE_RODATA_ATTR */
     *(.gnu.linkonce.r.*)
@@ -586,6 +585,7 @@ SECTIONS
      * NOLOAD rodata may not be included in this section.
      */
     _rodata_reserved_end = ABSOLUTE(.);
+    *(.rodata_wlog_verbose .rodata_wlog_verbose.*)
   } > default_rodata_seg
   .flash.text :
   {

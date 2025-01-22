@@ -55,23 +55,42 @@ void connect_to_wifi()
 
 static esp_err_t get_handler(httpd_req_t *req)
 {
-    vTaskDelay(1000 / portTICK_PERIOD_MS);
+    char query[100];
+    char id[10] = {0};
+
+    if (httpd_req_get_url_query_str(req, query, sizeof(query)) == ESP_OK) {
+        printf("Query string: %s", query);
+
+        if (httpd_query_key_value(query, "id", id, sizeof(id)) == ESP_OK) {
+            printf("Extracted ID: %s", id);
+        } else {
+            printf("ID not found in query");
+            httpd_resp_send(req, "-1", HTTPD_RESP_USE_STRLEN);
+            return ESP_OK;
+        }
+    } else {
+        printf("Failed to get query string");
+    }
+
     httpd_resp_send(req, "59", HTTPD_RESP_USE_STRLEN);
     return ESP_OK;
 }
 
 void server_initiation()
 {
-    char* id = getModuleId();
-    char uri_path[50];
-    snprintf(uri_path, sizeof(uri_path), "/%s/humidity", id);
 	httpd_config_t server_config = HTTPD_DEFAULT_CONFIG();
+    server_config.max_uri_handlers = 10;
     httpd_handle_t server_handle = NULL;
     httpd_start(&server_handle, &server_config);
     httpd_uri_t uri_post = {
-        .uri = uri_path,
+        .uri = "/humidity",
         .method = HTTP_GET,
         .handler = get_handler,
         .user_ctx = NULL};
-    httpd_register_uri_handler(server_handle, &uri_post);
+    esp_err_t err = httpd_register_uri_handler(server_handle, &uri_post);
+	if (err != ESP_OK) {
+    	ESP_LOGE("HTTP_SERVER", "Failed to register URI handler. Error: %d", err);
+	} else {
+    	ESP_LOGI("HTTP_SERVER", "Handler registered for URI: %s", uri_post.uri);
+	}
 }
