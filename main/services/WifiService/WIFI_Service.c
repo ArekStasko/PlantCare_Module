@@ -55,6 +55,7 @@ void connect_to_wifi()
 
 static esp_err_t get_handler(httpd_req_t *req)
 {
+    char savedId = getModuleId();
     char query[100];
     char id[10] = {0};
 
@@ -62,7 +63,13 @@ static esp_err_t get_handler(httpd_req_t *req)
         printf("Query string: %s", query);
 
         if (httpd_query_key_value(query, "id", id, sizeof(id)) == ESP_OK) {
-            printf("Extracted ID: %s", id);
+            if(savedId == id)
+          	{
+              httpd_resp_send(req, "-1", HTTPD_RESP_USE_STRLEN);
+              return ESP_OK;
+          	}
+            httpd_resp_send(req, "59", HTTPD_RESP_USE_STRLEN);
+    		return ESP_OK;
         } else {
             printf("ID not found in query");
             httpd_resp_send(req, "-1", HTTPD_RESP_USE_STRLEN);
@@ -72,7 +79,6 @@ static esp_err_t get_handler(httpd_req_t *req)
         printf("Failed to get query string");
     }
 
-    httpd_resp_send(req, "59", HTTPD_RESP_USE_STRLEN);
     return ESP_OK;
 }
 
