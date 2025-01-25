@@ -10,5 +10,7 @@
 bool checkIfWiFiDataExists(void);
 char* getWifiName(void);
 char* getWifiPassword(void);
+char* getModuleId(void);
+void resetWifiData(void);
 
 #endif //NVS_SERVICE_H

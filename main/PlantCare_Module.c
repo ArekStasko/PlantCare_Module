@@ -20,6 +20,7 @@ void app_main(void)
 
     if(isWifiDataExist)
     {
-      connectToWifi();
+      connect_to_wifi();
+      server_initiation();
     }
 }

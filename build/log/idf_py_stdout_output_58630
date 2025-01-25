@@ -1,0 +1,91 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /home/arekstasko/sources/repos/PlantCare_Module/build/bootloader/esp-idf/esptool_py && /home/arekstasko/.espressif/python_env/idf5.3_py3.10_env/bin/python /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/arekstasko/sources/repos/PlantCare_Module/build/bootloader/bootloader.bin
+Bootloader binary size 0x6880 bytes. 0x780 bytes (7%) free.
+[2/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/services/WifiService/WIFI_Service.c.obj
+/home/arekstasko/sources/repos/PlantCare_Module/main/services/WifiService/WIFI_Service.c: In function 'get_handler':
+/home/arekstasko/sources/repos/PlantCare_Module/main/services/WifiService/WIFI_Service.c:58:11: warning: unused variable 'id' [-Wunused-variable]
+   58 |     char* id = getModuleId();
+      |           ^~
+[3/8] Linking C static library esp-idf/main/libmain.a
+[4/8] Generating ld/sections.ld
+[5/8] Linking CXX executable PlantCare_Module.elf
+[6/8] Generating binary image from built executable
+esptool.py v4.8.1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/arekstasko/sources/repos/PlantCare_Module/build/PlantCare_Module.bin
+[7/8] cd /home/arekstasko/sources/repos/PlantCare_Module/build/esp-idf/esptool_py && /home/arekstasko/.espressif/python_env/idf5.3_py3.10_env/bin/python /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/arekstasko/sources/repos/PlantCare_Module/build/partition_table/partition-table.bin /home/arekstasko/sources/repos/PlantCare_Module/build/PlantCare_Module.bin
+PlantCare_Module.bin binary size 0xfe750 bytes. Smallest app partition is 0x100000 bytes. 0x18b0 bytes (1%) free.
+Warning: The smallest app partition is nearly full (1% free space left)!
+[7/8] cd /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esptool_py && /home/arekstasko/.espressif/tools/cmake/3.24.0/bin/cmake -D IDF_PATH=/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1 -D "SERIAL_TOOL=/home/arekstasko/.espressif/python_env/idf5.3_py3.10_env/bin/python;;/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/arekstasko/sources/repos/PlantCare_Module/build -P /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 115200 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 PlantCare_Module.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.1
+Serial port /dev/ttyUSB0
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: f0:24:f9:44:30:a8
+Uploading stub...
+Running stub...
+Stub running...
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x0010efff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 26752 bytes to 16356...
+Writing at 0x00001000... (100 %)
+Wrote 26752 bytes (16356 compressed) at 0x00001000 in 1.8 seconds (effective 117.4 kbit/s)...
+Hash of data verified.
+Compressed 1042256 bytes to 648548...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001dcb2... (5 %)
+Writing at 0x00027ebe... (7 %)
+Writing at 0x0002ccce... (10 %)
+Writing at 0x00033d9c... (12 %)
+Writing at 0x00041170... (15 %)
+Writing at 0x00046950... (17 %)
+Writing at 0x0004d092... (20 %)
+Writing at 0x00052e89... (22 %)
+Writing at 0x00058d22... (25 %)
+Writing at 0x0005ebc7... (27 %)
+Writing at 0x00064850... (30 %)
+Writing at 0x0006b0b0... (32 %)
+Writing at 0x00070d68... (35 %)
+Writing at 0x000768e0... (37 %)
+Writing at 0x0007bb45... (40 %)
+Writing at 0x00080fcf... (42 %)
+Writing at 0x0008654d... (45 %)
+Writing at 0x0008b8ed... (47 %)
+Writing at 0x00090f4f... (50 %)
+Writing at 0x00096790... (52 %)
+Writing at 0x0009c56d... (55 %)
+Writing at 0x000a1d4b... (57 %)
+Writing at 0x000a7a7d... (60 %)
+Writing at 0x000ad79a... (62 %)
+Writing at 0x000b2fb2... (65 %)
+Writing at 0x000b8aab... (67 %)
+Writing at 0x000beb08... (70 %)
+Writing at 0x000c4cdd... (72 %)
+Writing at 0x000ca73b... (75 %)
+Writing at 0x000d09ef... (77 %)
+Writing at 0x000d6c6a... (80 %)
+Writing at 0x000dffb2... (82 %)
+Writing at 0x000e8718... (85 %)
+Writing at 0x000ee3e5... (87 %)
+Writing at 0x000f4745... (90 %)
+Writing at 0x000f9fef... (92 %)
+Writing at 0x000ffb57... (95 %)
+Writing at 0x00105dd1... (97 %)
+Writing at 0x0010b0c4... (100 %)
+Wrote 1042256 bytes (648548 compressed) at 0x00010000 in 57.4 seconds (effective 145.3 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 404.5 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
