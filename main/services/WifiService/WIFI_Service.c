@@ -8,6 +8,8 @@
 #include "esp_netif.h"
 #include "esp_http_server.h"
 #include "NVS_Service.h"
+#include "Sensor_Service.h"
+#define MAX_RESPONSE_LENGTH 64
 
 static void wifi_event_handler(void *event_handler_arg, esp_event_base_t event_base, int32_t event_id, void *event_data)
 {
@@ -68,7 +70,11 @@ static esp_err_t get_handler(httpd_req_t *req)
               httpd_resp_send(req, "-1", HTTPD_RESP_USE_STRLEN);
               return ESP_OK;
           	}
-            httpd_resp_send(req, "59", HTTPD_RESP_USE_STRLEN);
+
+            char response[MAX_RESPONSE_LENGTH];
+            int moistureValue = get_moisture_value();
+            snprintf(response, MAX_RESPONSE_LENGTH, "%d", moistureValue);
+            httpd_resp_send(req, response, HTTPD_RESP_USE_STRLEN);
     		return ESP_OK;
         } else {
             printf("ID not found in query");
