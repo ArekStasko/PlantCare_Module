@@ -2,9 +2,9 @@
 #include "driver/adc.h"
 #include "esp_log.h"
 #define MOISTURE_SENSOR_ADC_CHANNEL ADC1_CHANNEL_4
-const int dry_value = 2596;
-const int wet_value = 1680;
-const int difference = 916;
+const int dry_value = 2600;
+const int wet_value = 1700;
+const int difference = 800;
 
 
 int get_moisture_value(void)
