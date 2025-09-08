@@ -23,6 +23,7 @@ static void wifi_event_handler(void *event_handler_arg, esp_event_base_t event_b
         break;
     case WIFI_EVENT_STA_DISCONNECTED:
         printf("WiFi lost connection WIFI_EVENT_STA_DISCONNECTED ... \n");
+        esp_wifi_connect();
         break;
     case IP_EVENT_STA_GOT_IP:
         printf("WiFi got IP ... \n\n");
