@@ -537,3 +537,8 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/arekstasko/sources/repos/PlantCare_Module/build/esp-idf/wifi_provisioning/cmake_install.cmake")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/arekstasko/sources/repos/PlantCare_Module/build/esp-idf/main/cmake_install.cmake")
+endif()
+

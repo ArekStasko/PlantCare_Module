@@ -13,5 +13,9 @@ int get_moisture_value(void)
     adc1_config_channel_atten(MOISTURE_SENSOR_ADC_CHANNEL, ADC_ATTEN_DB_11);
     int value = adc1_get_raw(MOISTURE_SENSOR_ADC_CHANNEL);
     printf("Moisture value: {%d}\n", value);
-    return ((dry_value - value)*100)/(dry_value - wet_value);
+    int result = ((dry_value - value)*100)/(dry_value - wet_value);
+    if(result<0) return 0;
+    if(result>100) return 100;
+    return result;
+
 }
