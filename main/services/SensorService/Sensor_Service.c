@@ -9,6 +9,7 @@ const int difference = 800;
 
 int get_moisture_value(void)
 {
+  // TO REBUILD
     adc1_config_width(ADC_WIDTH_BIT_12);
     adc1_config_channel_atten(MOISTURE_SENSOR_ADC_CHANNEL, ADC_ATTEN_DB_11);
     int value = adc1_get_raw(MOISTURE_SENSOR_ADC_CHANNEL);
