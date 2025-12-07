@@ -26,8 +26,13 @@ static void wifi_event_handler(void *event_handler_arg, esp_event_base_t event_b
         esp_wifi_connect();
         break;
     case IP_EVENT_STA_GOT_IP:
-        printf("WiFi got IP ... \n\n");
-        break;
+        {
+        	ip_event_got_ip_t *event = (ip_event_got_ip_t *)event_data;
+        	esp_ip4_addr_t ip = event->ip_info.ip;
+
+        	printf("WiFi got IP: %s\n\n", (char*)&ip);
+        	break;
+    	}
     default:
         break;
     }
@@ -35,8 +40,8 @@ static void wifi_event_handler(void *event_handler_arg, esp_event_base_t event_b
 
 void connect_to_wifi()
 {
-  	char* wifiName = getWifiName();
-    char* wifiPassword = getWifiPassword();
+  	char* wifiName = "";
+    char* wifiPassword = "";
 
     esp_netif_init();
     esp_event_loop_create_default();
