@@ -8,7 +8,9 @@
 #include "esp_netif.h"
 #include "esp_http_server.h"
 #include "NVS_Service.h"
+#include "nvs_flash.h"
 #include "Sensor_Service.h"
+#include "esp_netif_ip_addr.h"
 #define MAX_RESPONSE_LENGTH 64
 
 static void wifi_event_handler(void *event_handler_arg, esp_event_base_t event_base, int32_t event_id, void *event_data)
@@ -28,9 +30,18 @@ static void wifi_event_handler(void *event_handler_arg, esp_event_base_t event_b
     case IP_EVENT_STA_GOT_IP:
         {
         	ip_event_got_ip_t *event = (ip_event_got_ip_t *)event_data;
-        	esp_ip4_addr_t ip = event->ip_info.ip;
+        	char ip_str[16];
+        	esp_ip4addr_ntoa(&event->ip_info.ip, ip_str, sizeof(ip_str));
+        	printf("IP ADDRESS: %s\n", ip_str);
 
-        	printf("WiFi got IP: %s\n\n", (char*)&ip);
+            nvs_handle_t nvs_handle;
+        	esp_err_t err = nvs_open("storage", NVS_READWRITE, &nvs_handle);
+        	if (err != ESP_OK)
+        	{
+                printf("UNDABLE TO OPEN NVS STORAGE \n");
+            	break;
+        	}
+            nvs_set_str(nvs_handle, "address", ip_str);
         	break;
     	}
     default:
@@ -40,8 +51,8 @@ static void wifi_event_handler(void *event_handler_arg, esp_event_base_t event_b
 
 void connect_to_wifi()
 {
-  	char* wifiName = "";
-    char* wifiPassword = "";
+  	char* wifiName = getWifiName();
+    char* wifiPassword = getWifiPassword();
 
     esp_netif_init();
     esp_event_loop_create_default();
