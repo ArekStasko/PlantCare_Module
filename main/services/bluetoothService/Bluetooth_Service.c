@@ -98,7 +98,13 @@ static int device_write(uint16_t conn_handle, uint16_t attr_handle, struct ble_g
 
 static int device_read(uint16_t con_handle, uint16_t attr_handle, struct ble_gatt_access_ctxt *ctxt, void *arg)
 {
-    os_mbuf_append(ctxt->om, "Data from the server", strlen("Data from the server"));
+    const char *response = "test";
+
+    int rc = os_mbuf_append(ctxt->om, response, strlen(response));
+    if (rc != 0) {
+        return BLE_ATT_ERR_INSUFFICIENT_RES;
+    }
+
     return 0;
 }
 
