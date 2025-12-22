@@ -48,7 +48,12 @@ void disable_bt()
     ESP_LOGI(TAG, "Bluetooth disabled successfully.");
 }
 
-static int device_write(uint16_t conn_handle, uint16_t attr_handle, struct ble_gatt_access_ctxt *ctxt, void *arg)
+static void save_module_id(uint16_t conn_handle, uint16_t attr_handle, struct ble_gatt_access_ctxt *ctxt, void *arg)
+{
+
+}
+
+static int save_wifi_data(uint16_t conn_handle, uint16_t attr_handle, struct ble_gatt_access_ctxt *ctxt, void *arg)
 {
     char *data = (char *)ctxt->om->om_data;
     char *name, *password, *id;
@@ -96,7 +101,7 @@ static int device_write(uint16_t conn_handle, uint16_t attr_handle, struct ble_g
     return 0;
 }
 
-static int device_read(uint16_t con_handle, uint16_t attr_handle, struct ble_gatt_access_ctxt *ctxt, void *arg)
+static int get_module_ip_address(uint16_t con_handle, uint16_t attr_handle, struct ble_gatt_access_ctxt *ctxt, void *arg)
 {
     const char *response = "test";
 
@@ -114,11 +119,15 @@ static const struct ble_gatt_svc_def gatt_svcs[] = {
      .characteristics = (struct ble_gatt_chr_def[]){
          {.uuid = BLE_UUID16_DECLARE(0xFEF4),
           .flags = BLE_GATT_CHR_F_READ,
-          .access_cb = device_read},
+          .access_cb = get_module_ip_address},
          {.uuid = BLE_UUID16_DECLARE(0xDEAD),
           .flags = BLE_GATT_CHR_F_WRITE,
-          .access_cb = device_write},
+          .access_cb = save_wifi_data},
          {0}}},
+    	 {.uuid = BLE_UUID16_DECLARE(0xBEEF),
+          .flags = BLE_GATT_CHR_F_WRITE,
+          .access_cb = save_module_id,
+         },
     {0}};
 
 static int ble_gap_event(struct ble_gap_event *event, void *arg)
