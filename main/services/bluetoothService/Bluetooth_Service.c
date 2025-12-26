@@ -48,15 +48,15 @@ void disable_bt()
     ESP_LOGI(TAG, "Bluetooth disabled successfully.");
 }
 
-static void save_module_id(uint16_t conn_handle, uint16_t attr_handle, struct ble_gatt_access_ctxt *ctxt, void *arg)
+static int save_module_id(uint16_t conn_handle, uint16_t attr_handle, struct ble_gatt_access_ctxt *ctxt, void *arg)
 {
-
+    return 0;
 }
 
 static int save_wifi_data(uint16_t conn_handle, uint16_t attr_handle, struct ble_gatt_access_ctxt *ctxt, void *arg)
 {
     char *data = (char *)ctxt->om->om_data;
-    char *name, *password, *id;
+    char *name, *password;
 
     char buffer[256];
     strncpy(buffer, data, sizeof(buffer) - 1);
@@ -64,7 +64,6 @@ static int save_wifi_data(uint16_t conn_handle, uint16_t attr_handle, struct ble
 
     name = strtok(buffer, "|");
     password = strtok(NULL, "|");
-    id = strtok(NULL, "|");
 
     if (name && password && id)
     {
@@ -78,7 +77,6 @@ static int save_wifi_data(uint16_t conn_handle, uint16_t attr_handle, struct ble
 
         nvs_set_str(nvs_handle, "name", name);
         nvs_set_str(nvs_handle, "password", password);
-        nvs_set_str(nvs_handle, "id", id);
 
         err = nvs_commit(nvs_handle);
         if (err != ESP_OK)
@@ -89,8 +87,7 @@ static int save_wifi_data(uint16_t conn_handle, uint16_t attr_handle, struct ble
         }
 
         nvs_close(nvs_handle);
-        disable_bt();
-        ESP_LOGI(TAG, "Data saved: name=%s, password=%s, id=%s", name, password, id);
+        ESP_LOGI(TAG, "Data saved: name=%s, password=%s", name, password, id);
     }
     else
     {
@@ -103,7 +100,7 @@ static int save_wifi_data(uint16_t conn_handle, uint16_t attr_handle, struct ble
 
 static int get_module_ip_address(uint16_t con_handle, uint16_t attr_handle, struct ble_gatt_access_ctxt *ctxt, void *arg)
 {
-    const char *response = "test";
+    const char *response = getWifiIpAddress();
 
     int rc = os_mbuf_append(ctxt->om, response, strlen(response));
     if (rc != 0) {
@@ -123,11 +120,10 @@ static const struct ble_gatt_svc_def gatt_svcs[] = {
          {.uuid = BLE_UUID16_DECLARE(0xDEAD),
           .flags = BLE_GATT_CHR_F_WRITE,
           .access_cb = save_wifi_data},
-         {0}}},
     	 {.uuid = BLE_UUID16_DECLARE(0xBEEF),
           .flags = BLE_GATT_CHR_F_WRITE,
-          .access_cb = save_module_id,
-         },
+          .access_cb = save_module_id},
+        {0}}},
     {0}};
 
 static int ble_gap_event(struct ble_gap_event *event, void *arg)
