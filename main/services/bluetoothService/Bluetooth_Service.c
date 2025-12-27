@@ -12,6 +12,8 @@
 #include "host/ble_hs.h"
 #include "services/gap/ble_svc_gap.h"
 #include "services/gatt/ble_svc_gatt.h"
+#include "WIFI_Service.h"
+#include "NVS_Service.h"
 #include "sdkconfig.h"
 
 char *TAG = "Plantcare Module";
@@ -65,7 +67,7 @@ static int save_wifi_data(uint16_t conn_handle, uint16_t attr_handle, struct ble
     name = strtok(buffer, "|");
     password = strtok(NULL, "|");
 
-    if (name && password && id)
+    if (name && password)
     {
         nvs_handle_t nvs_handle;
         esp_err_t err = nvs_open("storage", NVS_READWRITE, &nvs_handle);
@@ -87,14 +89,16 @@ static int save_wifi_data(uint16_t conn_handle, uint16_t attr_handle, struct ble
         }
 
         nvs_close(nvs_handle);
-        ESP_LOGI(TAG, "Data saved: name=%s, password=%s", name, password, id);
+        disable_bt();
+    	connect_to_wifi();
+
+        ESP_LOGI(TAG, "Data saved: name=%s, password=%s", name, password);
     }
     else
     {
         ESP_LOGE(TAG, "Invalid data format");
         return BLE_ATT_ERR_INVALID_ATTR_VALUE_LEN;
     }
-
     return 0;
 }
 
