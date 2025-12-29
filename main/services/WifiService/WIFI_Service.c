@@ -72,6 +72,14 @@ void connect_to_wifi()
     esp_wifi_connect();
 }
 
+
+void configure_connection_to_wifi()
+{
+  connect_to_wifi();
+
+  // save address after connection and disable wifi, return true if successfull
+}
+
 static esp_err_t get_handler(httpd_req_t *req)
 {
     char savedId = getModuleId();
