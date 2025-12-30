@@ -36,6 +36,38 @@ char* getWifiName(void)
     return wifiName;
 }
 
+char* getWifiIpAddress(void)
+{
+    char* wifiName = getWifiName();
+  	static char address[128];
+    size_t required_size = 0;
+
+    nvs_handle_t nvs_handle;
+    esp_err_t ret = nvs_open("storage", NVS_READONLY, &nvs_handle);
+
+    if (ret != ESP_OK) {
+        ESP_LOGE("NVS", "Failed to open NVS handle! Error: %d", ret);
+        return NULL;
+    }
+
+    ret = nvs_get_str(nvs_handle, "address", NULL, &required_size);
+    if (ret != ESP_OK || required_size == 0) {
+        ESP_LOGE("NVS", "Failed to read wifi ip address or wifi ip address not found");
+        nvs_close(nvs_handle);
+        return NULL;
+    }
+
+    ret = nvs_get_str(nvs_handle, "address", wifiName, &required_size);
+    if (ret != ESP_OK) {
+        ESP_LOGE("NVS", "Failed to read wifi ip address");
+        nvs_close(nvs_handle);
+        return NULL;
+    }
+
+    nvs_close(nvs_handle);
+    return address;
+}
+
 char* getWifiPassword(void)
 {
     static char password[128];
@@ -119,6 +151,11 @@ void resetWifiData(void)
     }
 
     if(nvs_get_str(nvs_handle, "id", NULL, &required_size) == ESP_OK)
+    {
+      nvs_erase_key(nvs_handle, "id");
+    }
+
+    if(nvs_get_str(nvs_handle, "address", NULL, &required_size) == ESP_OK)
     {
       nvs_erase_key(nvs_handle, "id");
     }

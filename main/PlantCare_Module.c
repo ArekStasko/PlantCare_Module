@@ -12,12 +12,13 @@
 void app_main(void)
 {
     nvs_flash_init();
+
+    resetWifiData();
     bool isWifiDataExist = checkIfWiFiDataExists();
     if (!isWifiDataExist)
     {
         enable_bt();
     }
-
     if(isWifiDataExist)
     {
       connect_to_wifi();

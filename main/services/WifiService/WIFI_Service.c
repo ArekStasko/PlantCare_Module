@@ -8,7 +8,9 @@
 #include "esp_netif.h"
 #include "esp_http_server.h"
 #include "NVS_Service.h"
+#include "nvs_flash.h"
 #include "Sensor_Service.h"
+#include "esp_netif_ip_addr.h"
 #define MAX_RESPONSE_LENGTH 64
 
 static void wifi_event_handler(void *event_handler_arg, esp_event_base_t event_base, int32_t event_id, void *event_data)
@@ -26,8 +28,22 @@ static void wifi_event_handler(void *event_handler_arg, esp_event_base_t event_b
         esp_wifi_connect();
         break;
     case IP_EVENT_STA_GOT_IP:
-        printf("WiFi got IP ... \n\n");
-        break;
+        {
+        	ip_event_got_ip_t *event = (ip_event_got_ip_t *)event_data;
+        	char ip_str[16];
+        	esp_ip4addr_ntoa(&event->ip_info.ip, ip_str, sizeof(ip_str));
+        	printf("IP ADDRESS: %s\n", ip_str);
+
+            nvs_handle_t nvs_handle;
+        	esp_err_t err = nvs_open("storage", NVS_READWRITE, &nvs_handle);
+        	if (err != ESP_OK)
+        	{
+                printf("UNDABLE TO OPEN NVS STORAGE \n");
+            	break;
+        	}
+            nvs_set_str(nvs_handle, "address", ip_str);
+        	break;
+    	}
     default:
         break;
     }
@@ -54,6 +70,14 @@ void connect_to_wifi()
     esp_wifi_set_mode(WIFI_MODE_STA);
     esp_wifi_start();
     esp_wifi_connect();
+}
+
+
+void configure_connection_to_wifi()
+{
+  connect_to_wifi();
+
+  // save address after connection and disable wifi, return true if successfull
 }
 
 static esp_err_t get_handler(httpd_req_t *req)
