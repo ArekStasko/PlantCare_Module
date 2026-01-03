@@ -13,6 +13,15 @@
 #include "esp_netif_ip_addr.h"
 #define MAX_RESPONSE_LENGTH 64
 
+static void stop_wifi_service(void)
+{
+  esp_err_t result = esp_wifi_stop();
+  if(result != ESP_OK)
+  {
+    printf("esp_wifi_stop failed (%d)\n", result);
+  }
+};
+
 static void wifi_event_handler(void *event_handler_arg, esp_event_base_t event_base, int32_t event_id, void *event_data)
 {
     switch (event_id)
@@ -29,7 +38,11 @@ static void wifi_event_handler(void *event_handler_arg, esp_event_base_t event_b
         break;
     case IP_EVENT_STA_GOT_IP:
         {
-        	ip_event_got_ip_t *event = (ip_event_got_ip_t *)event_data;
+      		char* ip_address = getWifiIpAddress();
+            if (ip_address == NULL){
+              break;
+            }
+            ip_event_got_ip_t *event = (ip_event_got_ip_t *)event_data;
         	char ip_str[16];
         	esp_ip4addr_ntoa(&event->ip_info.ip, ip_str, sizeof(ip_str));
         	printf("IP ADDRESS: %s\n", ip_str);
@@ -51,6 +64,7 @@ static void wifi_event_handler(void *event_handler_arg, esp_event_base_t event_b
 
 void connect_to_wifi()
 {
+    printf("WiFi connecting to WiFi ...\n");
   	char* wifiName = getWifiName();
     char* wifiPassword = getWifiPassword();
 
@@ -70,14 +84,6 @@ void connect_to_wifi()
     esp_wifi_set_mode(WIFI_MODE_STA);
     esp_wifi_start();
     esp_wifi_connect();
-}
-
-
-void configure_connection_to_wifi()
-{
-  connect_to_wifi();
-
-  // save address after connection and disable wifi, return true if successfull
 }
 
 static esp_err_t get_handler(httpd_req_t *req)
