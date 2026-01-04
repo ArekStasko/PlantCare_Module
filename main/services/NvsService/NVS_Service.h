@@ -8,7 +8,7 @@
 #include "esp_log.h"
 #include "esp_event.h"
 bool checkIfWiFiDataExists(void);
-char* getWifiIpAddress(void);
+char* getServerAddress(void);
 char* getWifiName(void);
 char* getWifiPassword(void);
 char* getModuleId(void);

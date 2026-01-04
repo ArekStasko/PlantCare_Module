@@ -86,54 +86,48 @@ void connect_to_wifi()
     esp_wifi_connect();
 }
 
-static esp_err_t get_handler(httpd_req_t *req)
-{
-    char savedId = getModuleId();
-    char query[100];
-    char id[10] = {0};
+        void UpdateMoistureLevel()
+        {
+            char savedId = getModuleId();
+            if(savedId == NULL) return;
 
-    if (httpd_req_get_url_query_str(req, query, sizeof(query)) == ESP_OK) {
-        printf("Query string: %s", query);
-
-        if (httpd_query_key_value(query, "id", id, sizeof(id)) == ESP_OK) {
-            if(savedId == id)
-          	{
-              httpd_resp_send(req, "-1", HTTPD_RESP_USE_STRLEN);
-              return ESP_OK;
-          	}
-
-            char response[MAX_RESPONSE_LENGTH];
+            char* serverAddress = getServerAddress();
             int moistureValue = get_moisture_value();
-            snprintf(response, MAX_RESPONSE_LENGTH, "%d", moistureValue);
-            httpd_resp_send(req, response, HTTPD_RESP_USE_STRLEN);
-    		return ESP_OK;
-        } else {
-            printf("ID not found in query");
-            httpd_resp_send(req, "-1", HTTPD_RESP_USE_STRLEN);
-            return ESP_OK;
+            Serial.println("CURRENT MOISTURE :");
+            Serial.println(currentMoistureLevel);
+            client.begin(String(serverAddress) + "/humidity-measurements/Add");
+            client.addHeader("Content-Type", "application/json");
+
+            String moduleIdToSent = moduleId;
+            Serial.println(moduleIdToSent);
+
+            const size_t CAPACITY = JSON_OBJECT_SIZE(2);
+            StaticJsonDocument<CAPACITY> doc;
+            Serial.println(moduleId.c_str());
+            JsonObject object = doc.to<JsonObject>();
+            moduleIdToSent.remove(0, 1);
+            moduleIdToSent.remove(moduleIdToSent.length() - 1);
+            object["ModuleId"] = savedId.c_str();
+            object["Humidity"] = moistureValue;
+
+            String jsonOutput;
+            serializeJson(doc, jsonOutput);
+
+            Serial.println(jsonOutput);
+
+            int httpCode = client.POST(jsonOutput);
+
+            if(httpCode > 0)
+            {
+                String payload = client.getString();
+                Serial.println("\nStatuscode: " + String(httpCode));
+                Serial.println(payload);
+            }
+
+            client.end();
+
+            if(httpCode == 200)
+            {
+                Serial.println("Humidity Measurement successfully registered");
+            }
         }
-    } else {
-        printf("Failed to get query string");
-    }
-
-    return ESP_OK;
-}
-
-void server_initiation()
-{
-	httpd_config_t server_config = HTTPD_DEFAULT_CONFIG();
-    server_config.max_uri_handlers = 10;
-    httpd_handle_t server_handle = NULL;
-    httpd_start(&server_handle, &server_config);
-    httpd_uri_t uri_post = {
-        .uri = "/humidity",
-        .method = HTTP_GET,
-        .handler = get_handler,
-        .user_ctx = NULL};
-    esp_err_t err = httpd_register_uri_handler(server_handle, &uri_post);
-	if (err != ESP_OK) {
-    	ESP_LOGE("HTTP_SERVER", "Failed to register URI handler. Error: %d", err);
-	} else {
-    	ESP_LOGI("HTTP_SERVER", "Handler registered for URI: %s", uri_post.uri);
-	}
-}

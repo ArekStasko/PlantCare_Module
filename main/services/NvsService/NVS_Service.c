@@ -36,7 +36,7 @@ char* getWifiName(void)
     return wifiName;
 }
 
-char* getWifiIpAddress(void)
+char* getServerAddress(void)
 {
     char* wifiName = getWifiName();
   	static char address[128];

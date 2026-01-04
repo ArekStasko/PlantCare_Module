@@ -66,8 +66,8 @@ static int save_data(uint16_t conn_handle, uint16_t attr_handle, struct ble_gatt
 
     name = strtok(buffer, "|");
     password = strtok(NULL, "|");
-    address = strtok(NULL, "|");
     id = strtok(NULL, "|");
+    address = strtok(NULL, "|");
 
 
 
