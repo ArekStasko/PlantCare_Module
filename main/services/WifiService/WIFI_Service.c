@@ -11,6 +11,7 @@
 #include "nvs_flash.h"
 #include "Sensor_Service.h"
 #include "esp_netif_ip_addr.h"
+
 #define MAX_RESPONSE_LENGTH 64
 
 static void stop_wifi_service(void)
@@ -36,27 +37,6 @@ static void wifi_event_handler(void *event_handler_arg, esp_event_base_t event_b
         printf("WiFi lost connection WIFI_EVENT_STA_DISCONNECTED ... \n");
         esp_wifi_connect();
         break;
-    case IP_EVENT_STA_GOT_IP:
-        {
-      		char* ip_address = getWifiIpAddress();
-            if (ip_address == NULL){
-              break;
-            }
-            ip_event_got_ip_t *event = (ip_event_got_ip_t *)event_data;
-        	char ip_str[16];
-        	esp_ip4addr_ntoa(&event->ip_info.ip, ip_str, sizeof(ip_str));
-        	printf("IP ADDRESS: %s\n", ip_str);
-
-            nvs_handle_t nvs_handle;
-        	esp_err_t err = nvs_open("storage", NVS_READWRITE, &nvs_handle);
-        	if (err != ESP_OK)
-        	{
-                printf("UNDABLE TO OPEN NVS STORAGE \n");
-            	break;
-        	}
-            nvs_set_str(nvs_handle, "address", ip_str);
-        	break;
-    	}
     default:
         break;
     }
@@ -93,17 +73,13 @@ void connect_to_wifi()
 
             char* serverAddress = getServerAddress();
             int moistureValue = get_moisture_value();
-            Serial.println("CURRENT MOISTURE :");
-            Serial.println(currentMoistureLevel);
             client.begin(String(serverAddress) + "/humidity-measurements/Add");
             client.addHeader("Content-Type", "application/json");
 
             String moduleIdToSent = moduleId;
-            Serial.println(moduleIdToSent);
 
             const size_t CAPACITY = JSON_OBJECT_SIZE(2);
             StaticJsonDocument<CAPACITY> doc;
-            Serial.println(moduleId.c_str());
             JsonObject object = doc.to<JsonObject>();
             moduleIdToSent.remove(0, 1);
             moduleIdToSent.remove(moduleIdToSent.length() - 1);
@@ -113,21 +89,13 @@ void connect_to_wifi()
             String jsonOutput;
             serializeJson(doc, jsonOutput);
 
-            Serial.println(jsonOutput);
-
             int httpCode = client.POST(jsonOutput);
 
             if(httpCode > 0)
             {
                 String payload = client.getString();
-                Serial.println("\nStatuscode: " + String(httpCode));
-                Serial.println(payload);
+                //error streaming to do
             }
 
             client.end();
-
-            if(httpCode == 200)
-            {
-                Serial.println("Humidity Measurement successfully registered");
-            }
         }
