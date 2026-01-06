@@ -6,22 +6,12 @@
 #include "esp_wifi.h"
 #include "esp_log.h"
 #include "esp_netif.h"
-#include "esp_http_server.h"
 #include "NVS_Service.h"
 #include "nvs_flash.h"
 #include "Sensor_Service.h"
 #include "esp_netif_ip_addr.h"
-
+#include "esp_http_client.h"
 #define MAX_RESPONSE_LENGTH 64
-
-static void stop_wifi_service(void)
-{
-  esp_err_t result = esp_wifi_stop();
-  if(result != ESP_OK)
-  {
-    printf("esp_wifi_stop failed (%d)\n", result);
-  }
-};
 
 static void wifi_event_handler(void *event_handler_arg, esp_event_base_t event_base, int32_t event_id, void *event_data)
 {
@@ -37,6 +27,23 @@ static void wifi_event_handler(void *event_handler_arg, esp_event_base_t event_b
         printf("WiFi lost connection WIFI_EVENT_STA_DISCONNECTED ... \n");
         esp_wifi_connect();
         break;
+    case IP_EVENT_STA_GOT_IP:
+        {
+        	ip_event_got_ip_t *event = (ip_event_got_ip_t *)event_data;
+        	char ip_str[16];
+        	esp_ip4addr_ntoa(&event->ip_info.ip, ip_str, sizeof(ip_str));
+        	printf("IP ADDRESS: %s\n", ip_str);
+
+            nvs_handle_t nvs_handle;
+        	esp_err_t err = nvs_open("storage", NVS_READWRITE, &nvs_handle);
+        	if (err != ESP_OK)
+        	{
+                printf("UNDABLE TO OPEN NVS STORAGE \n");
+            	break;
+        	}
+            nvs_set_str(nvs_handle, "address", ip_str);
+        	break;
+    	}
     default:
         break;
     }
@@ -44,7 +51,6 @@ static void wifi_event_handler(void *event_handler_arg, esp_event_base_t event_b
 
 void connect_to_wifi()
 {
-    printf("WiFi connecting to WiFi ...\n");
   	char* wifiName = getWifiName();
     char* wifiPassword = getWifiPassword();
 
@@ -66,36 +72,35 @@ void connect_to_wifi()
     esp_wifi_connect();
 }
 
-        void UpdateMoistureLevel()
-        {
-            char savedId = getModuleId();
-            if(savedId == NULL) return;
+static void send_moisture_to_server(void)
+{
+    char *savedId = getModuleId();
+    int moistureValue = get_moisture_value();
+    char *serverAddress = getServerAddress();
 
-            char* serverAddress = getServerAddress();
-            int moistureValue = get_moisture_value();
-            client.begin(String(serverAddress) + "/humidity-measurements/Add");
-            client.addHeader("Content-Type", "application/json");
+    if (!savedId || !serverAddress) return;
 
-            String moduleIdToSent = moduleId;
+    const char *endpoint = "/api/v1/humidity-measurements/add";
 
-            const size_t CAPACITY = JSON_OBJECT_SIZE(2);
-            StaticJsonDocument<CAPACITY> doc;
-            JsonObject object = doc.to<JsonObject>();
-            moduleIdToSent.remove(0, 1);
-            moduleIdToSent.remove(moduleIdToSent.length() - 1);
-            object["ModuleId"] = savedId.c_str();
-            object["Humidity"] = moistureValue;
+    char full_url[128];
+    snprintf(full_url, sizeof(full_url), "http://%s%s", serverAddress, endpoint);
 
-            String jsonOutput;
-            serializeJson(doc, jsonOutput);
+    char post_data[256];
+    snprintf(post_data, sizeof(post_data),
+             "{\"ModuleId\":\"%s\",\"Humidity\":%d}",
+             savedId, moistureValue);
 
-            int httpCode = client.POST(jsonOutput);
+    esp_http_client_config_t config = {
+        .url = full_url,
+        .method = HTTP_METHOD_POST,
+        .timeout_ms = 5000,
+    };
+    esp_http_client_handle_t client = esp_http_client_init(&config);
 
-            if(httpCode > 0)
-            {
-                String payload = client.getString();
-                //error streaming to do
-            }
+    esp_http_client_set_header(client, "Content-Type", "application/json");
+    esp_http_client_set_post_field(client, post_data, strlen(post_data));
 
-            client.end();
-        }
+    esp_err_t err = esp_http_client_perform(client);
+    esp_http_client_cleanup(client);
+}
+
