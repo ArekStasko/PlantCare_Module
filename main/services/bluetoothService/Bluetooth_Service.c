@@ -95,8 +95,8 @@ static int save_data(uint16_t conn_handle, uint16_t attr_handle, struct ble_gatt
         }
 
         nvs_close(nvs_handle);
-        disable_bt();
-    	connect_to_wifi();
+        vTaskDelay(pdMS_TO_TICKS(200));
+        esp_restart();
 
         ESP_LOGI(TAG, "Data saved: name=%s, password=%s, id=%s, address=%s", name, password, id, address);
     }

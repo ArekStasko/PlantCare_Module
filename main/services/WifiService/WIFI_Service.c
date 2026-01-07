@@ -12,7 +12,9 @@
 #include "esp_netif_ip_addr.h"
 #include "esp_http_client.h"
 
-static void send_moisture_to_server(void)
+static bool wifi_started = false;
+
+void send_moisture_to_server(void)
 {
     char *savedId = getModuleId();
     int moistureValue = get_moisture_value();
@@ -23,7 +25,9 @@ static void send_moisture_to_server(void)
     const char *endpoint = "/api/v1/humidity-measurements/add";
 
     char full_url[128];
-    snprintf(full_url, sizeof(full_url), "http://%s%s", serverAddress, endpoint);
+    const int serverPort = 8080;
+    snprintf(full_url, sizeof(full_url), "http://%s:%d%s", serverAddress, serverPort, endpoint);
+
 
     char post_data[256];
     snprintf(post_data, sizeof(post_data),
@@ -45,7 +49,7 @@ static void send_moisture_to_server(void)
 }
 
 
-static void moisture_task(void *pvParameter)
+void moisture_task(void *pvParameter)
 {
     while (1) {
         send_moisture_to_server();
@@ -53,7 +57,7 @@ static void moisture_task(void *pvParameter)
     }
 }
 
-static void wifi_event_handler(void *event_handler_arg, esp_event_base_t event_base, int32_t event_id, void *event_data)
+void wifi_event_handler(void *event_handler_arg, esp_event_base_t event_base, int32_t event_id, void *event_data)
 {
     switch (event_id)
     {
@@ -83,6 +87,10 @@ static void wifi_event_handler(void *event_handler_arg, esp_event_base_t event_b
 
 void connect_to_wifi()
 {
+    if (wifi_started) return;
+    wifi_started = true;
+
+    printf("WiFi connecting to WiFi network ...\n");
   	char* wifiName = getWifiName();
     char* wifiPassword = getWifiPassword();
 
