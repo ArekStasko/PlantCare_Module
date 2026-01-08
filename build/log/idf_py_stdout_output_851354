@@ -1,0 +1,659 @@
+��=0001�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jan  7 2026 16:53:13[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2d814h (186388) map[0m
+[0;32mI (169) esp_image: segment 1: paddr=0003d83c vaddr=3ffbdb60 size=027dch ( 10204) load[0m
+[0;32mI (173) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=af0f0h (717040) map[0m
+[0;32mI (420) esp_image: segment 3: paddr=000ef118 vaddr=3ffc033c size=0341ch ( 13340) load[0m
+[0;32mI (425) esp_image: segment 4: paddr=000f253c vaddr=40080000 size=1cbe8h (117736) load[0m
+[0;32mI (487) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (487) boot: Disabling RNG early entropy source...[0m
+[0;32mI (499) cpu_start: Multicore app[0m
+D (499) cpu_start: Pro cpu up[0m
+D (499) cpu_start: Starting app cpu, entry point is 0x40081114[0m
+D (0) cpu_start: App cpu up[0m
+D (510) clk: RTC_SLOW_CLK calibration value: 3372160[0m
+D (522) cpu_start: calling init function: 0x400d2144 on core: 0[0m
+D (522) cpu_start: calling init function: 0x400d25dc on core: 0[0m
+[0;32mI (524) cpu_start: Pro cpu start user code[0m
+[0;32mI (529) cpu_start: cpu freq: 160000000 Hz[0m
+D (534) cpu_start: calling init function: 0x400d2074 on core: 0[0m
+[0;32mI (540) app_init: Application information:[0m
+[0;32mI (544) app_init: Project name:     PlantCare_Module[0m
+[0;32mI (550) app_init: App version:      dc6e84a-dirty[0m
+[0;32mI (555) app_init: Compile time:     Jan  8 2026 20:03:47[0m
+[0;32mI (561) app_init: ELF file SHA256:  9da39e28c...[0m
+[0;32mI (567) app_init: ESP-IDF:          v5.3.1-dirty[0m
+D (572) cpu_start: calling init function: 0x400d2158 on core: 0[0m
+[0;32mI (578) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (583) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (588) efuse_init: Chip rev:         v3.1[0m
+D (592) cpu_start: calling init function: 0x400d3b34 on core: 0[0m
+D (599) memory_layout: Checking 13 reserved memory ranges:[0m
+D (604) memory_layout: Reserved memory range 0x3ff82000 - 0x3ff82000[0m
+D (610) memory_layout: Reserved memory range 0x3ffae000 - 0x3ffae6e0[0m
+D (617) memory_layout: Reserved memory range 0x3ffae6e0 - 0x3ffaff10[0m
+D (623) memory_layout: Reserved memory range 0x3ffb0000 - 0x3ffb6388[0m
+D (630) memory_layout: Reserved memory range 0x3ffb8000 - 0x3ffb9a20[0m
+D (636) memory_layout: Reserved memory range 0x3ffbdb28 - 0x3ffbdb5c[0m
+D (643) memory_layout: Reserved memory range 0x3ffbdb60 - 0x3ffca2f0[0m
+D (649) memory_layout: Reserved memory range 0x3ffe0000 - 0x3ffe0440[0m
+D (655) memory_layout: Reserved memory range 0x3ffe3f20 - 0x3ffe4350[0m
+D (662) memory_layout: Reserved memory range 0x40070000 - 0x40078000[0m
+D (668) memory_layout: Reserved memory range 0x40078000 - 0x40080000[0m
+D (675) memory_layout: Reserved memory range 0x40080000 - 0x4009cbe8[0m
+D (681) memory_layout: Reserved memory range 0x50001fe8 - 0x50002000[0m
+D (688) memory_layout: Building list of available memory regions:[0m
+D (694) memory_layout: Available memory region 0x3ffaff10 - 0x3ffb0000[0m
+D (700) memory_layout: Available memory region 0x3ffb6388 - 0x3ffb8000[0m
+D (707) memory_layout: Available memory region 0x3ffb9a20 - 0x3ffbdb28[0m
+D (713) memory_layout: Available memory region 0x3ffca2f0 - 0x3ffcc000[0m
+D (720) memory_layout: Available memory region 0x3ffcc000 - 0x3ffce000[0m
+D (727) memory_layout: Available memory region 0x3ffce000 - 0x3ffd0000[0m
+D (733) memory_layout: Available memory region 0x3ffd0000 - 0x3ffd2000[0m
+D (740) memory_layout: Available memory region 0x3ffd2000 - 0x3ffd4000[0m
+D (746) memory_layout: Available memory region 0x3ffd4000 - 0x3ffd6000[0m
+D (753) memory_layout: Available memory region 0x3ffd6000 - 0x3ffd8000[0m
+D (760) memory_layout: Available memory region 0x3ffd8000 - 0x3ffda000[0m
+D (766) memory_layout: Available memory region 0x3ffda000 - 0x3ffdc000[0m
+D (773) memory_layout: Available memory region 0x3ffdc000 - 0x3ffde000[0m
+D (779) memory_layout: Available memory region 0x3ffde000 - 0x3ffe0000[0m
+D (786) memory_layout: Available memory region 0x3ffe0440 - 0x3ffe3f20[0m
+D (793) memory_layout: Available memory region 0x3ffe4350 - 0x3ffe8000[0m
+D (799) memory_layout: Available memory region 0x3ffe8000 - 0x3fff0000[0m
+D (806) memory_layout: Available memory region 0x3fff0000 - 0x3fff8000[0m
+D (812) memory_layout: Available memory region 0x3fff8000 - 0x3fffc000[0m
+D (819) memory_layout: Available memory region 0x3fffc000 - 0x40000000[0m
+D (826) memory_layout: Available memory region 0x4009cbe8 - 0x4009e000[0m
+D (832) memory_layout: Available memory region 0x4009e000 - 0x400a0000[0m
+[0;32mI (839) heap_init: Initializing. RAM available for dynamic allocation:[0m
+D (846) heap_init: New heap initialised at 0x3ffaff10[0m
+[0;32mI (851) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+D (857) heap_init: New heap initialised at 0x3ffb6388[0m
+[0;32mI (862) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+D (868) heap_init: New heap initialised at 0x3ffb9a20[0m
+[0;32mI (874) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+D (880) heap_init: New heap initialised at 0x3ffca2f0[0m
+[0;32mI (885) heap_init: At 3FFCA2F0 len 00015D10 (87 KiB): DRAM[0m
+[0;32mI (891) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (897) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+D (904) heap_init: New heap initialised at 0x4009cbe8[0m
+[0;32mI (909) heap_init: At 4009CBE8 len 00003418 (13 KiB): IRAM[0m
+D (915) cpu_start: calling init function: 0x400d4d98 on core: 0[0m
+D (921) cpu_start: calling init function: 0x400d479c on core: 0[0m
+D (927) cpu_start: calling init function: 0x400d261c on core: 0[0m
+D (933) intr_alloc: Connected src 46 to int 1 (cpu 0)[0m
+D (938) cpu_start: calling init function: 0x400d2628 on core: 0[0m
+D (944) cpu_start: calling init function: 0x400d5c54 on core: 0[0m
+D (950) cpu_start: calling init function: 0x400d65ac on core: 0[0m
+D (956) cpu_start: calling init function: 0x400d4814 on core: 0[0m
+D (963) cpu_start: calling init function: 0x400d4bd8 on core: 0[0m
+D (968) cpu_start: calling init function: 0x400d2668 on core: 0[0m
+D (974) spi_flash: trying chip: issi[0m
+D (978) spi_flash: trying chip: gd[0m
+D (981) spi_flash: trying chip: mxic[0m
+D (985) spi_flash: trying chip: winbond[0m
+D (989) spi_flash: trying chip: generic[0m
+[0;32mI (993) spi_flash: detected chip: generic[0m
+[0;32mI (997) spi_flash: flash io: dio[0m
+[0;33mW (1001) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+D (1014) cpu_start: calling init function: 0x40176268 on core: 0[0m
+D (1021) cpu_start: calling init function: 0x40152c68[0m
+D (1026) cpu_start: calling init function: 0x400ee90c[0m
+D (1031) cpu_start: calling init function: 0x400eb8c4[0m
+[0;33mW (1036) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+D (1044) cpu_start: calling init function: 0x4008f2d4[0m
+D (1050) cpu_start: calling init function: 0x400d3480[0m
+D (1055) cpu_start: calling init function: 0x400d29e8[0m
+D (1060) cpu_start: calling init function: 0x400e8308 on core: 0[0m
+D (1066) intr_alloc: Connected src 17 to int 2 (cpu 0)[0m
+D (1071) cpu_start: calling init function: 0x400d2634 on core: 0[0m
+[0;32mI (1077) coexist: coex firmware version: 4482466[0m
+D (1083) cpu_start: calling init function: 0x400d2648 on core: 0[0m
+D (1089) intr_alloc: Connected src 24 to int 3 (cpu 0)[0m
+D (1094) app_start: Starting scheduler on CPU0[0m
+[0;32D (1098) intr_alloc: Connected src 25 to int 1 (cpu 1)[0m
+D (1098) app_start: Starting scheduler on CPU1[0m
+mI (1098) main_task: Started on CPU0[0m
+D (1118) heap_init: New heap initialised at 0x3ffe0440[0m
+D (1118) heap_init: New heap initialised at 0x3ffe4350[0m
+D (1118) intr_alloc: Connected src 16 to int 5 (cpu 0)[0m
+[0;32mI (1118) main_task: Calling app_main()[0m
+D (1148) nvs: nvs_open_from_partition storage 0[0m
+D (1148) nvs: nvs_get_str_or_blob name[0m
+D (1148) nvs: nvs_get_str_or_blob name[0m
+D (1148) nvs: nvs_get_str_or_blob password[0m
+D (1158) nvs: nvs_get_str_or_blob password[0m
+D (1158) nvs: nvs_get_str_or_blob id[0m
+D (1168) nvs: nvs_get_str_or_blob id[0m
+D (1168) nvs: nvs_close 1[0m
+WiFi connecting to WiFi network ...
+D (1168) nvs: nvs_open_from_partition storage 0[0m
+D (1178) nvs: nvs_get_str_or_blob name[0m
+D (1178) nvs: nvs_get_str_or_blob name[0m
+D (1188) nvs: nvs_close 2[0m
+D (1188) nvs: nvs_open_from_partition storage 0[0m
+D (1188) nvs: nvs_get_str_or_blob password[0m
+D (1198) nvs: nvs_get_str_or_blob password[0m
+D (1198) nvs: nvs_close 3[0m
+D (1208) esp_netif_lwip: LwIP stack has been initialized[0m
+D (1208) esp_netif_lwip: esp-netif has been successfully initialized[0m
+D (1218) event: running task for loop 0x3ffbd41c[0m
+D (1218) event: created task for loop 0x3ffbd41c[0m
+D (1228) event: created event loop 0x3ffbd41c[0m
+D (1228) esp_netif_lwip: check: remote, if=0x3ffbba34 fn=0x400ec850[0m
+D (1238) esp_netif_objects: esp_netif_add_to_list_unsafe netif added successfully (total netifs: 1)[0m
+D (1248) esp_netif_lwip: call api in lwip: ret=0x0, give sem[0m
+D (1248) nvs: nvs_open_from_partition misc 1[0m
+[0;32mI (1268) wifi:wifi driver task: 3ffce288, prio:23, stack:6656, core=0[0m
+D (1268) efuse: In EFUSE_BLK0__DATA2_REG is used 8 bits starting with 8 bit[0m
+D (1268) efuse: In EFUSE_BLK0__DATA2_REG is used 8 bits starting with 0 bit[0m
+D (1278) efuse: In EFUSE_BLK0__DATA1_REG is used 8 bits starting with 24 bit[0m
+D (1278) efuse: In EFUSE_BLK0__DATA1_REG is used 8 bits starting with 16 bit[0m
+D (1288) efuse: In EFUSE_BLK0__DATA1_REG is used 8 bits starting with 8 bit[0m
+D (1298) efuse: In EFUSE_BLK0__DATA1_REG is used 8 bits starting with 0 bit[0m
+D (1308) efuse: In EFUSE_BLK0__DATA2_REG is used 8 bits starting with 16 bit[0m
+D (1308) nvs: nvs_open_from_partition nvs.net80211 1[0m
+D (1318) nvs: nvs_get opmode 1[0m
+D (1318) nvs: nvs_get_str_or_blob sta.ssid[0m
+D (1328) nvs: nvs_get sta.authmode 1[0m
+D (1328) nvs: nvs_get_str_or_blob sta.pswd[0m
+D (1328) nvs: nvs_get_str_or_blob sta.pmk[0m
+D (1338) nvs: nvs_get sta.chan 1[0m
+D (1338) nvs: nvs_get auto.conn 1[0m
+D (1338) nvs: nvs_get bssid.set 1[0m
+D (1348) nvs: nvs_get_str_or_blob sta.bssid[0m
+D (1348) nvs: nvs_get sta.lis_intval 2[0m
+D (1348) nvs: nvs_get sta.phym 1[0m
+D (1358) nvs: nvs_get sta.phybw 1[0m
+D (1358) nvs: nvs_get_str_or_blob sta.apsw[0m
+D (1368) nvs: nvs_get_str_or_blob sta.apinfo[0m
+D (1368) nvs: nvs_get sta.scan_method 1[0m
+D (1368) nvs: nvs_get sta.sort_method 1[0m
+D (1378) nvs: nvs_get sta.minrssi 1[0m
+D (1378) nvs: nvs_get sta.minauth 1[0m
+D (1378) nvs: nvs_get sta.pmf_e 1[0m
+D (1388) nvs: nvs_get sta.pmf_r 1[0m
+D (1388) nvs: nvs_get sta.btm_e 1[0m
+D (1398) nvs: nvs_get sta.rrm_e 1[0m
+D (1398) nvs: nvs_get sta.mbo_e 1[0m
+D (1398) nvs: nvs_get_str_or_blob ap.ssid[0m
+D (1408) nvs: nvs_get_str_or_blob ap.passwd[0m
+D (1408) nvs: nvs_get_str_or_blob ap.pmk[0m
+D (1408) nvs: nvs_get ap.chan 1[0m
+D (1418) nvs: nvs_get ap.authmode 1[0m
+D (1418) nvs: nvs_get ap.hidden 1[0m
+D (1418) nvs: nvs_get ap.max.conn 1[0m
+D (1428) nvs: nvs_get bcn.interval 2[0m
+D (1428) nvs: nvs_get ap.phym 1[0m
+D (1428) nvs: nvs_get ap.phybw 1[0m
+D (1438) nvs: nvs_get ap.sndchan 1[0m
+D (1438) nvs: nvs_get ap.pmf_e 1[0m
+D (1438) nvs: nvs_get ap.pmf_r 1[0m
+D (1448) nvs: nvs_get ap.p_cipher 1[0m
+D (1448) nvs: nvs_get lorate 1[0m
+D (1448) nvs: nvs_get_str_or_blob country[0m
+D (1458) nvs: nvs_get ap.ftm_r 1[0m
+D (1458) nvs: nvs_get sta.ft 1[0m
+D (1468) nvs: nvs_get sta.owe 1[0m
+D (1468) nvs: nvs_get sta.trans_d 1[0m
+D (1468) nvs: nvs_get sta.sae_h2e 1[0m
+D (1478) nvs: nvs_get sta.sae_pk_mode 1[0m
+D (1478) nvs: nvs_get sta.bss_retry 1[0m
+D (1478) nvs: nvs_get_str_or_blob sta.owe_data[0m
+D (1488) nvs: nvs_get sta.he_dcm 1[0m
+D (1488) nvs: nvs_get sta.he_dcm_c_tx 1[0m
+D (1498) nvs: nvs_get sta.he_dcm_c_rx 1[0m
+D (1498) nvs: nvs_get sta.he_mcs9_d 1[0m
+D (1498) nvs: nvs_get sta.he_su_b_d 1[0m
+D (1508) nvs: nvs_get sta.he_su_b_f_d 1[0m
+D (1508) nvs: nvs_get sta.he_mu_b_f_d 1[0m
+D (1508) nvs: nvs_get sta.he_cqi_f_d 1[0m
+D (1518) nvs: nvs_get_str_or_blob sta.sae_h2e_id[0m
+D (1518) nvs: nvs_get ap.sae_h2e 1[0m
+D (1528) nvs: nvs_get_str_or_blob ap.pmk_info[0m
+D (1528) nvs: nvs_get nan.phym 1[0m
+D (1528) nvs: nvs_get sta.pwr_reset 1[0m
+D (1538) nvs: nvs_get band 1[0m
+D (1538) nvs: nvs_set ap.sndchan 1 1[0m
+[0;32mI (1538) wifi:wifi firmware version: ccaebfa[0m
+[0;32mI (1548) wifi:wifi certification version: v7.0[0m
+[0;32mI (1548) wifi:config NVS flash: enabled[0m
+[0;32mI (1558) wifi:config nano formating: disabled[0m
+[0;32mI (1558) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (1568) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (1568) wifi:Init management short buffer num: 32[0m
+[0;32mI (1568) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (1578) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (1578) wifi:Init static rx buffer num: 10[0m
+[0;32mI (1588) wifi:Init dynamic rx buffer num: 32[0m
+D (1588) wifi:Reset scan defaults in ms : min,max,passive,chan_dwell :(0,120,360,30)
+[0;32mI (1598) wifi_init: rx ba win: 6[0m
+[0;32mI (1598) wifi_init: accept mbox: 6[0m
+[0;32mI (1608) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1608) wifi_init: udp mbox: 6[0m
+[0;32mI (1608) wifi_init: tcp mbox: 6[0m
+[0;32mI (1618) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1618) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1628) wifi_init: tcp mss: 1440[0m
+[0;32mI (1628) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1628) wifi_init: WiFi RX IRAM OP enabled[0m
+D (1638) wifi:clear blacklist
+[0;33mW (1638) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+D (1648) nvs: nvs_get_str_or_blob sta.ssid[0m
+D (1658) nvs: nvs_get sta.pmf_e 1[0m
+D (1658) nvs: nvs_get opmode 1[0m
+D (1658) adc_share_hw_ctrl: Wi-Fi takes adc2 lock.[0m
+[0;32mI (1668) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+D (1668) phy_init: loading PHY init data from application binary[0m
+D (1678) nvs: nvs_open_from_partition phy 0[0m
+D (1678) nvs: nvs_get cal_version 4[0m
+D (1688) nvs: nvs_get_str_or_blob cal_mac[0m
+D (1688) efuse: In EFUSE_BLK0__DATA2_REG is used 8 bits starting with 8 bit[0m
+D (1698) efuse: In EFUSE_BLK0__DATA2_REG is used 8 bits starting with 0 bit[0m
+D (1698) efuse: In EFUSE_BLK0__DATA1_REG is used 8 bits starting with 24 bit[0m
+D (1708) efuse: In EFUSE_BLK0__DATA1_REG is used 8 bits starting with 16 bit[0m
+D (1718) efuse: In EFUSE_BLK0__DATA1_REG is used 8 bits starting with 8 bit[0m
+D (1728) efuse: In EFUSE_BLK0__DATA1_REG is used 8 bits starting with 0 bit[0m
+D (1728) efuse: In EFUSE_BLK0__DATA2_REG is used 8 bits starting with 16 bit[0m
+D (1738) nvs: nvs_get_str_or_blob cal_data[0m
+D (1748) nvs: nvs_close 6[0m
+D (1748) efuse: In EFUSE_BLK0__DATA2_REG is used 8 bits starting with 8 bit[0m
+D (1748) efuse: In EFUSE_BLK0__DATA2_REG is used 8 bits starting with 0 bit[0m
+D (1758) efuse: In EFUSE_BLK0__DATA1_REG is used 8 bits starting with 24 bit[0m
+D (1768) efuse: In EFUSE_BLK0__DATA1_REG is used 8 bits starting with 16 bit[0m
+D (1778) efuse: In EFUSE_BLK0__DATA1_REG is used 8 bits starting with 8 bit[0m
+D (1778) efuse: In EFUSE_BLK0__DATA1_REG is used 8 bits starting with 0 bit[0m
+D (1788) efuse: In EFUSE_BLK0__DATA2_REG is used 8 bits starting with 16 bit[0m
+D (1868) wifi:filter: set rx policy=0
+[0;32mI (1868) wifi:mode : sta (ec:e3:34:19:e0:48)[0m
+[0;32mI (1868) wifi:enable tsf[0m
+D (1868) wifi:filter: set rx policy=1
+D (1868) wifi:connect status 0 -> 0
+D (1878) event: running post WIFI_EVENT:43 with handler 0x400d79b4 and context 0x3ffd3fe8 on loop 0x3ffbd41c[0m
+D (1888) event: running post WIFI_EVENT:2 with handler 0x400eebc0 and context 0x3ffbda40 on loop 0x3ffbd41c[0m
+D (1898) wifi_init_default: wifi_start esp-netif:0x3ffbd840 event-id2[0m
+D (1898) wifi_init_default: WIFI mac address: ec e3 34 19 e0 48[0m
+D (1908) esp_netif_lwip: check: remote, if=0x3ffbd840 fn=0x400ec01c[0m
+D (1918) esp_netif_lwip: call api in lwip: ret=0x0, give sem[0m
+D (1918) wifi:Start wifi connect
+D (1918) wifi:connect status 0 -> 0
+D (1928) wifi:connect chan=0
+D (1928) wifi:first chan=1
+D (1928) wifi:connect status 0 -> 1
+D (1938) wifi:filter: set rx policy=3
+D (1938) wifi:clear scan ap list
+D (1938) wifi:start scan: type=0x50f, priority=2, cb=0x4011a588, arg=0x0, ss_state=0x1, time=72216, index=0
+D (1948) wifi:perform scan: ss_state=0x9, chan<1,0>, dur<0,120>
+D (1958) esp_netif_handlers: esp_netif action has started with netif0x3ffbd840 from event_id=2[0m
+D (1968) esp_netif_lwip: check: remote, if=0x3ffbd840 fn=0x400ecaa4[0m
+D (1958) wifi:D (1968) esp_netif_lwip: esp_netif_start_api 0x3ffbd840[0m
+rsn valid: gcipher=3 ucipher=3 akm=5 mac=ec:be:dd:98:d5:a0D (1978) esp_netif_lwip: esp_netif_get_hostname esp_netif:0x3ffbd840[0m
+
+D (1988) esp_netif_lwip: check: local, if=0x3ffbd840 fn=0x400ecf60[0m
+D (1988) wifi:D (1998) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3ffbd840[0m
+profile match: ss_state=0x7D (1998) esp_netif_lwip: call api in lwip: ret=0x0, give sem[0m
+
+D (2008) wifi:scan end: arg=0x3ffc42de, status=0, ss_state=0x7
+D (2018) wifi:find first mathched ssid, scan done
+D (2018) wifi:filter: set rx policy=4
+D (2028) wifi:first chan=1
+D (2028) wifi:handoff_cb: status=0
+D (2028) wifi:ap found, mac=ec:be:dd:98:d5:a0
+D (2038) wifi:going for connection with bssid=ec:be:dd:98:d5:a0
+D (2038) wifi:new_bss=0x3ffc6d58, cur_bss=0x0, new_chan=<1,0>, cur_chan=1
+D (2048) wifi:filter: set rx policy=5
+[0;32mI (2048) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+D (2058) wifi:connect_op: status=0, auth=5, cipher=3 
+D (2058) wifi:auth mode is not none
+D (2068) wifi:connect_bss: auth=1, reconnect=0
+[0;32mI (2068) wifi:state: init -> auth (0xb0)[0m
+D (2068) nvs: nvs_get sta.pwr_reset 1[0m
+D (2078) wifi:start 1s AUTH timer
+D (2078) wifi:clear scan ap list
+D (2028) event: running post WIFI_EVENT:2 with handler 0x400d79b4 and context 0x3ffd3fe8 on loop 0x3ffbd41c[0m
+WiFi connecting WIFI_EVENT_STA_START ... 
+D (2088) wifi:recv auth: seq=2, status=0, algo=0
+[0;32mI (2098) wifi:state: auth -> assoc (0x0)[0m
+D (2108) nvs: nvs_get sta.pwr_reset 1[0m
+D (2108) wifi:restart connect 1s timer for assoc
+[0;32mI (1968) main_task: Returned from app_main()[0m
+D (2118) wifi:recv assoc: type=0x10
+D (2118) wifi:filter: set rx policy=6
+[0;32mI (2128) wifi:state: assoc -> run (0x10)[0m
+D (2128) nvs: nvs_get sta.pwr_reset 1[0m
+D (2128) wifi:start 10s connect timer for 4 way handshake
+[0;32mI (2138) wifi:<ba-add>idx:0 (ifx:0, ec:be:dd:98:d5:a0), tid:5, ssn:0, winSize:64[0m
+[0;32mI (2158) wifi:connected with Orange_Swiatlowod_D5A0, aid = 1, channel 1, BW20, bssid = ec:be:dd:98:d5:a0[0m
+[0;32mI (2158) wifi:security: WPA2-PSK, phy: bgn, rssi: -65[0m
+D (2158) wifi:remove all except ec:be:dd:98:d5:a0 from rc list
+D (2168) wifi:clear blacklist
+D (2168) nvs: nvs_set sta.chan 1 1[0m
+D (2168) nvs: nvs_set_blob sta.apinfo 700[0m
+D (2178) wifi:filter: set rx policy=7
+[0;32mI (2178) wifi:pm start, type: 1[0m
+
+[0;32mI (2178) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+D (2188) wifi:Send sta connected event
+D (2188) wifi:connect status 1 -> 5
+D (2198) wifi:obss scan is disabled
+D (2198) wifi:start obss scan: obss scan is stopped
+D (2208) event: running post WIFI_EVENT:4 with handler 0x400eebf0 and context 0x3ffbdaa0 on loop 0x3ffbd41c[0m
+[0;32mI (2208) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+D (2218) esp_netif_handlers: esp_netif action connected with netif0x3ffbd840 from event_id=4[0m
+D (2228) esp_netif_lwip: check: remote, if=0x3ffbd840 fn=0x400ec2c4[0m
+D (2238) esp_netif_lwip: esp_netif_up_api esp_netif:0x3ffbd840[0m
+D (2238) esp_netif_lwip: check: local, if=0x3ffbd840 fn=0x400ecf60[0m
+D (2248) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3ffbd840[0m
+D (2248) esp_netif_lwip: call api in lwip: ret=0x0, give sem[0m
+D (2258) esp_netif_lwip: check: remote, if=0x3ffbd840 fn=0x400ec6a4[0m
+D (2268) esp_netif_lwip: esp_netif_dhcpc_start_api esp_netif:0x3ffbd840[0m
+D (2268) esp_netif_lwip: esp_netif_start_ip_lost_timer esp_netif:0x3ffbd840[0m
+D (2278) esp_netif_lwip: if0x3ffbd840 start ip lost tmr: interval=120[0m
+D (2288) esp_netif_lwip: starting dhcp client[0m
+D (2288) wifi:D (2288) esp_netif_lwip: call api in lwip: ret=0x0, give sem[0m
+eb is dhcp or dns sport = 68, dport = 67
+D (2298) event: running post WIFI_EVENT:4 with handler 0x400d79b4 and context 0x3ffd3fe8 on loop 0x3ffbd41c[0m
+WiFi connected WIFI_EVENT_STA_CONNECTED ... 
+[0;32mI (2318) wifi:<ba-add>idx:1 (ifx:0, ec:be:dd:98:d5:a0), tid:0, ssn:0, winSize:64[0m
+D (2328) wifi:eb is dhcp or dns sport = 68, dport = 67
+D (3288) esp_netif_lwip: esp_netif_internal_dhcpc_cb lwip-netif:0x3ffbd8c8[0m
+D (3288) esp_netif_lwip: if0x3ffbd840 ip changed=1[0m
+D (3288) event: running post IP_EVENT:0 with handler 0x400eec4c and context 0x3ffcbfb8 on loop 0x3ffbd41c[0m
+D (3298) wifi_init_default: Got IP wifi default handler entered[0m
+D (3298) esp_netif_handlers: esp_netif action got_ip with netif0x3ffbd840 from event_id=0[0m
+[0;32mI (3308) esp_netif_handlers: sta ip: 192.168.1.27, mask: 255.255.255.0, gw: 192.168.1.1[0m
+D (3318) event: running post IP_EVENT:0 with handler 0x400d79b4 and context 0x3ffd4008 on loop 0x3ffbd41c[0m
+D (3328) nvs: nvs_open_from_partition storage 0[0m
+D (3338) nvs: nvs_get_str_or_blob id[0m
+D (3338) nvs: nvs_get_str_or_blob id[0m
+D (3338) nvs: nvs_close 7[0m
+Moisture value: {2924}
+D (3348) nvs: nvs_open_from_partition storage 0[0m
+D (3348) nvs: nvs_get_str_or_blob address[0m
+D (3358) nvs: nvs_close 8[0m
+D (3358) HTTP_CLIENT: set post file length = 32[0m
+D (3358) HTTP_CLIENT: Begin connect to: http://192.168.1.40:8080[0m
+D (3368) esp-tls: host:192.168.1.40: strlen 12[0m
+D (3368) esp-tls: [sock=54] Resolved IPv4 address: 192.168.1.40[0m
+D (3378) esp-tls: [sock=54] Connecting to server. HOST: 192.168.1.40, Port: 8080[0m
+[0;31mE (8398) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (8398) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (8398) HTTP_CLIENT: Connection failed, sock < 0[0m
+D (8398) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:0 posted to loop 0x3ffbd41c[0m
+D (8408) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:6 posted to loop 0x3ffbd41c[0m
+D (18408) nvs: nvs_open_from_partition storage 0[0m
+D (18408) nvs: nvs_get_str_or_blob id[0m
+D (18408) nvs: nvs_get_str_or_blob id[0m
+D (18408) nvs: nvs_close 9[0m
+Moisture value: {2913}
+D (18408) nvs: nvs_open_from_partition storage 0[0m
+D (18418) nvs: nvs_get_str_or_blob address[0m
+D (18418) nvs: nvs_close 10[0m
+D (18428) HTTP_CLIENT: set post file length = 32[0m
+D (18428) HTTP_CLIENT: Begin connect to: http://192.168.1.40:8080[0m
+D (18428) esp-tls: host:192.168.1.40: strlen 12[0m
+D (18438) esp-tls: [sock=54] Resolved IPv4 address: 192.168.1.40[0m
+D (18448) esp-tls: [sock=54] Connecting to server. HOST: 192.168.1.40, Port: 8080[0m
+D (18498) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:1 posted to loop 0x3ffbd41c[0m
+D (18498) HTTP_CLIENT: Write header[5]: POST /api/v1/humidity-measurements/add HTTP/1.1
+User-Agent: ESP32 HTTP Client/1.0
+Host: 192.168.1.40:8080
+Content-Type: application/json
+Authorization: Bearer deb1197807e28b36bc6a7e5b9d6ad13c9fdc92e407364a5615d31518705057a5
+Content-Length: 32
+
+[0m
+D (18528) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:2 posted to loop 0x3ffbd41c[0m
+D (18588) HTTP_CLIENT: on_message_begin[0m
+D (18588) HTTP_CLIENT: HEADER=Content-Length:0[0m
+D (18588) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:3 posted to loop 0x3ffbd41c[0m
+D (18598) HTTP_CLIENT: HEADER=Date:Thu, 08 Jan 2026 19:45:48 GMT[0m
+D (18598) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:3 posted to loop 0x3ffbd41c[0m
+D (18598) HTTP_CLIENT: HEADER=Server:Kestrel[0m
+D (18618) HTTP_CLIENT: http_on_headers_complete, status=401, offset=102, nread=102[0m
+D (18618) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:3 posted to loop 0x3ffbd41c[0m
+D (18618) HTTP_CLIENT: http_on_message_complete, parser=0x3ffbd15c[0m
+D (18638) HTTP_CLIENT: content_length = 0[0m
+[0;33mW (18648) HTTP_CLIENT: This request requires authentication, but does not provide header information for that[0m
+D (18658) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:5 posted to loop 0x3ffbd41c[0m
+D (18668) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:6 posted to loop 0x3ffbd41c[0m
+D (28658) nvs: nvs_open_from_partition storage 0[0m
+D (28658) nvs: nvs_get_str_or_blob id[0m
+D (28658) nvs: nvs_get_str_or_blob id[0m
+D (28658) nvs: nvs_close 11[0m
+Moisture value: {2907}
+D (28658) nvs: nvs_open_from_partition storage 0[0m
+D (28668) nvs: nvs_get_str_or_blob address[0m
+D (28668) nvs: nvs_close 12[0m
+D (28678) HTTP_CLIENT: set post file length = 32[0m
+D (28678) HTTP_CLIENT: Begin connect to: http://192.168.1.40:8080[0m
+D (28678) esp-tls: host:192.168.1.40: strlen 12[0m
+D (28688) esp-tls: [sock=54] Resolved IPv4 address: 192.168.1.40[0m
+D (28698) esp-tls: [sock=54] Connecting to server. HOST: 192.168.1.40, Port: 8080[0m
+D (29048) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:1 posted to loop 0x3ffbd41c[0m
+D (29048) HTTP_CLIENT: Write header[5]: POST /api/v1/humidity-measurements/add HTTP/1.1
+User-Agent: ESP32 HTTP Client/1.0
+Host: 192.168.1.40:8080
+Content-Type: application/json
+Authorization: Bearer deb1197807e28b36bc6a7e5b9d6ad13c9fdc92e407364a5615d31518705057a5
+Content-Length: 32
+
+[0m
+D (29078) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:2 posted to loop 0x3ffbd41c[0m
+D (29358) HTTP_CLIENT: on_message_begin[0m
+D (29358) HTTP_CLIENT: HEADER=Content-Length:0[0m
+D (29358) HTTP_CLIENT: HEADER=Date:Thu, 08 Jan 2026 19:45:59 GMT[0m
+D (29358) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:3 posted to loop 0x3ffbd41c[0m
+D (29358) HTTP_CLIENT: HEADER=Server:Kestrel[0m
+D (29368) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:3 posted to loop 0x3ffbd41c[0m
+D (29368) HTTP_CLIENT: http_on_headers_complete, status=401, offset=102, nread=102[0m
+D (29378) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:3 posted to loop 0x3ffbd41c[0m
+D (29388) HTTP_CLIENT: http_on_message_complete, parser=0x3ffbb7ac[0m
+D (29408) HTTP_CLIENT: content_length = 0[0m
+[0;33mW (29408) HTTP_CLIENT: This request requires authentication, but does not provide header information for that[0m
+D (29418) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:5 posted to loop 0x3ffbd41c[0m
+D (29428) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:6 posted to loop 0x3ffbd41c[0m
+����������������������������������������������������������������tition storage 0[0m
+D (39418) nvs: nvs_get_str_or_blob id[0m
+D (39418) nvs: nvs_get_str_or_blob id[0m
+D (39418) nvs: nvs_close 13[0m
+Moisture value: {2920}
+D (39418) nvs: nvs_open_from_partition storage 0[0m
+D (39428) nvs: nvs_get_str_or_blob address[0m
+D (39428) nvs: nvs_close 14[0m
+D (39438) HTTP_CLIENT: set post file length = 32[0m
+D (39438) HTTP_CLIENT: Begin connect to: http://192.168.1.40:8080[0m
+D (39438) esp-tls: host:192.168.1.40: strlen 12[0m
+D (39448) esp-tls: [sock=54] Resolved IPv4 address: 192.168.1.40[0m
+D (39458) esp-tls: [sock=54] Connecting to server. HOST: 192.168.1.40, Port: 8080[0m
+D (39798) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:1 posted to loop 0x3ffbd41c[0m
+D (39798) HTTP_CLIENT: Write header[5]: POST /api/v1/humidity-measurements/add HTTP/1.1
+User-Agent: ESP32 HTTP Client/1.0
+Host: 192.168.1.40:8080
+Content-Type: application/json
+Authorization: Bearer deb1197807e28b36bc6a7e5b9d6ad13c9fdc92e407364a5615d31518705057a5
+Content-Length: 32
+
+[0m
+D (39828) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:2 posted to loop 0x3ffbd41c[0m
+D (40718) HTTP_CLIENT: on_message_begin[0m
+D (40718) HTTP_CLIENT: HEADER=Content-Length:0[0m
+D (40718) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:3 posted to loop 0x3ffbd41c[0m
+D (40718) HTTP_CLIENT: HEADER=Date:Thu, 08 Jan 2026 19:46:10 GMT[0m
+D (40738) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:3 posted to loop 0x3ffbd41c[0m
+D (40738) HTTP_CLIENT: HEADER=Server:Kestrel[0m
+D (40748) HTTP_CLIENT: http_on_headers_complete, status=401, offset=102, nread=102[0m
+D (40748) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:3 posted to loop 0x3ffbd41c[0m
+D (40758) HTTP_CLIENT: http_on_message_complete, parser=0x3ffbb7ac[0m
+D (40768) HTTP_CLIENT: content_length = 0[0m
+[0;33mW (40778) HTTP_CLIENT: This request requires authentication, but does not provide header information for that[0m
+D (40788) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:5 posted to loop 0x3ffbd41c[0m
+D (40798) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:6 posted to loop 0x3ffbd41c[0m
+D (50788) nvs: nvs_open_from_partition storage 0[0m
+D (50788) nvs: nvs_get_str_or_blob id[0m
+D (50788) nvs: nvs_get_str_or_blob id[0m
+D (50788) nvs: nvs_close 15[0m
+Moisture value: {2915}
+D (50788) nvs: nvs_open_from_partition storage 0[0m
+D (50798) nvs: nvs_get_str_or_blob address[0m
+D (50798) nvs: nvs_close 16[0m
+D (50808) HTTP_CLIENT: set post file length = 32[0m
+D (50808) HTTP_CLIENT: Begin connect to: http://192.168.1.40:8080[0m
+D (50808) esp-tls: host:192.168.1.40: strlen 12[0m
+D (50818) esp-tls: [sock=54] Resolved IPv4 address: 192.168.1.40[0m
+D (50828) esp-tls: [sock=54] Connecting to server. HOST: 192.168.1.40, Port: 8080[0m
+D (50848) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:1 posted to loop 0x3ffbd41c[0m
+D (50848) HTTP_CLIENT: Write header[5]: POST /api/v1/humidity-measurements/add HTTP/1.1
+User-Agent: ESP32 HTTP Client/1.0
+Host: 192.168.1.40:8080
+Content-Type: application/json
+Authorization: Bearer deb1197807e28b36bc6a7e5b9d6ad13c9fdc92e407364a5615d31518705057a5
+Content-Length: 32
+
+[0m
+D (50878) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:2 posted to loop 0x3ffbd41c[0m
+D (50888) HTTP_CLIENT: on_message_begin[0m
+D (50888) HTTP_CLIENT: HEADER=Content-Length:0[0m
+D (50888) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:3 posted to loop 0x3ffbd41c[0m
+D (50888) HTTP_CLIENT: HEADER=Date:Thu, 08 Jan 2026 19:46:20 GMT[0m
+D (50908) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:3 posted to loop 0x3ffbd41c[0m
+D (50908) HTTP_CLIENT: HEADER=Server:Kestrel[0m
+D (50918) HTTP_CLIENT: http_on_headers_complete, status=401, offset=102, nread=102[0m
+D (50918) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:3 posted to loop 0x3ffbd41c[0m
+D (50928) HTTP_CLIENT: http_on_message_complete, parser=0x3ffbb7ac[0m
+D (50948) HTTP_CLIENT: content_length = 0[0m
+[0;33mW (50948) HTTP_CLIENT: This request requires authentication, but does not provide header information for that[0m
+D (50958) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:5 posted to loop 0x3ffbd41c[0m
+D (50968) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:6 posted to loop 0x3ffbd41c[0m
+D (60958) nvs: nvs_open_from_partition storage 0[0m
+D (60958) nvs: nvs_get_str_or_blob id[0m
+D (60958) nvs: nvs_get_str_or_blob id[0m
+D (60958) nvs: nvs_close 17[0m
+Moisture value: {2914}
+D (60958) nvs: nvs_open_from_partition storage 0[0m
+D (60968) nvs: nvs_get_str_or_blob address[0m
+D (60968) nvs: nvs_close 18[0m
+D (60978) HTTP_CLIENT: set post file length = 32[0m
+D (60978) HTTP_CLIENT: Begin connect to: http://192.168.1.40:8080[0m
+D (60978) esp-tls: host:192.168.1.40: strlen 12[0m
+D (60988) esp-tls: [sock=54] Resolved IPv4 address: 192.168.1.40[0m
+D (60998) esp-tls: [sock=54] Connecting to server. HOST: 192.168.1.40, Port: 8080[0m
+D (61298) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:1 posted to loop 0x3ffbd41c[0m
+D (61308) HTTP_CLIENT: Write header[5]: POST /api/v1/humidity-measurements/add HTTP/1.1
+User-Agent: ESP32 HTTP Client/1.0
+Host: 192.168.1.40:8080
+Content-Type: application/json
+Authorization: Bearer deb1197807e28b36bc6a7e5b9d6ad13c9fdc92e407364a5615d31518705057a5
+Content-Length: 32
+
+[0m
+D (61328) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:2 posted to loop 0x3ffbd41c[0m
+D (61348) HTTP_CLIENT: on_message_begin[0m
+D (61348) HTTP_CLIENT: HEADER=Content-Length:0[0m
+D (61348) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:3 posted to loop 0x3ffbd41c[0m
+D (61358) HTTP_CLIENT: HEADER=Date:Thu, 08 Jan 2026 19:46:31 GMT[0m
+D (61368) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:3 posted to loop 0x3ffbd41c[0m
+D (61368) HTTP_CLIENT: HEADER=Server:Kestrel[0m
+D (61378) HTTP_CLIENT: http_on_headers_complete, status=401, offset=102, nread=102[0m
+D (61378) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:3 posted to loop 0x3ffbd41c[0m
+D (61388) HTTP_CLIENT: http_on_message_complete, parser=0x3ffbb7ac[0m
+D (61398) HTTP_CLIENT: content_length = 0[0m
+[0;33mW (61408) HTTP_CLIENT: This request requires authentication, but does not provide header information for that[0m
+D (61418) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:5 posted to loop 0x3ffbd41c[0m
+D (61428) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:6 posted to loop 0x3ffbd41c[0m
+D (71428) nvs: nvs_open_from_partition storage 0[0m
+D (71428) nvs: nvs_get_str_or_blob id[0m
+D (71428) nvs: nvs_get_str_or_blob id[0m
+D (71428) nvs: nvs_close 19[0m
+Moisture value: {2914}
+D (71428) nvs: nvs_open_from_partition storage 0[0m
+D (71438) nvs: nvs_get_str_or_blob address[0m
+D (71438) nvs: nvs_close 20[0m
+D (71448) HTTP_CLIENT: set post file length = 32[0m
+D (71448) HTTP_CLIENT: Begin connect to: http://192.168.1.40:8080[0m
+D (71448) esp-tls: host:192.168.1.40: strlen 12[0m
+D (71458) esp-tls: [sock=54] Resolved IPv4 address: 192.168.1.40[0m
+D (71468) esp-tls: [sock=54] Connecting to server. HOST: 192.168.1.40, Port: 8080[0m
+D (71758) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:1 posted to loop 0x3ffbd41c[0m
+D (71758) HTTP_CLIENT: Write header[5]: POST /api/v1/humidity-measurements/add HTTP/1.1
+User-Agent: ESP32 HTTP Client/1.0
+Host: 192.168.1.40:8080
+Content-Type: application/json
+Authorization: Bearer deb1197807e28b36bc6a7e5b9d6ad13c9fdc92e407364a5615d31518705057a5
+Content-Length: 32
+
+[0m
+D (71788) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:2 posted to loop 0x3ffbd41c[0m
+D (72068) HTTP_CLIENT: on_message_begin[0m
+D (72068) HTTP_CLIENT: HEADER=Content-Length:0[0m
+D (72068) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:3 posted to loop 0x3ffbd41c[0m
+D (72078) HTTP_CLIENT: HEADER=Date:Thu, 08 Jan 2026 19:46:41 GMT[0m
+D (72088) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:3 posted to loop 0x3ffbd41c[0m
+D (72088) HTTP_CLIENT: HEADER=Server:Kestrel[0m
+D (72098) HTTP_CLIENT: http_on_headers_complete, status=401, offset=102, nread=102[0m
+D (72098) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:3 posted to loop 0x3ffbd41c[0m
+D (72108) HTTP_CLIENT: http_on_message_complete, parser=0x3ffbb7ac[0m
+D (72118) HTTP_CLIENT: content_length = 0[0m
+[0;33mW (72128) HTTP_CLIENT: This request requires authentication, but does not provide header information for that[0m
+D (72138) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:5 posted to loop 0x3ffbd41c[0m
+D (72148) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:6 posted to loop 0x3ffbd41c[0m
+D (82138) nvs: nvs_open_from_partition storage 0[0m
+D (82138) nvs: nvs_get_str_or_blob id[0m
+D (82138) nvs: nvs_get_str_or_blob id[0m
+D (82138) nvs: nvs_close 21[0m
+Moisture value: {2909}
+D (82138) nvs: nvs_open_from_partition storage 0[0m
+D (82148) nvs: nvs_get_str_or_blob address[0m
+D (82148) nvs: nvs_close 22[0m
+D (82158) HTTP_CLIENT: set post file length = 32[0m
+D (82158) HTTP_CLIENT: Begin connect to: http://192.168.1.40:8080[0m
+D (82158) esp-tls: host:192.168.1.40: strlen 12[0m
+D (82168) esp-tls: [sock=54] Resolved IPv4 address: 192.168.1.40[0m
+D (82178) esp-tls: [sock=54] Connecting to server. HOST: 192.168.1.40, Port: 8080[0m
+D (82188) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:1 posted to loop 0x3ffbd41c[0m
+D (82188) HTTP_CLIENT: Write header[5]: POST /api/v1/humidity-measurements/add HTTP/1.1
+User-Agent: ESP32 HTTP Client/1.0
+Host: 192.168.1.40:8080
+Content-Type: application/json
+Authorization: Bearer deb1197807e28b36bc6a7e5b9d6ad13c9fdc92e407364a5615d31518705057a5
+Content-Length: 32
+
+[0m
+D (82218) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:2 posted to loop 0x3ffbd41c[0m
+D (82228) HTTP_CLIENT: on_message_begin[0m
+D (82238) HTTP_CLIENT: HEADER=Content-Length:0[0m
+D (82238) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:3 posted to loop 0x3ffbd41c[0m
+D (82238) HTTP_CLIENT: HEADER=Date:Thu, 08 Jan 2026 19:46:51 GMT[0m
+D (82258) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:3 posted to loop 0x3ffbd41c[0m
+D (82258) HTTP_CLIENT: HEADER=Server:Kestrel[0m
+D (82268) HTTP_CLIENT: http_on_headers_complete, status=401, offset=102, nread=102[0m
+D (82268) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:3 posted to loop 0x3ffbd41c[0m
+D (82278) HTTP_CLIENT: http_on_message_complete, parser=0x3ffbb7ac[0m
+D (82288) HTTP_CLIENT: content_length = 0[0m
+[0;33mW (82298) HTTP_CLIENT: This request requires authentication, but does not provide header information for that[0m
+D (82308) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:5 posted to loop 0x3ffbd41c[0m
+D (82318) event: no handlers have been registered for event ESP_HTTP_CLIENT_EVENT:6 posted to loop 0x3ffbd41c[0m
