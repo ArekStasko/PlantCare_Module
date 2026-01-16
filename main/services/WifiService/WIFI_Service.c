@@ -44,7 +44,7 @@ void send_moisture_to_server(void)
     esp_http_client_set_header(client, "Content-Type", "application/json");
 
     // TO REFACTOR, TOKEN SHOULD BE STORED IN NVS
-    const char *auth_token = "";
+    const char *auth_token = "deb1197807e28b36bc6a7e5b9d6ad13c9fdc92e407364a5615d31518705057a5";
 
     char auth_header[128];
     snprintf(auth_header, sizeof(auth_header), "Bearer %s", auth_token);

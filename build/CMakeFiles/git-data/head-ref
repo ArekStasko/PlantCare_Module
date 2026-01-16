@@ -1,16 +1,1 @@
-8ff983c3a17ee4d13fd22766a93cb2fb842a5409 31d7fc902ef30b8e3a5229484b51e4ec49a909a9 ArekStasko <arek.stasko@gmail.com> 1764794788 +0100	commit: Note
-31d7fc902ef30b8e3a5229484b51e4ec49a909a9 eb63915009d6ad168a7851b7947fff59e70a3efa ArekStasko <arek.stasko@gmail.com> 1764872775 +0100	commit: notes v2
-eb63915009d6ad168a7851b7947fff59e70a3efa 142217ef4e2c99b39e4134184953b0c77056052e ArekStasko <arek.stasko@gmail.com> 1765118485 +0100	commit: Get ip address on event
-142217ef4e2c99b39e4134184953b0c77056052e 7cd95602ccdfd5bffff7fbe535cfd9890d6b1319 ArekStasko <arek.stasko@gmail.com> 1765119346 +0100	commit: Save ip address to nvs storage
-7cd95602ccdfd5bffff7fbe535cfd9890d6b1319 685a94fbc5b3b1411dbc261e75f348769c598cb8 ArekStasko <arek.stasko@gmail.com> 1765401861 +0100	commit: Test ble service
-685a94fbc5b3b1411dbc261e75f348769c598cb8 6930f05b07c4743bae48832f99d1748ffce2997e ArekStasko <arek.stasko@gmail.com> 1766173395 +0100	commit: Build
-6930f05b07c4743bae48832f99d1748ffce2997e 79792f2af4c85fd09e59d085e525ba1df0dcae1c ArekStasko <arek.stasko@gmail.com> 1766440398 +0100	commit: save module id method plus refactor
-79792f2af4c85fd09e59d085e525ba1df0dcae1c 9da6aa5620fee6889f2197976499cfdcc956acce ArekStasko <arek.stasko@gmail.com> 1766764454 +0100	commit: get module address from nvs store
-9da6aa5620fee6889f2197976499cfdcc956acce 077f8671955c78b879d139fdece4e811fd949b0c ArekStasko <arek.stasko@gmail.com> 1766862150 +0100	commit: Initialize wifi connection after data receive
-077f8671955c78b879d139fdece4e811fd949b0c f48c0059482c523b9d3a3a16706cf61059556d38 ArekStasko <arek.stasko@gmail.com> 1767035111 +0100	commit: Configure wifi connection method template
-f48c0059482c523b9d3a3a16706cf61059556d38 129be5811f3585f6f18179f4315e7118808eba56 ArekStasko <arek.stasko@gmail.com> 1767464841 +0100	commit: Rebuild bluetooth service to new solution
-129be5811f3585f6f18179f4315e7118808eba56 8dd30665beed5577c5c48390698a312e7cbe4b4e ArekStasko <arek.stasko@gmail.com> 1767541566 +0100	commit: refactor wifi service
-8dd30665beed5577c5c48390698a312e7cbe4b4e 874d8a0d3820d28dcde9c952c6c3d62f1da00fd4 ArekStasko <arek.stasko@gmail.com> 1767646765 +0100	commit: Resolve part of errors
-874d8a0d3820d28dcde9c952c6c3d62f1da00fd4 23d0e744176113768bb8de25f33e8aa82606516f ArekStasko <arek.stasko@gmail.com> 1767718752 +0100	commit: Properly implemented send_moisture_to_server method
-23d0e744176113768bb8de25f33e8aa82606516f 16cb88c5bb65c34393744bd4e9ff47e4f4b3e23f ArekStasko <arek.stasko@gmail.com> 1767719034 +0100	commit: FRTOS task
-16cb88c5bb65c34393744bd4e9ff47e4f4b3e23f dc6e84abe7cffe6a0ff11e246a5d279ef469a3b6 ArekStasko <arek.stasko@gmail.com> 1767804774 +0100	commit: Fix wifi and ble services
+7957c593f777ad4f5eeda51aca18b28f281cbc4d
