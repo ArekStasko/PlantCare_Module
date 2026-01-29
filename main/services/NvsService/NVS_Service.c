@@ -36,37 +36,23 @@ char* getWifiName(void)
     return wifiName;
 }
 
-char* getWifiIpAddress(void)
+char* getServerAddress(void)
 {
-    char* wifiName = getWifiName();
-  	static char address[128];
-    size_t required_size = 0;
+    static char address[128];
+    size_t required_size = sizeof(address);
 
     nvs_handle_t nvs_handle;
     esp_err_t ret = nvs_open("storage", NVS_READONLY, &nvs_handle);
+    if (ret != ESP_OK) return NULL;
 
-    if (ret != ESP_OK) {
-        ESP_LOGE("NVS", "Failed to open NVS handle! Error: %d", ret);
-        return NULL;
-    }
-
-    ret = nvs_get_str(nvs_handle, "address", NULL, &required_size);
-    if (ret != ESP_OK || required_size == 0) {
-        ESP_LOGE("NVS", "Failed to read wifi ip address or wifi ip address not found");
-        nvs_close(nvs_handle);
-        return NULL;
-    }
-
-    ret = nvs_get_str(nvs_handle, "address", wifiName, &required_size);
-    if (ret != ESP_OK) {
-        ESP_LOGE("NVS", "Failed to read wifi ip address");
-        nvs_close(nvs_handle);
-        return NULL;
-    }
-
+    ret = nvs_get_str(nvs_handle, "address", address, &required_size);
     nvs_close(nvs_handle);
+
+    if (ret != ESP_OK) return NULL;
+
     return address;
 }
+
 
 char* getWifiPassword(void)
 {
@@ -101,8 +87,8 @@ char* getWifiPassword(void)
 
 char* getModuleId(void)
 {
-  	static char id[5];
-    size_t required_size = 0;
+  	static char id[32];
+    size_t required_size = sizeof(id);
 
     nvs_handle_t nvs_handle;
     esp_err_t ret = nvs_open("storage", NVS_READONLY, &nvs_handle);

@@ -6,14 +6,67 @@
 #include "esp_wifi.h"
 #include "esp_log.h"
 #include "esp_netif.h"
-#include "esp_http_server.h"
 #include "NVS_Service.h"
 #include "nvs_flash.h"
 #include "Sensor_Service.h"
 #include "esp_netif_ip_addr.h"
-#define MAX_RESPONSE_LENGTH 64
+#include "esp_http_client.h"
 
-static void wifi_event_handler(void *event_handler_arg, esp_event_base_t event_base, int32_t event_id, void *event_data)
+static bool wifi_started = false;
+
+void send_moisture_to_server(void)
+{
+    char *savedId = getModuleId();
+    int moistureValue = get_moisture_value();
+    char *serverAddress = getServerAddress();
+
+    if (!savedId || !serverAddress) return;
+
+    const char *endpoint = "/api/v1/humidity-measurements/add";
+
+    char full_url[128];
+    const int serverPort = 8080;
+    snprintf(full_url, sizeof(full_url), "http://%s:%d%s", serverAddress, serverPort, endpoint);
+
+
+    char post_data[256];
+    snprintf(post_data, sizeof(post_data),
+             "{\"ModuleId\":\"%s\",\"Humidity\":%d}",
+             savedId, moistureValue);
+
+    esp_http_client_config_t config = {
+        .url = full_url,
+        .method = HTTP_METHOD_POST,
+        .timeout_ms = 5000,
+    };
+    esp_http_client_handle_t client = esp_http_client_init(&config);
+
+    esp_http_client_set_header(client, "Content-Type", "application/json");
+
+    // TO REFACTOR, TOKEN SHOULD BE STORED IN NVS
+    const char *auth_token = "deb1197807e28b36bc6a7e5b9d6ad13c9fdc92e407364a5615d31518705057a5";
+
+    char auth_header[128];
+    snprintf(auth_header, sizeof(auth_header), "Bearer %s", auth_token);
+    esp_http_client_set_header(client, "Authorization", auth_header);
+
+    esp_http_client_set_post_field(client, post_data, strlen(post_data));
+
+    esp_err_t err = esp_http_client_perform(client);
+    esp_http_client_cleanup(client);
+}
+
+
+void moisture_task(void *pvParameter)
+{
+    while (1) {
+        send_moisture_to_server();
+        //600000
+        vTaskDelay(pdMS_TO_TICKS(10000));
+    }
+}
+
+void wifi_event_handler(void *event_handler_arg, esp_event_base_t event_base, int32_t event_id, void *event_data)
 {
     switch (event_id)
     {
@@ -29,19 +82,11 @@ static void wifi_event_handler(void *event_handler_arg, esp_event_base_t event_b
         break;
     case IP_EVENT_STA_GOT_IP:
         {
-        	ip_event_got_ip_t *event = (ip_event_got_ip_t *)event_data;
-        	char ip_str[16];
-        	esp_ip4addr_ntoa(&event->ip_info.ip, ip_str, sizeof(ip_str));
-        	printf("IP ADDRESS: %s\n", ip_str);
-
-            nvs_handle_t nvs_handle;
-        	esp_err_t err = nvs_open("storage", NVS_READWRITE, &nvs_handle);
-        	if (err != ESP_OK)
-        	{
-                printf("UNDABLE TO OPEN NVS STORAGE \n");
-            	break;
-        	}
-            nvs_set_str(nvs_handle, "address", ip_str);
+        	static bool task_created = false;
+            if (!task_created) {
+                xTaskCreate(moisture_task, "MoistureTask", 4096, NULL, 5, NULL);
+                task_created = true;
+            }
         	break;
     	}
     default:
@@ -51,6 +96,10 @@ static void wifi_event_handler(void *event_handler_arg, esp_event_base_t event_b
 
 void connect_to_wifi()
 {
+    if (wifi_started) return;
+    wifi_started = true;
+
+    printf("WiFi connecting to WiFi network ...\n");
   	char* wifiName = getWifiName();
     char* wifiPassword = getWifiPassword();
 
@@ -70,64 +119,4 @@ void connect_to_wifi()
     esp_wifi_set_mode(WIFI_MODE_STA);
     esp_wifi_start();
     esp_wifi_connect();
-}
-
-
-void configure_connection_to_wifi()
-{
-  connect_to_wifi();
-
-  // save address after connection and disable wifi, return true if successfull
-}
-
-static esp_err_t get_handler(httpd_req_t *req)
-{
-    char savedId = getModuleId();
-    char query[100];
-    char id[10] = {0};
-
-    if (httpd_req_get_url_query_str(req, query, sizeof(query)) == ESP_OK) {
-        printf("Query string: %s", query);
-
-        if (httpd_query_key_value(query, "id", id, sizeof(id)) == ESP_OK) {
-            if(savedId == id)
-          	{
-              httpd_resp_send(req, "-1", HTTPD_RESP_USE_STRLEN);
-              return ESP_OK;
-          	}
-
-            char response[MAX_RESPONSE_LENGTH];
-            int moistureValue = get_moisture_value();
-            snprintf(response, MAX_RESPONSE_LENGTH, "%d", moistureValue);
-            httpd_resp_send(req, response, HTTPD_RESP_USE_STRLEN);
-    		return ESP_OK;
-        } else {
-            printf("ID not found in query");
-            httpd_resp_send(req, "-1", HTTPD_RESP_USE_STRLEN);
-            return ESP_OK;
-        }
-    } else {
-        printf("Failed to get query string");
-    }
-
-    return ESP_OK;
-}
-
-void server_initiation()
-{
-	httpd_config_t server_config = HTTPD_DEFAULT_CONFIG();
-    server_config.max_uri_handlers = 10;
-    httpd_handle_t server_handle = NULL;
-    httpd_start(&server_handle, &server_config);
-    httpd_uri_t uri_post = {
-        .uri = "/humidity",
-        .method = HTTP_GET,
-        .handler = get_handler,
-        .user_ctx = NULL};
-    esp_err_t err = httpd_register_uri_handler(server_handle, &uri_post);
-	if (err != ESP_OK) {
-    	ESP_LOGE("HTTP_SERVER", "Failed to register URI handler. Error: %d", err);
-	} else {
-    	ESP_LOGI("HTTP_SERVER", "Handler registered for URI: %s", uri_post.uri);
-	}
 }

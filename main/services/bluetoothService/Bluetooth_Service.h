@@ -16,6 +16,8 @@
 #include "services/gap/ble_svc_gap.h"
 #include "services/gatt/ble_svc_gatt.h"
 #include "sdkconfig.h"
+
 void enable_bt(void);
+void disable_bt(void);
 
 #endif //BLUETOOTH_SERVICE_H

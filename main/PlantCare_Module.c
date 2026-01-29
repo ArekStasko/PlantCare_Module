@@ -13,7 +13,6 @@ void app_main(void)
 {
     nvs_flash_init();
 
-    resetWifiData();
     bool isWifiDataExist = checkIfWiFiDataExists();
     if (!isWifiDataExist)
     {
@@ -22,6 +21,5 @@ void app_main(void)
     if(isWifiDataExist)
     {
       connect_to_wifi();
-      server_initiation();
     }
 }

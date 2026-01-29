@@ -55,10 +55,10 @@ static int save_module_id(uint16_t conn_handle, uint16_t attr_handle, struct ble
     return 0;
 }
 
-static int save_wifi_data(uint16_t conn_handle, uint16_t attr_handle, struct ble_gatt_access_ctxt *ctxt, void *arg)
+static int save_data(uint16_t conn_handle, uint16_t attr_handle, struct ble_gatt_access_ctxt *ctxt, void *arg)
 {
     char *data = (char *)ctxt->om->om_data;
-    char *name, *password;
+    char *name, *password, *id, *address;
 
     char buffer[256];
     strncpy(buffer, data, sizeof(buffer) - 1);
@@ -66,8 +66,12 @@ static int save_wifi_data(uint16_t conn_handle, uint16_t attr_handle, struct ble
 
     name = strtok(buffer, "|");
     password = strtok(NULL, "|");
+    id = strtok(NULL, "|");
+    address = strtok(NULL, "|");
 
-    if (name && password)
+
+
+    if (name && password && address && id)
     {
         nvs_handle_t nvs_handle;
         esp_err_t err = nvs_open("storage", NVS_READWRITE, &nvs_handle);
@@ -79,6 +83,8 @@ static int save_wifi_data(uint16_t conn_handle, uint16_t attr_handle, struct ble
 
         nvs_set_str(nvs_handle, "name", name);
         nvs_set_str(nvs_handle, "password", password);
+        nvs_set_str(nvs_handle, "id", id);
+        nvs_set_str(nvs_handle, "address", address);
 
         err = nvs_commit(nvs_handle);
         if (err != ESP_OK)
@@ -89,10 +95,10 @@ static int save_wifi_data(uint16_t conn_handle, uint16_t attr_handle, struct ble
         }
 
         nvs_close(nvs_handle);
-        disable_bt();
-    	connect_to_wifi();
+        vTaskDelay(pdMS_TO_TICKS(200));
+        esp_restart();
 
-        ESP_LOGI(TAG, "Data saved: name=%s, password=%s", name, password);
+        ESP_LOGI(TAG, "Data saved: name=%s, password=%s, id=%s, address=%s", name, password, id, address);
     }
     else
     {
@@ -102,31 +108,13 @@ static int save_wifi_data(uint16_t conn_handle, uint16_t attr_handle, struct ble
     return 0;
 }
 
-static int get_module_ip_address(uint16_t con_handle, uint16_t attr_handle, struct ble_gatt_access_ctxt *ctxt, void *arg)
-{
-    const char *response = getWifiIpAddress();
-
-    int rc = os_mbuf_append(ctxt->om, response, strlen(response));
-    if (rc != 0) {
-        return BLE_ATT_ERR_INSUFFICIENT_RES;
-    }
-
-    return 0;
-}
-
 static const struct ble_gatt_svc_def gatt_svcs[] = {
     {.type = BLE_GATT_SVC_TYPE_PRIMARY,
      .uuid = BLE_UUID16_DECLARE(0x180),
      .characteristics = (struct ble_gatt_chr_def[]){
-         {.uuid = BLE_UUID16_DECLARE(0xFEF4),
-          .flags = BLE_GATT_CHR_F_READ,
-          .access_cb = get_module_ip_address},
          {.uuid = BLE_UUID16_DECLARE(0xDEAD),
           .flags = BLE_GATT_CHR_F_WRITE,
-          .access_cb = save_wifi_data},
-    	 {.uuid = BLE_UUID16_DECLARE(0xBEEF),
-          .flags = BLE_GATT_CHR_F_WRITE,
-          .access_cb = save_module_id},
+          .access_cb = save_data},
         {0}}},
     {0}};
 
