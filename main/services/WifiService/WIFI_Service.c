@@ -22,7 +22,7 @@ void send_moisture_to_server(void)
 
     if (!savedId || !serverAddress) return;
 
-    const char *endpoint = "/api/v1/humidity-measurements/add";
+    const char *endpoint = "/api/humidity-measurements";
 
     char full_url[128];
     const int serverPort = 8080;
