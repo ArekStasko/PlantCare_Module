@@ -61,8 +61,7 @@ void moisture_task(void *pvParameter)
 {
     while (1) {
         send_moisture_to_server();
-        //600000
-        vTaskDelay(pdMS_TO_TICKS(10000));
+        vTaskDelay(pdMS_TO_TICKS(1800000));
     }
 }
 
