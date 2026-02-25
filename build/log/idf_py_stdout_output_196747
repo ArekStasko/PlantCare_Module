@@ -1,0 +1,54 @@
+[1/11] Performing build step for 'bootloader'
+[1/1] cd /home/arekstasko/sources/repos/PlantCare_Module/build/bootloader/esp-idf/esptool_py && /home/arekstasko/.espressif/python_env/idf5.3_py3.10_env/bin/python /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/arekstasko/sources/repos/PlantCare_Module/build/bootloader/bootloader.bin
+Bootloader binary size 0x6880 bytes. 0x780 bytes (7%) free.
+[2/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/services/SensorService/Sensor_Service.c.obj
+In file included from /home/arekstasko/sources/repos/PlantCare_Module/main/services/SensorService/Sensor_Service.c:2:
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+/home/arekstasko/sources/repos/PlantCare_Module/main/services/SensorService/Sensor_Service.c: In function 'get_moisture_value':
+/home/arekstasko/sources/repos/PlantCare_Module/main/services/SensorService/Sensor_Service.c:12:5: warning: 'ADC_ATTEN_DB_11' is deprecated [-Wdeprecated-declarations]
+   12 |     adc1_config_channel_atten(MOISTURE_SENSOR_ADC_CHANNEL, ADC_ATTEN_DB_11);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/driver/deprecated/driver/adc_types_legacy.h:8,
+                 from /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/driver/deprecated/driver/adc.h:15:
+/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/hal/include/hal/adc_types.h:51:5: note: declared here
+   51 |     ADC_ATTEN_DB_11 __attribute__((deprecated)) = ADC_ATTEN_DB_12,  ///<This is deprecated, it behaves the same as `ADC_ATTEN_DB_12`
+      |     ^~~~~~~~~~~~~~~
+[3/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/services/WifiService/WIFI_Service.c.obj
+/home/arekstasko/sources/repos/PlantCare_Module/main/services/WifiService/WIFI_Service.c: In function 'send_moisture_to_server':
+/home/arekstasko/sources/repos/PlantCare_Module/main/services/WifiService/WIFI_Service.c:55:15: warning: unused variable 'err' [-Wunused-variable]
+   55 |     esp_err_t err = esp_http_client_perform(client);
+      |               ^~~
+[4/9] Linking C static library esp-idf/main/libmain.a
+[5/9] Generating ld/sections.ld
+[6/9] Linking CXX executable PlantCare_Module.elf
+[7/9] Generating binary image from built executable
+esptool.py v4.8.1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/arekstasko/sources/repos/PlantCare_Module/build/PlantCare_Module.bin
+[8/9] cd /home/arekstasko/sources/repos/PlantCare_Module/build/esp-idf/esptool_py && /home/arekstasko/.espressif/python_env/idf5.3_py3.10_env/bin/python /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/arekstasko/sources/repos/PlantCare_Module/build/partition_table/partition-table.bin /home/arekstasko/sources/repos/PlantCare_Module/build/PlantCare_Module.bin
+PlantCare_Module.bin binary size 0xff160 bytes. Smallest app partition is 0x100000 bytes. 0xea0 bytes (0%) free.
+Warning: The smallest app partition is nearly full (0% free space left)!
+[8/9] cd /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esptool_py && /home/arekstasko/.espressif/tools/cmake/3.24.0/bin/cmake -D IDF_PATH=/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1 -D "SERIAL_TOOL=/home/arekstasko/.espressif/python_env/idf5.3_py3.10_env/bin/python;;/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/arekstasko/sources/repos/PlantCare_Module/build -P /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 PlantCare_Module.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.1
+Serial port /dev/ttyUSB0
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+WARNING: Detected crystal freq 15.67MHz is quite different to normalized freq 26MHz. Unsupported crystal in use?
+Crystal is 26MHz
+MAC: ec:e3:34:19:e0:48
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+
+A fatal error occurred: Unable to verify flash chip connection (No serial data received.).
+FAILED: CMakeFiles/flash /home/arekstasko/sources/repos/PlantCare_Module/build/CMakeFiles/flash 
+cd /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esptool_py && /home/arekstasko/.espressif/tools/cmake/3.24.0/bin/cmake -D IDF_PATH=/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1 -D "SERIAL_TOOL=/home/arekstasko/.espressif/python_env/idf5.3_py3.10_env/bin/python;;/home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/arekstasko/sources/repos/PlantCare_Module/build -P /home/arekstasko/sources/Espressif-IDE/esp-idf-v5.3.1/components/esptool_py/run_serial_tool.cmake
+ninja: build stopped: subcommand failed.
