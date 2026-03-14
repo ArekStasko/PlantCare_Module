@@ -11,8 +11,19 @@
 #include "Sensor_Service.h"
 #include "esp_netif_ip_addr.h"
 #include "esp_http_client.h"
+#include "esp_sleep.h"
 
 static bool wifi_started = false;
+
+void enter_deep_sleep()
+{
+	esp_wifi_disconnect();
+	esp_wifi_stop();
+	esp_wifi_deinit();
+
+	esp_sleep_enable_timer_wakeup(3600000000ULL);
+	esp_deep_sleep_start();
+}
 
 void send_moisture_to_server(void)
 {
@@ -54,15 +65,13 @@ void send_moisture_to_server(void)
 
     esp_err_t err = esp_http_client_perform(client);
     esp_http_client_cleanup(client);
+    enter_deep_sleep();
 }
 
-
-void moisture_task(void *pvParameter)
+void perform_moisture_measurement(void *pvParameters)
 {
-    while (1) {
-        send_moisture_to_server();
-        vTaskDelay(pdMS_TO_TICKS(1800000));
-    }
+    send_moisture_to_server();
+    vTaskDelete(NULL);
 }
 
 void wifi_event_handler(void *event_handler_arg, esp_event_base_t event_base, int32_t event_id, void *event_data)
@@ -81,12 +90,9 @@ void wifi_event_handler(void *event_handler_arg, esp_event_base_t event_base, in
         break;
     case IP_EVENT_STA_GOT_IP:
         {
-        	static bool task_created = false;
-            if (!task_created) {
-                xTaskCreate(moisture_task, "MoistureTask", 4096, NULL, 5, NULL);
-                task_created = true;
-            }
-        	break;
+      		vTaskDelay(pdMS_TO_TICKS(500));
+			xTaskCreate(perform_moisture_measurement, "perform_moisture_measurement", 8192, NULL, 5, NULL);
+    		break;
     	}
     default:
         break;
