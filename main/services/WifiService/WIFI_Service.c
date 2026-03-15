@@ -12,8 +12,10 @@
 #include "esp_netif_ip_addr.h"
 #include "esp_http_client.h"
 #include "esp_sleep.h"
+#include "sdkconfig.h"
 
 static bool wifi_started = false;
+char *TAG = "Plantcare Module - wifi service";
 
 void enter_deep_sleep()
 {
@@ -25,9 +27,23 @@ void enter_deep_sleep()
 	esp_deep_sleep_start();
 }
 
+void save_error_code_to_nvs(esp_err_t error_code)
+{
+  	nvs_handle_t nvs_handle;
+    esp_err_t err = nvs_open("storage", NVS_READWRITE, &nvs_handle);
+    if (err != ESP_OK)
+    {
+       ESP_LOGE(TAG, "Error (%s) opening NVS handle!", esp_err_to_name(err));
+    }
+
+    nvs_set_str(nvs_handle, "error", error_code);
+    nvs_close(nvs_handle);
+}
+
 void send_moisture_to_server(void)
 {
     char *savedId = getModuleId();
+    char *error_code = getErrorCode();
     int moistureValue = get_moisture_value();
     char *serverAddress = getServerAddress();
 
@@ -42,8 +58,8 @@ void send_moisture_to_server(void)
 
     char post_data[256];
     snprintf(post_data, sizeof(post_data),
-             "{\"ModuleId\":\"%s\",\"Humidity\":%d}",
-             savedId, moistureValue);
+             "{\"ModuleId\":\"%s\",\"ErrorCode\":\"%s\",\"Humidity\":%d}",
+             savedId, error_code, moistureValue);
 
     esp_http_client_config_t config = {
         .url = full_url,
@@ -64,7 +80,13 @@ void send_moisture_to_server(void)
     esp_http_client_set_post_field(client, post_data, strlen(post_data));
 
     esp_err_t err = esp_http_client_perform(client);
+
+    if (err != ESP_OK)
+    {
+       save_error_code_to_nvs(err);
+    }
     esp_http_client_cleanup(client);
+
     enter_deep_sleep();
 }
 

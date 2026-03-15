@@ -12,6 +12,7 @@ char* getServerAddress(void);
 char* getWifiName(void);
 char* getWifiPassword(void);
 char* getModuleId(void);
+char* getErrorCode(void);
 void resetWifiData(void);
 
 #endif //NVS_SERVICE_H

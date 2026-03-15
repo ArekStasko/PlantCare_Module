@@ -36,6 +36,23 @@ char* getWifiName(void)
     return wifiName;
 }
 
+char* getErrorCode(void)
+{
+  static char errorCode[128];
+  size_t required_size = sizeof(errorCode);
+
+  nvs_handle_t nvs_handle;
+  esp_err_t ret = nvs_open("storage", NVS_READWRITE, &nvs_handle);
+  if(ret != ESP_OK) return NULL;
+
+  ret = nvs_get_str(nvs_handle, "error", NULL, &required_size);
+  nvs_close(nvs_handle);
+
+  if(ret != ESP_OK) return NULL;
+
+  return errorCode;
+}
+
 char* getServerAddress(void)
 {
     static char address[128];
