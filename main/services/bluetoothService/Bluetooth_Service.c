@@ -16,38 +16,38 @@
 #include "NVS_Service.h"
 #include "sdkconfig.h"
 
-char *TAG = "Plantcare Module";
+char *BLE_LOG_TAG = "Plantcare Module";
 uint8_t ble_addr_type;
 static void ble_app_advertise(void);
 
 void disable_bt()
 {
-    ESP_LOGI(TAG, "Disabling Bluetooth...");
+    ESP_LOGI(BLE_LOG_TAG, "Disabling Bluetooth...");
     nimble_port_stop();
     nimble_port_deinit();
 
     esp_err_t err = esp_nimble_hci_deinit();
     if (err != ESP_OK)
     {
-        ESP_LOGE(TAG, "Failed to deinitialize NimBLE controller: %s", esp_err_to_name(err));
+        ESP_LOGE(BLE_LOG_TAG, "Failed to deinitialize NimBLE controller: %s", esp_err_to_name(err));
         return;
     }
 
     err = esp_bt_controller_disable();
     if (err != ESP_OK)
     {
-        ESP_LOGE(TAG, "Failed to disable Bluetooth controller: %s", esp_err_to_name(err));
+        ESP_LOGE(BLE_LOG_TAG, "Failed to disable Bluetooth controller: %s", esp_err_to_name(err));
         return;
     }
 
     err = esp_bt_controller_deinit();
     if (err != ESP_OK)
     {
-        ESP_LOGE(TAG, "Failed to deinitialize Bluetooth controller: %s", esp_err_to_name(err));
+        ESP_LOGE(BLE_LOG_TAG, "Failed to deinitialize Bluetooth controller: %s", esp_err_to_name(err));
         return;
     }
 
-    ESP_LOGI(TAG, "Bluetooth disabled successfully.");
+    ESP_LOGI(BLE_LOG_TAG, "Bluetooth disabled successfully.");
 }
 
 static int save_module_id(uint16_t conn_handle, uint16_t attr_handle, struct ble_gatt_access_ctxt *ctxt, void *arg)
@@ -77,7 +77,7 @@ static int save_data(uint16_t conn_handle, uint16_t attr_handle, struct ble_gatt
         esp_err_t err = nvs_open("storage", NVS_READWRITE, &nvs_handle);
         if (err != ESP_OK)
         {
-            ESP_LOGE(TAG, "Error (%s) opening NVS handle!", esp_err_to_name(err));
+            ESP_LOGE(BLE_LOG_TAG, "Error (%s) opening NVS handle!", esp_err_to_name(err));
             return BLE_ATT_ERR_UNLIKELY;
         }
 
@@ -89,7 +89,7 @@ static int save_data(uint16_t conn_handle, uint16_t attr_handle, struct ble_gatt
         err = nvs_commit(nvs_handle);
         if (err != ESP_OK)
         {
-            ESP_LOGE(TAG, "Error (%s) committing data!", esp_err_to_name(err));
+            ESP_LOGE(BLE_LOG_TAG, "Error (%s) committing data!", esp_err_to_name(err));
             nvs_close(nvs_handle);
             return BLE_ATT_ERR_UNLIKELY;
         }
@@ -98,11 +98,11 @@ static int save_data(uint16_t conn_handle, uint16_t attr_handle, struct ble_gatt
         vTaskDelay(pdMS_TO_TICKS(200));
         esp_restart();
 
-        ESP_LOGI(TAG, "Data saved: name=%s, password=%s, id=%s, address=%s", name, password, id, address);
+        ESP_LOGI(BLE_LOG_TAG, "Data saved: name=%s, password=%s, id=%s, address=%s", name, password, id, address);
     }
     else
     {
-        ESP_LOGE(TAG, "Invalid data format");
+        ESP_LOGE(BLE_LOG_TAG, "Invalid data format");
         return BLE_ATT_ERR_INVALID_ATTR_VALUE_LEN;
     }
     return 0;

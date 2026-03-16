@@ -116,3 +116,7 @@
 181	399	1773595066544373524	/home/arekstasko/sources/repos/PlantCare_Module/build/bootloader/.bin_timestamp	7102b68786158e26
 399	441	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	31c3e094c989ae0f
 399	441	0	/home/arekstasko/sources/repos/PlantCare_Module/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	31c3e094c989ae0f
+5	29	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	31c3e094c989ae0f
+5	29	0	/home/arekstasko/sources/repos/PlantCare_Module/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	31c3e094c989ae0f
+3	25	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	31c3e094c989ae0f
+3	25	0	/home/arekstasko/sources/repos/PlantCare_Module/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	31c3e094c989ae0f

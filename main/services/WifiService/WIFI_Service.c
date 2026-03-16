@@ -15,7 +15,7 @@
 #include "sdkconfig.h"
 
 static bool wifi_started = false;
-char *TAG = "Plantcare Module - wifi service";
+char *WIFI_LOG_TAG = "Plantcare Module - wifi service";
 
 void enter_deep_sleep()
 {
@@ -33,7 +33,7 @@ void save_error_code_to_nvs(esp_err_t error_code)
     esp_err_t err = nvs_open("storage", NVS_READWRITE, &nvs_handle);
     if (err != ESP_OK)
     {
-       ESP_LOGE(TAG, "Error (%s) opening NVS handle!", esp_err_to_name(err));
+       ESP_LOGE(WIFI_LOG_TAG, "Error (%s) opening NVS handle!", esp_err_to_name(err));
     }
 
     nvs_set_str(nvs_handle, "error", error_code);
