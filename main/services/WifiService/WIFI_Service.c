@@ -13,6 +13,7 @@
 #include "esp_http_client.h"
 #include "esp_sleep.h"
 #include "sdkconfig.h"
+#include "Battery_Service.h"
 
 static bool wifi_started = false;
 char *WIFI_LOG_TAG = "Plantcare Module - wifi service";
@@ -43,8 +44,8 @@ void save_error_code_to_nvs(esp_err_t error_code)
 void send_moisture_to_server(void)
 {
     char *savedId = getModuleId();
-    char *error_code = getErrorCode();
     int moistureValue = get_moisture_value();
+    int battery_level = Get_Battery_Level();
     char *serverAddress = getServerAddress();
 
     if (!savedId || !serverAddress) return;
@@ -58,8 +59,8 @@ void send_moisture_to_server(void)
 
     char post_data[256];
     snprintf(post_data, sizeof(post_data),
-             "{\"ModuleId\":\"%s\",\"ErrorCode\":\"%s\",\"Humidity\":%d}",
-             savedId, error_code, moistureValue);
+             "{\"ModuleId\":\"%s\",\"Humidity\":%d,\"BatteryLevel\":%d}",
+             savedId, moistureValue, battery_level);
 
     esp_http_client_config_t config = {
         .url = full_url,
