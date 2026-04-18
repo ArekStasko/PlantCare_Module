@@ -26,9 +26,19 @@ void Battery_ADC_Init(void)
   adc_oneshot_chan_cfg_t config = {
     .bitwidth = ADC_BITWIDTH_DEFAULT,
     .atten = ADC_ATTEN_DB_11,
-};
+  };
 
   adc_oneshot_config_channel(adc_handle, ADC_CHANNEL_6, &config);
+
+  adc_cali_line_fitting_config_t cali_config = {
+    .unit_id = ADC_UNIT_1,
+    .atten = ADC_ATTEN_DB_11,
+    .bitwidth = ADC_BITWIDTH_DEFAULT,
+  };
+  esp_err_t ret;
+  ret = adc_cali_create_scheme_line_fitting(&cali_config, &cali_handle);
+
+  printf("Calibration ret: %d\n", ret);
 }
 
 int Get_Battery_Level(void)
