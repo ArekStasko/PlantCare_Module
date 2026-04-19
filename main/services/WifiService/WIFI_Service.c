@@ -11,13 +11,41 @@
 #include "Sensor_Service.h"
 #include "esp_netif_ip_addr.h"
 #include "esp_http_client.h"
+#include "esp_sleep.h"
+#include "sdkconfig.h"
+#include "Battery_Service.h"
 
 static bool wifi_started = false;
+char *WIFI_LOG_TAG = "Plantcare Module - wifi service";
+
+void enter_deep_sleep()
+{
+	esp_wifi_disconnect();
+	esp_wifi_stop();
+	esp_wifi_deinit();
+
+	esp_sleep_enable_timer_wakeup(3600000000ULL);
+	esp_deep_sleep_start();
+}
+
+void save_error_code_to_nvs(esp_err_t error_code)
+{
+  	nvs_handle_t nvs_handle;
+    esp_err_t err = nvs_open("storage", NVS_READWRITE, &nvs_handle);
+    if (err != ESP_OK)
+    {
+       ESP_LOGE(WIFI_LOG_TAG, "Error (%s) opening NVS handle!", esp_err_to_name(err));
+    }
+
+    nvs_set_str(nvs_handle, "error", error_code);
+    nvs_close(nvs_handle);
+}
 
 void send_moisture_to_server(void)
 {
     char *savedId = getModuleId();
     int moistureValue = get_moisture_value();
+    int battery_level = Get_Battery_Level();
     char *serverAddress = getServerAddress();
 
     if (!savedId || !serverAddress) return;
@@ -31,8 +59,8 @@ void send_moisture_to_server(void)
 
     char post_data[256];
     snprintf(post_data, sizeof(post_data),
-             "{\"ModuleId\":\"%s\",\"Humidity\":%d}",
-             savedId, moistureValue);
+             "{\"ModuleId\":\"%s\",\"Humidity\":%d,\"BatteryLevel\":%d}",
+             savedId, moistureValue, battery_level);
 
     esp_http_client_config_t config = {
         .url = full_url,
@@ -53,17 +81,20 @@ void send_moisture_to_server(void)
     esp_http_client_set_post_field(client, post_data, strlen(post_data));
 
     esp_err_t err = esp_http_client_perform(client);
+
+    if (err != ESP_OK)
+    {
+       save_error_code_to_nvs(err);
+    }
     esp_http_client_cleanup(client);
+
+    enter_deep_sleep();
 }
 
-
-void moisture_task(void *pvParameter)
+void perform_moisture_measurement(void *pvParameters)
 {
-    while (1) {
-        send_moisture_to_server();
-        //600000
-        vTaskDelay(pdMS_TO_TICKS(10000));
-    }
+    send_moisture_to_server();
+    vTaskDelete(NULL);
 }
 
 void wifi_event_handler(void *event_handler_arg, esp_event_base_t event_base, int32_t event_id, void *event_data)
@@ -82,12 +113,9 @@ void wifi_event_handler(void *event_handler_arg, esp_event_base_t event_base, in
         break;
     case IP_EVENT_STA_GOT_IP:
         {
-        	static bool task_created = false;
-            if (!task_created) {
-                xTaskCreate(moisture_task, "MoistureTask", 4096, NULL, 5, NULL);
-                task_created = true;
-            }
-        	break;
+      		vTaskDelay(pdMS_TO_TICKS(500));
+			xTaskCreate(perform_moisture_measurement, "perform_moisture_measurement", 8192, NULL, 5, NULL);
+    		break;
     	}
     default:
         break;

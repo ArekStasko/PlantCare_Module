@@ -7,11 +7,16 @@
 #include "WIFI_Service.h"
 #include "esp_log.h"
 #include "esp_event.h"
-
+#include "Battery_Service.h"
+#include "Sensor_Service.h"
+#include "Adc_Service.h"
 
 void app_main(void)
 {
     nvs_flash_init();
+    ADC_Init();
+	Battery_ADC_Init();
+	sensor_init();
 
     bool isWifiDataExist = checkIfWiFiDataExists();
     if (!isWifiDataExist)
